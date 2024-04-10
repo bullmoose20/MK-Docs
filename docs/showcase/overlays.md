@@ -1,8 +1,8 @@
 # Overlays Showcase
 
-This page is designed to show the art of the possible when using Overlays within Plex Meta Manager.
+This page is designed to show the art of the possible when using Overlays within Komet.
 
-Each showcased photo has been confirmed to be fully functional with Plex Meta Manager v1.19.0. We cannot guarantee functionality beyond that version.
+Each showcased photo has been confirmed to be fully functional with Komet v1.19.0. We cannot guarantee functionality beyond that version.
 
 ## Example 1
 
@@ -12,7 +12,7 @@ Each showcased photo has been confirmed to be fully functional with Plex Meta Ma
     
     This example shows a minimalistic Overlay application with the resolution, audio codec and video format on display.
 
-    This example uses three PMM Default Overlay files: [Resolution](../defaults/overlays/resolution.md), [Audio Codec](../defaults/overlays/audio_codec.md) and [Video Format](../defaults/overlays/video_format.md).
+    This example uses three Komet Default Overlay files: [Resolution](../defaults/overlays/resolution.md), [Audio Codec](../defaults/overlays/audio_codec.md) and [Video Format](../defaults/overlays/video_format.md).
 
     Resolution is used to identify if the movie is 4K for example, and also highlights if a movie is Dolby Vision or HDR.
 
@@ -30,9 +30,9 @@ Each showcased photo has been confirmed to be fully functional with Plex Meta Ma
     libraries:
       Movies:
         overlay_files:
-        - pmm: resolution
-        - pmm: audio_codec
-        - pmm: video_format
+        - default: resolution
+        - default: audio_codec
+        - default: video_format
     ```
 
     **Replace `Movies` with the name of your library**
@@ -45,7 +45,7 @@ Each showcased photo has been confirmed to be fully functional with Plex Meta Ma
     
     This example shows a minimalistic Overlay application with the ratings and ribbon of the movie.
 
-    This example uses two PMM Default Overlay files: [Ratings](../defaults/overlays/ratings.md) and [Ribbon](../defaults/overlays/ribbon.md).
+    This example uses two Komet Default Overlay files: [Ratings](../defaults/overlays/ratings.md) and [Ribbon](../defaults/overlays/ribbon.md).
 
     Ratings are set to show the Rotten Tomatoes Audience & Critic scores, as well as the IMDb score.
 
@@ -63,7 +63,7 @@ Each showcased photo has been confirmed to be fully functional with Plex Meta Ma
     libraries:
       Movies:
         overlay_files:
-        - pmm: ratings
+        - default: ratings
           template_variables:
             rating1: critic
             rating1_image: rt_tomato
@@ -85,7 +85,7 @@ Each showcased photo has been confirmed to be fully functional with Plex Meta Ma
             rating1_horizontal_offset: 30
             rating2_horizontal_offset: 250
             rating3_horizontal_offset: 470
-        - pmm: ribbon
+        - default: ribbon
         operations:
           mass_user_rating_update: imdb
     ```
@@ -101,7 +101,7 @@ Each showcased photo has been confirmed to be fully functional with Plex Meta Ma
     
     This example shows a minimalistic Overlay application with the ratings applied at the bottom of the poster
 
-    This example uses two PMM Default Overlay files: [Ratings](../defaults/overlays/ratings.md) and [Runtimes](../defaults/overlays/runtimes.md).
+    This example uses two Komet Default Overlay files: [Ratings](../defaults/overlays/ratings.md) and [Runtimes](../defaults/overlays/runtimes.md).
 
     Ratings are set to show the TMDb, Trakt and IMDb ratings, which have been set using [Library Operations](../config/operations.md#mass--rating-update)
 
@@ -117,7 +117,7 @@ Each showcased photo has been confirmed to be fully functional with Plex Meta Ma
     libraries:
       Movies:
         overlay_files:
-        - pmm: runtimes
+        - default: runtimes
           template_variables:
             text: ""
             horizontal_position: center
@@ -128,7 +128,7 @@ Each showcased photo has been confirmed to be fully functional with Plex Meta Ma
             back_color: "#000000"
             horizontal_offset: 0
             vertical_offset: 0
-        - pmm: ratings
+        - default: ratings
           template_variables:
             rating1: critic
             rating1_image: tmdb

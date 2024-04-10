@@ -386,16 +386,16 @@ libraries:
 
   Anime:
     metadata_path:
-      - pmm: basic               # This is a file within PMM's defaults folder
-      - pmm: anilist             # This is a file within PMM's defaults folder
+      - pmm: basic               # This is a file within Komet's defaults folder
+      - pmm: anilist             # This is a file within Komet's defaults folder
       # see the wiki for how to use local files, folders, URLs, or files from git
   Music:
     metadata_path:
       - file: config/Music.yml   # This is a local file THAT YOU MIGHT CREATE
 playlist_files:
-  - pmm: playlist                # This is a file within PMM's defaults folder
+  - pmm: playlist                # This is a file within Komet's defaults folder
     template_variables:
-      libraries: Movies, TV Shows   # list of libraries that you want the PMM Defaults playlists to look at
+      libraries: Movies, TV Shows   # list of libraries that you want the Komet Defaults playlists to look at
   # see the wiki for how to use local files, folders, URLs, or files from git
 settings:
   cache: true

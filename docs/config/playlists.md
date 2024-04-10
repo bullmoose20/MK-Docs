@@ -13,7 +13,7 @@ Manager to act on.
 ```yaml
 playlist_files:
   - file: config/playlists.yml
-  - pmm: playlist
+  - default: playlist
 ```
 
 ???+ example "Example"
@@ -25,22 +25,22 @@ playlist_files:
       Movies:
         collection_files:
           - file: config/Movies.yml
-          - pmm: imdb
-          - pmm: studio
-          - pmm: genre
-          - pmm: actor
+          - default: imdb
+          - default: studio
+          - default: genre
+          - default: actor
         operations:
           mass_critic_rating_update: tmdb
           split_duplicates: true
       TV Shows:
         collection_files:
           - file: config/TV Shows.yml
-          - pmm: tmdb
-          - pmm: network
+          - default: tmdb
+          - default: network
         remove_overlays: false
         overlay_files:
           - file: config/Overlays.yml
     playlist_files:
       - file: config/playlists.yml
-      - pmm: playlist
+      - default: playlist
     ```

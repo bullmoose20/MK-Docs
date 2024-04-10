@@ -1,7 +1,7 @@
 # Initial Setup Guide
 
-**Before using this guide you should already have installed Plex Meta Manager.**
+**Before using this guide you should already have installed Komet.**
 
-See the [Installation Page](../pmm/install/overview.md) for info on how to install Plex Meta Manager.
+See the [Installation Page](../komet/install/overview.md) for info on how to install Komet.
 
-This guide is assuming you know how to run pmm with the `--run` run command or the `PMM_RUN` environment variable to perform immediate runs  
+This guide is assuming you know how to run Kometwith the `--run` run command or the `KOMET_RUN` environment variable to perform immediate runs  

@@ -29,7 +29,7 @@ The `sync_mode: sync` and `collection_order: custom` Setting are recommended sin
 
 ???+ warning
 
-    Trakt lists and users come and go, and PMM has no control over this.  The list URLs found in this documentation are used here as examples and are available and working at time of writing, but they may disappear at any time.  Do not take their use here as a guarantee that they exist or are working when you read this.
+    Trakt lists and users come and go, and Komet has no control over this.  The list URLs found in this documentation are used here as examples and are available and working at time of writing, but they may disappear at any time.  Do not take their use here as a guarantee that they exist or are working when you read this.
 
 ```yaml
 collections:
@@ -193,7 +193,7 @@ collections:
 
 ## Syncing Plex Collections to Trakt Lists
 
-A combination of PMM settings/attributes can be utilized to create a collection via PMM and then sync them to a blank or existing Trakt List.
+A combination of Komet settings/attributes can be utilized to create a collection via Komet and then sync them to a blank or existing Trakt List.
 
 NOTE: You must either create an empty Trakt list or specify an existing Trakt list which you have write access to.
 
@@ -208,6 +208,6 @@ collections:
         sort_by: user_rating.desc
 ```
 
-In this example, PMM will generate a Plex collection with any films that I have rated 8.0 or above (using the `plex_search`). The `sync_to_trakt_list` will take those films and then sync them to my `myfilms` Trakt list.
+In this example, Komet will generate a Plex collection with any films that I have rated 8.0 or above (using the `plex_search`). The `sync_to_trakt_list` will take those films and then sync them to my `myfilms` Trakt list.
 
 I can optionally also enable the `trakt_list` to create a two-way sync between Plex and Trakt. This allows me to add films to the Trakt list that I want in my Plex collection, and then sync them to Plex.

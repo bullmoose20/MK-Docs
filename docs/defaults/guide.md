@@ -1,10 +1,10 @@
 # Defaults Usage Guide
 
-Plex Meta Manager includes a pre-created set of Collection Files and Overlay Files which can be found in the "defaults" folder in the root of your Plex Meta Manager installation directory.
+Komet includes a pre-created set of Collection Files and Overlay Files which can be found in the "defaults" folder in the root of your Komet installation directory.
 
 These files offer an easy-to-use and customizable set of Collections and Overlays that the user can achieve without having to worry about creating the files that make the collections and overlays possible.
 
-All Collections come with a matching poster to make a clean, consistent set of collections in your library. These files are stored in the [Plex Meta Manager Images](https://github.com/meisnate12/Plex-Meta-Manager-Images) Repository and each poster is downloaded straight to your Plex Collection when you run Plex Meta Manager.
+All Collections come with a matching poster to make a clean, consistent set of collections in your library. These files are stored in the [Komet Images](https://github.com/meisnate12/Plex-Meta-Manager-Images) Repository and each poster is downloaded straight to your Plex Collection when you run Komet.
 
 Credits to Sohjiro, Bullmoose20, Yozora, Cpt Kuesel, and anon_fawkes for helping drive this entire Default Set of Configs through the concept, design and implementation.
 
@@ -22,17 +22,17 @@ See the [Overlay Defaults](overlays.md) Page for more information on the specifi
 
 ## Configurations
 
-To run a default pmm Collection or Overlay file you can simply add it to your `collection_files` (For Collection Files) or `overlay_files` (For Overlay Files) using `pmm` like so:
+To run a default KometCollection or Overlay file you can simply add it to your `collection_files` (For Collection Files) or `overlay_files` (For Overlay Files) using `default` like so:
 
 ```yaml
 libraries:
   Movies:
     collection_files:
-    - pmm: actor
-    - pmm: genre
+    - default: actor
+    - default: genre
     overlay_files:
-    - pmm: ribbon
-    - pmm: ratings
+    - default: ribbon
+    - default: ratings
 ```
 
 ## Customizing Configs
@@ -47,7 +47,7 @@ For overlays, this example changes the ratings overlay to apply to episodes rath
 libraries:
   TV Shows:
     collection_files:
-      - pmm: imdb
+      - default: imdb
         template_variables:
           use_popular: false
           use_lowest: false
@@ -55,12 +55,12 @@ libraries:
           visible_home_top: true
           visible_shared_top: true
     overlay_files:
-      - pmm: ratings
+      - default: ratings
         template_variables:
           builder_level: episode
 ```
 
-Each file has a page on the wiki showing the available `template_variables` for each file. For example the default `pmm: ratings` has a page [here](overlays/ratings.md).
+Each file has a page on the wiki showing the available `template_variables` for each file. For example the default `default: ratings` has a page [here](overlays/ratings.md).
 
 **In addition to the defined `template_variables` almost all default Collection and Overlay files have access to their respective [Collection](collection_variables.md)/[Overlay](overlay_variables.md) Shared Variables.**
 

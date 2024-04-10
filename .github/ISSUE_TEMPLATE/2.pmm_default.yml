@@ -1,5 +1,5 @@
-name: PMM Default Issue
-description: Post here if there is an issue with the pmm defaults or for missing images for pmm default overlays or posters.
+name: Komet Default Issue
+description: Post here if there is an issue with the komet defaults or for missing images for komet default overlays or posters.
 title: '[Defaults]: '
 labels: ['defaults']
 assignees: ['meisnate12', 'bullmoose20', 'YozoraXCII']
@@ -9,8 +9,8 @@ body:
     attributes:
       value: >
         **THIS IS NOT THE PLACE TO ASK FOR SUPPORT OR FEATURE REQUESTS!**
-        Please use [Plex Meta Manager Discord](https://metamanager.wiki/en/latest/discord/) and post your question under the `pmm-support` channel for support issues.
-        Please use [Plex Meta Manager Features](https://features.metamanager.wiki/) to request and upvote features.
+        Please use [Komet Discord](https://metamanager.wiki/en/latest/discord/) and post your question under the `pmm-support` channel for support issues.
+        Please use [Komet Features](https://features.metamanager.wiki/) to request and upvote features.
   - type: input
     id: file
     attributes:

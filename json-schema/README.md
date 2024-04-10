@@ -1,4 +1,4 @@
-JSON schemas for PMM YAML files
+JSON schemas for Komet YAML files
 
 limitations:
 

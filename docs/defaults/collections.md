@@ -1,8 +1,8 @@
 # Collection Defaults
 
-There are many Default Collection Files built into PMM itself which offer an easy-to-use and customizable set of Collections that the user can achieve without having to worry about creating the files that makes the collections possible.
+There are many Default Collection Files built into Komet itself which offer an easy-to-use and customizable set of Collections that the user can achieve without having to worry about creating the files that makes the collections possible.
 
-This is the simplest way to create Collections using Plex Meta Manager.
+This is the simplest way to create Collections using Komet.
 
 {%
    include-markdown "./collection_list.md"
@@ -11,14 +11,14 @@ This is the simplest way to create Collections using Plex Meta Manager.
 
 ## Configurations
 
-To run a default pmm Metadata file you can simply add it to your `collection_files` using `pmm` like so:
+To run a default KometMetadata file you can simply add it to your `collection_files` using `default` like so:
 
 ```yaml
 libraries:
   Movies:
     collection_files:
-      - pmm: actor
-      - pmm: genre
+      - default: actor
+      - default: genre
 ```
 
 ## Separators
@@ -44,8 +44,8 @@ libraries:
     template_variables:
       use_separator: false
     collection_files:
-      - pmm: actor
-      - pmm: genre
+      - default: actor
+      - default: genre
 ```
 
 ## Collection Section Order
@@ -54,7 +54,7 @@ All Default Collection Files have a `collection_section` attribute. These attrib
 
 For example: `collection_section: 01` translates to `sort_title: "!<<collection_section>><<pre>><<order_<<key>>>><<sort>>"` and so for `genre` if you have a `Fantasy` collection, plex is going to show `!06_Fantasy`
 
-This is the default PMM collection ordering:
+This is the default Komet collection ordering:
 
 | Collection           | Collection Section |
 |:---------------------|:-------------------|
@@ -117,7 +117,7 @@ This example disables two keys, which will prevent those collections from being 
 libraries:
   TV Shows:
     collection_files:
-      - pmm: imdb
+      - default: imdb
         template_variables:
           use_popular: false
           use_lowest: false
@@ -126,7 +126,7 @@ libraries:
           visible_shared_top: true
 ```
 
-Each file has a page on the wiki showing the available `template_variables` for each file. For example the default `pmm: genre` has a page [here](both/genre.md).
+Each file has a page on the wiki showing the available `template_variables` for each file. For example the default `default: genre` has a page [here](both/genre.md).
 
 **In addition to the defined `template_variables` almost all default Metadata files have access to the [Shared Variables](collection_variables.md).**
 
@@ -138,7 +138,7 @@ For example if you want yearly oscar collections that go back 10 years instead o
 libraries:
   Movies:
     collection_files:
-      - pmm: oscars
+      - default: oscars
         template_variables:
           radarr_add_missing: true
           data:
@@ -146,13 +146,13 @@ libraries:
             ending: latest
 ```
 
-Or maybe you want to change the number of actor collections made using pmm: actor.
+Or maybe you want to change the number of actor collections made using default: actor.
 
 ```yaml
 libraries:
   Movies:
     overlay_files:
-      - pmm: actor
+      - default: actor
         template_variables:
           collection_mode: hide
           data:
@@ -160,13 +160,13 @@ libraries:
             limit: 50
 ```
 
-Or maybe you want to change the collection sort order of the genre collections using pmm: genre.
+Or maybe you want to change the collection sort order of the genre collections using default: genre.
 
 ```yaml
 libraries:
   Movies:
     collection_files:
-      - pmm: genre
+      - default: genre
         template_variables:
           collection_section: 11
 ```
@@ -188,11 +188,11 @@ Alternatively it can be turned off individually per git file:
 libraries:
   LIBRARYNAME:
     collection_files:
-      - pmm: <file1>    # separator is disabled
+      - default: <file1>    # separator is disabled
         template_variables:
           use_separator: false
-      - pmm: <file2>    # separator is enabled by default
-      - pmm: <file3>    # separator is disabled
+      - default: <file2>    # separator is enabled by default
+      - default: <file3>    # separator is disabled
         template_variables:
           use_separator: false
 ```
