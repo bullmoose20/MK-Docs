@@ -44,7 +44,7 @@ scheduled_boolean = ["visible_library", "visible_home", "visible_shared"]
 string_details = ["sort_title", "content_rating", "name_mapping"]
 ignored_details = [
     "smart_filter", "smart_label", "smart_url", "run_again", "schedule", "sync_mode", "template", "variables", "test", "suppress_overlays",
-    "delete_not_scheduled", "tmdb_person", "build_collection", "collection_order", "builder_level", "overlay", "pmm_poster",
+    "delete_not_scheduled", "tmdb_person", "build_collection", "collection_order", "builder_level", "overlay", "komet_poster",
     "validate_builders", "libraries", "sync_to_users", "exclude_users", "collection_name", "playlist_name", "name", "limit",
     "blank_collection", "allowed_library_types", "run_definition", "delete_playlist", "ignore_blank_results", "only_run_on_create",
     "delete_collections_named", "tmdb_person_offset", "append_label", "key_name", "translation_key", "translation_prefix", "tmdb_birthday"
@@ -479,14 +479,14 @@ class CollectionBuilder:
 
         self.posters = {}
         self.backgrounds = {}
-        if not self.overlay and "pmm_poster" in methods:
+        if not self.overlay and "komet_poster" in methods:
             logger.debug("")
-            logger.debug("Validating Method: pmm_poster")
-            if self.data[methods["pmm_poster"]] is None:
-                logger.error(f"{self.Type} Error: pmm_poster attribute is blank")
-            logger.debug(f"Value: {data[methods['pmm_poster']]}")
+            logger.debug("Validating Method: komet_poster")
+            if self.data[methods["komet_poster"]] is None:
+                logger.error(f"{self.Type} Error: komet_poster attribute is blank")
+            logger.debug(f"Value: {data[methods['komet_poster']]}")
             try:
-                self.posters["pmm_poster"] = PMMImage(self.config, self.data[methods["pmm_poster"]], "pmm_poster", playlist=self.playlist)
+                self.posters["komet_poster"] = PMMImage(self.config, self.data[methods["komet_poster"]], "komet_poster", playlist=self.playlist)
             except Failed as e:
                 logger.error(e)
 
@@ -3356,9 +3356,9 @@ class CollectionBuilder:
             remove_tags = self.details["label.remove"] if "label.remove" in self.details else None
             sync_tags = self.details["label.sync"] if "label.sync" in self.details else None
             if sync_tags:
-                sync_tags.append("PMM")
+                sync_tags.append("Komet")
             else:
-                add_tags.append("PMM")
+                add_tags.append("Komet")
             tag_results = self.library.edit_tags('label', self.obj, add_tags=add_tags, remove_tags=remove_tags, sync_tags=sync_tags, do_print=False)
             if tag_results:
                 batch_display += f"\n{tag_results}"

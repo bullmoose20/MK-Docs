@@ -58,13 +58,13 @@ class Webhooks:
                                         yaml.data["webhooks"][hook_cat] = None
                                 if changed:
                                     yaml.save()
-                        remove_from_config("PMM updated trigger is not enabled", "changes")
-                        remove_from_config("PMM created trigger is not enabled", "changes")
-                        remove_from_config("PMM deleted trigger is not enabled", "changes")
-                        remove_from_config("PMM failure trigger is not enabled", "error")
-                        remove_from_config("PMM start/complete trigger is not enabled", "run_start")
-                        remove_from_config("PMM start/complete trigger is not enabled", "run_end")
-                        remove_from_config("PMM app updates trigger is not enabled", "version")
+                        remove_from_config("Komet updated trigger is not enabled", "changes")
+                        remove_from_config("Komet created trigger is not enabled", "changes")
+                        remove_from_config("Komet deleted trigger is not enabled", "changes")
+                        remove_from_config("Komet failure trigger is not enabled", "error")
+                        remove_from_config("Komet start/complete trigger is not enabled", "run_start")
+                        remove_from_config("Komet start/complete trigger is not enabled", "run_end")
+                        remove_from_config("Komet app updates trigger is not enabled", "version")
                     if "result" in response_json and response_json["result"] == "error" and "details" in response_json and "response" in response_json["details"]:
                         raise Failed(f"Notifiarr Error: {response_json['details']['response']}")
                     if response.status_code >= 400 or ("result" in response_json and response_json["result"] == "error"):

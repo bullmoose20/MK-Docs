@@ -61,7 +61,7 @@ pip install -r requirements.txt --ignore-installed
 At this point Komet has been installed, and you can verify installation by running:
 
 ```shell
-python plex_meta_manager.py
+python komet.py
 ```
 
 ## Docker Install Overview

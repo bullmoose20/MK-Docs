@@ -30,7 +30,7 @@ arguments = {
     "debug": {"args": "db", "type": "bool", "help": "Run with Debug Logs Reporting to the Command Window"},
     "trace": {"args": "tr", "type": "bool", "help": "Run with extra Trace Debug Logs"},
     "log-requests": {"args": ["lr", "log-request"], "type": "bool", "help": "Run with all Requests printed"},
-    "timeout": {"args": "ti", "type": "int", "default": 180, "help": "PMM Global Timeout (Default: 180)"},
+    "timeout": {"args": "ti", "type": "int", "default": 180, "help": "Komet Global Timeout (Default: 180)"},
     "collections-only": {"args": ["co", "collection-only"], "type": "bool", "help": "Run only collection files"},
     "metadata-only": {"args": ["mo", "metadatas-only"], "type": "bool", "help": "Run only metadata files"},
     "playlists-only": {"args": ["po", "playlist-only"], "type": "bool", "help": "Run only playlist files"},
@@ -103,13 +103,13 @@ static_envs = []
 run_args = {}
 for arg_key, arg_data in arguments.items():
     temp_args = arg_data["args"] if isinstance(arg_data["args"], list) else [arg_data["args"]]
-    final_vars = [f"PMM_{arg_key.replace('-', '_').upper()}"] + [f"PMM_{a.replace('-', '_').upper()}" for a in temp_args if len(a) > 2]
+    final_vars = [f"KOMET_{arg_key.replace('-', '_').upper()}"] + [f"KOMET_{a.replace('-', '_').upper()}" for a in temp_args if len(a) > 2]
     run_args[arg_key] = get_env(final_vars, getattr(args, arg_key.replace("-", "_")), arg_bool=arg_data["type"] == "bool", arg_int=arg_data["type"] == "int")
 
 env_version = get_env("BRANCH_NAME", "master")
-is_docker = get_env("PMM_DOCKER", False, arg_bool=True)
-is_linuxserver = get_env("PMM_LINUXSERVER", False, arg_bool=True)
-is_lxml = get_env("PMM_LXML", False, arg_bool=True)
+is_docker = get_env("KOMET_DOCKER", False, arg_bool=True)
+is_linuxserver = get_env("KOMET_LINUXSERVER", False, arg_bool=True)
+is_lxml = get_env("KOMET_LXML", False, arg_bool=True)
 
 secret_args = {}
 plex_url = None
@@ -117,24 +117,27 @@ plex_token = None
 i = 0
 while i < len(unknown):
     test_var = str(unknown[i]).lower().replace("_", "-")
-    if test_var.startswith("--pmm-") or test_var in ["-pu", "--plex-url", "-pt", "--plex-token"]:
+    if test_var.startswith(("--pmm-", "--komet-")) or test_var in ["-pu", "--plex-url", "-pt", "--plex-token"]:
         if test_var in ["-pu", "--plex-url"]:
             plex_url = str(unknown[i + 1])
         elif test_var in ["-pt", "--plex-token"]:
             plex_token = str(unknown[i + 1])
-        else:
+        elif test_var.startswith("--pmm-"):
             secret_args[test_var[6:]] = str(unknown[i + 1])
+        else:
+            secret_args[test_var[8:]] = str(unknown[i + 1])
         i += 1
     i += 1
 
-plex_url = get_env("PMM_PLEX_URL", plex_url)
-plex_token = get_env("PMM_PLEX_TOKEN", plex_token)
+plex_url = get_env("KOMET_PLEX_URL", plex_url)
+plex_token = get_env("KOMET_PLEX_TOKEN", plex_token)
 
 env_secrets = []
 for env_name, env_data in os.environ.items():
     if str(env_name).upper().startswith("PMM_") and str(env_name).upper() not in static_envs:
         secret_args[str(env_name).lower()[4:].replace("_", "-")] = env_data
-
+    elif str(env_name).upper().startswith("KOMET_") and str(env_name).upper() not in static_envs:
+        secret_args[str(env_name).lower()[6:].replace("_", "-")] = env_data
 run_arg = " ".join([f'"{s}"' if " " in s else s for s in sys.argv[:]])
 for _, sv in secret_args.items():
     if sv in run_arg:
@@ -165,7 +168,7 @@ elif not os.path.exists(os.path.join(default_dir, "config.yml")):
     print(f"Config Error: config not found at {os.path.abspath(default_dir)}")
     sys.exit(0)
 
-logger = MyLogger("Plex Meta Manager", default_dir, run_args["width"], run_args["divider"][0], run_args["ignore-ghost"],
+logger = MyLogger("Komet", default_dir, run_args["width"], run_args["divider"][0], run_args["ignore-ghost"],
                   run_args["tests"] or run_args["debug"], run_args["trace"], run_args["log-requests"])
 
 from modules import util
@@ -226,12 +229,22 @@ def start(attrs):
     logger.add_main_handler()
     logger.separator()
     logger.info("")
-    logger.info_center(" ____  _             __  __      _          __  __                                   ")
-    logger.info_center("|  _ \\| | _____  __ |  \\/  | ___| |_ __ _  |  \\/  | __ _ _ __   __ _  __ _  ___ _ __ ")
-    logger.info_center("| |_) | |/ _ \\ \\/ / | |\\/| |/ _ \\ __/ _` | | |\\/| |/ _` | '_ \\ / _` |/ _` |/ _ \\ '__|")
-    logger.info_center("|  __/| |  __/>  <  | |  | |  __/ || (_| | | |  | | (_| | | | | (_| | (_| |  __/ |   ")
-    logger.info_center("|_|   |_|\\___/_/\\_\\ |_|  |_|\\___|\\__\\__,_| |_|  |_|\\__,_|_| |_|\\__,_|\\__, |\\___|_|   ")
-    logger.info_center("                                                                     |___/           ")
+    logger.info_center("                                        ██                                      ")
+    logger.info_center("                                      ███                                       ")
+    logger.info_center("                                ██ █████                                        ")
+    logger.info_center("                              ████████                                          ")
+    logger.info_center("                         ████████████ ██                                        ")
+    logger.info_center("                       ████████████████                                         ")
+    logger.info_center("                     █████████████████                                          ")
+    logger.info_center("                   ██████████████████                                           ")
+    logger.info_center("████    █████     ███████████████████           █████  ███████████ █████████████")
+    logger.info_center("████  ██████    ███       ██████████   █       ██████  ███████████ █████████████")
+    logger.info_center("████ █████     ██          ████████  ████     ███████  █████            ████    ")
+    logger.info_center("█████████     ██            █████   ██████   ████████  ███████████      ████    ")
+    logger.info_center("█████████     ██            ████   ██████████████████  ███████████      ████    ")
+    logger.info_center("████ ██████    ██           ██     ████ █████████████  █████            ████    ")
+    logger.info_center("████  ██████    ███       ███      ████  █████  █████  ████████████     ████    ")
+    logger.info_center("████    █████     █████████        ████   ███   █████  ████████████     ████    ")
     if is_lxml:
         system_ver = "lxml Docker"
     elif is_linuxserver:
@@ -285,12 +298,12 @@ def start(attrs):
     for akey, adata in arguments.items():
         if isinstance(adata["help"], str):
             ext = '"' if adata["type"] == "str" and run_args[akey] not in [None, "None"] else ""
-            logger.debug(f"--{akey} (PMM_{akey.replace('-', '_').upper()}): {ext}{run_args[akey]}{ext}")
+            logger.debug(f"--{akey} (KOMET_{akey.replace('-', '_').upper()}): {ext}{run_args[akey]}{ext}")
     logger.debug("")
     if secret_args:
-        logger.debug("PMM Secrets Read:")
+        logger.debug("Komet Secrets Read:")
         for sec in secret_args:
-            logger.debug(f"--pmm-{sec} (PMM_{sec.upper().replace('-', '_')}): (redacted)")
+            logger.debug(f"--komet-{sec} (KOMET_{sec.upper().replace('-', '_')}): (redacted)")
         logger.debug("")
     logger.separator(f"Starting {start_type}Run")
     config = None
@@ -890,7 +903,7 @@ def run_collection(config, library, metadata, requested_collections):
             library.notify(e, collection=mapping_name)
             logger.stacktrace()
             logger.error(e)
-            library.status[str(mapping_name)]["status"] = "PMM Failure"
+            library.status[str(mapping_name)]["status"] = "Komet Failure"
             library.status[str(mapping_name)]["errors"].append(e)
         except Exception as e:
             library.notify(f"Unknown Error: {e}", collection=mapping_name)
@@ -1129,4 +1142,4 @@ if __name__ == "__main__":
                         logger.error(f"Time Error: {valid_times}")
                 time.sleep(60)
     except KeyboardInterrupt:
-        logger.separator("Exiting Plex Meta Manager")
+        logger.separator("Exiting Komet")

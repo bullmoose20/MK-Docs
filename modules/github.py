@@ -6,7 +6,7 @@ logger = util.logger
 
 raw_url = "https://raw.githubusercontent.com"
 base_url = "https://api.github.com"
-pmm_base = f"{base_url}/repos/meisnate12/Plex-Meta-Manager"
+komet_base = f"{base_url}/repos/meisnate12/Plex-Meta-Manager"
 configs_raw_url = f"{raw_url}/meisnate12/Plex-Meta-Manager-Configs"
 
 class GitHub:
@@ -48,11 +48,11 @@ class GitHub:
         return {i["path"]: i for i in self._requests(tree_url, f"No tree found at {tree_url}")["tree"]}
 
     def latest_release_notes(self):
-        return self._requests(f"{pmm_base}/releases/latest")["body"]
+        return self._requests(f"{komet_base}/releases/latest")["body"]
 
     def get_commits(self, dev_version, nightly=False):
-        master_sha = self._requests(f"{pmm_base}/commits/master")["sha"]
-        response = self._requests(f"{pmm_base}/commits", params={"sha": "nightly" if nightly else "develop"})
+        master_sha = self._requests(f"{komet_base}/commits/master")["sha"]
+        response = self._requests(f"{komet_base}/commits", params={"sha": "nightly" if nightly else "develop"})
         commits = []
         for commit in response:
             if commit["sha"] == master_sha:
@@ -68,7 +68,7 @@ class GitHub:
     def config_tags(self):
         if not self._config_tags:
             try:
-                self._config_tags = [r["ref"][11:] for r in self._requests(f"{pmm_base}-Configs/git/refs/tags")]
+                self._config_tags = [r["ref"][11:] for r in self._requests(f"{komet_base}-Configs/git/refs/tags")]
             except TypeError:
                 pass
         return self._config_tags
