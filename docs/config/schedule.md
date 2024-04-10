@@ -1,14 +1,14 @@
-# Scheduling Parts of Komet
+# Scheduling Parts of Kometa
 
-Komet allows you to schedule libraries, files, overlays, operations, and more so that runs can be tailored 
+Kometa allows you to schedule libraries, files, overlays, operations, and more so that runs can be tailored 
 to suit your needs.
 
 This is particularly handy for users who have a lot of libraries or run a lot of Metadata/Operations on their libraries.
 
 ### IMPORTANT:
 
-These schedules do not trigger Komet to run; they control what Komet will do if it happens to be running at the scheduled 
-time. `weekly(sunday)`, for example, does not mean "run Komet on Sunday to do this thing"; it means "If Komet is running, 
+These schedules do not trigger Kometa to run; they control what Kometa will do if it happens to be running at the scheduled 
+time. `weekly(sunday)`, for example, does not mean "run Kometa on Sunday to do this thing"; it means "If Kometa is running, 
 and it's Sunday, do this thing".
 
 The scheduling options are:
@@ -26,7 +26,7 @@ The scheduling options are:
 | All          | Requires that all comma separated scheduling options inside its brackets be meet in order to run                    | all[Options]                                       | `all[weekly(sunday), hourly(17)]`                                    |
 
 * `daily` is the default when `schedule` is not specified.
-* You can run the script multiple times per day but using the `--time` command line argument detailed on the [Run Commands & Environmental Variables Page](../komet/environmental.md).
+* You can run the script multiple times per day but using the `--time` command line argument detailed on the [Run Commands & Environmental Variables Page](../kometa/environmental.md).
 * You can have multiple scheduling options as a list.
 * You can use the `delete_not_scheduled` setting to delete Collections that are skipped due to not being scheduled.
 
@@ -120,7 +120,7 @@ The scheduling options are:
     ???+ example "Example"
 
         Below is an example of a collection which has been scheduled to run on a Sunday. In this scenario, if you run 
-        Komet on a Monday, this collection will be skipped but any other collections which do not have a scheduled defined 
+        Kometa on a Monday, this collection will be skipped but any other collections which do not have a scheduled defined 
         will be run.
         
         ```yaml
@@ -180,7 +180,7 @@ The scheduling options are:
     ???+ example "Example"
 
         In this example, the collection will be pinned to your home screen for the month of December and on January 1st
-        will no longer be pinned (you must run Komet on 1st January for the removal of the pin to happen)
+        will no longer be pinned (you must run Kometa on 1st January for the removal of the pin to happen)
         
         ```yaml
         collections:

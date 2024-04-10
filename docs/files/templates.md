@@ -383,10 +383,10 @@ collections:
 ```
 
 1. This is wrapped in quotes because it contains a character [`!`] which has 
-[syntactic meaning in YAML files](../komet/yaml.md#string-literals). This "quoting special characters" is a general YAML 
+[syntactic meaning in YAML files](../kometa/yaml.md#string-literals). This "quoting special characters" is a general YAML 
 requirement, not something specific to `sort_title`.
 2. This is wrapped in quotes because it contains a character [`!`] which has 
-[syntactic meaning in YAML files](../komet/yaml.md#string-literals). This "quoting special characters" is a general YAML requirement, not something 
+[syntactic meaning in YAML files](../kometa/yaml.md#string-literals). This "quoting special characters" is a general YAML requirement, not something 
 specific to `sort_title`.
 
 You can continue adding definitions this way, but there's a lot of repetition there. Both of these collections have the 
@@ -495,5 +495,5 @@ collections:
 ```
 
 Check out the example files in the 
-[Komet Configs Repository](https://github.com/meisnate12/Plex-Meta-Manager-Configs/tree/master/meisnate12) 
+[Kometa Configs Repository](https://github.com/meisnate12/Plex-Meta-Manager-Configs/tree/master/meisnate12) 
 for more uses and examples.

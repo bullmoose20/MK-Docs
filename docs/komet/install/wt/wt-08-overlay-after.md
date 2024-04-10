@@ -1,4 +1,4 @@
-While it runs this time you should see the previous collections go by pretty quickly, since they aren't changing, and then a lot of logging as Komet decides which overlays apply to which movies.
+While it runs this time you should see the previous collections go by pretty quickly, since they aren't changing, and then a lot of logging as Kometa decides which overlays apply to which movies.
 
 This may take quite a while depending on the size of this library.
 

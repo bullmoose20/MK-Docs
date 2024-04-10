@@ -2,9 +2,9 @@
 search:
   boost: 2
 ---
-# Komet Ratings Explained
+# Kometa Ratings Explained
 
-How do ratings and ratings overlays work in Komet? This Guide will walk through some basics of how ratings work in conjunction with Komet.
+How do ratings and ratings overlays work in Kometa? This Guide will walk through some basics of how ratings work in conjunction with Kometa.
 
 <h4>Basics</h4>
 
@@ -12,7 +12,7 @@ Each thing in Plex that can have a rating [movie, show, episode, album, track] h
 
 The Critic and Audience ratings are typically managed by Plex, pulling from whatever you specify as the ratings source for the library; this is what determines the images that are displayed in the Plex UI.  The User rating is the star rating assigned by you to the item.
 
-Komet can insert a broader range of values into those fields than Plex supports natively, then it can leverage those values in overlays and the like.
+Kometa can insert a broader range of values into those fields than Plex supports natively, then it can leverage those values in overlays and the like.
 
 It's doing this "behind Plex's back", so there can be some seeming inconsistencies in the way things are displayed in the UI.  This guide is intended to clear up some of these things.
 
@@ -55,16 +55,16 @@ Now let's add rating overlays to the poster. We're going to use the minimal conf
     
     * `rating3` is set to be the user rating and it's image (`rating3_image`) is set to IMDb just because we have to pick something.
     
-    * `reapply_overlays` is set to true to ensure that Komet always updates the overlays as we run things.
+    * `reapply_overlays` is set to true to ensure that Kometa always updates the overlays as we run things.
     
     * We do not recommend using `reapply_overlays: true` consistently in a live/production environment, make sure to switch this back to `false` when finished.
 
 
-After Komet is run on this library, you'll get this result:
+After Kometa is run on this library, you'll get this result:
 
    ![](images/ratings-03.png)
 
-* Komet has added those two ratings to the poster using the values already stored with the movie. The icons and values are correctly associated simply because we made sure they are in the config file.
+* Kometa has added those two ratings to the poster using the values already stored with the movie. The icons and values are correctly associated simply because we made sure they are in the config file.
 
 * The two ratings match, and there is no IMDb rating icon on the poster since there is no user rating. (no star rating on the right)
 
@@ -72,17 +72,17 @@ Now we're going to add a user rating by clicking the middle star on the right fo
 
    ![](images/ratings-04.png)
 
-Now just run Komet again without changing anything else and the user rating overlay will appear:
+Now just run Kometa again without changing anything else and the user rating overlay will appear:
 
    ![](images/ratings-05.png)
 
-* Komet added the third rating overlay, since there is now a value in the user rating. 
+* Kometa added the third rating overlay, since there is now a value in the user rating. 
 * It gave it an IMDb icon because we told it to in the config file. ([Why does it say 250 instead of IMDb?](#why-do-different-images-appear-for-the-same-source))
 * It's displaying 6.0 since 3 stars on a 5-star scale is 60%.
 
 #### Change Rating Image
 
-You and I both know that the IMDb rating isn't 6.0, but Komet is just doing what it's told. Nobody but us humans know where those numbers come from. As an example, let's change the icons to "prove" that Komet doesn't know or care:
+You and I both know that the IMDb rating isn't 6.0, but Kometa is just doing what it's told. Nobody but us humans know where those numbers come from. As an example, let's change the icons to "prove" that Kometa doesn't know or care:
 
 ??? example "Updated config (click to expand)"
 
@@ -110,8 +110,8 @@ When the above is run you see this result:
    ![](images/ratings-06.png)
 
 * Three different ratings on the poster, all IMDb; All while the Plex UI still shows RT icons.
-* Note that the existing RT ratings numbers (`93%` and `96%`) display on the poster as `9.3` and `9.6`. This is happening because we just told Komet that those ratings were IMDb, and IMDb ratings are on a 1-10 scale. Komet doesn't "know" where those numbers are from, it just does what it's told to do and places the value (critic/audience/user) in that rating box. 
-* That first overlay showing an IMDb rating of `9.3` is not evidence that Komet pulled the wrong IMDb rating; it just shows that it has been told to display the number in the critic rating box (whatever that number is) as an IMDb rating. All three of those overlays mean the same thing; Komet read a number from a field and stuck it on the poster formatted as requested.
+* Note that the existing RT ratings numbers (`93%` and `96%`) display on the poster as `9.3` and `9.6`. This is happening because we just told Kometa that those ratings were IMDb, and IMDb ratings are on a 1-10 scale. Kometa doesn't "know" where those numbers are from, it just does what it's told to do and places the value (critic/audience/user) in that rating box. 
+* That first overlay showing an IMDb rating of `9.3` is not evidence that Kometa pulled the wrong IMDb rating; it just shows that it has been told to display the number in the critic rating box (whatever that number is) as an IMDb rating. All three of those overlays mean the same thing; Kometa read a number from a field and stuck it on the poster formatted as requested.
 
 #### Update User Ratings
 
@@ -188,7 +188,7 @@ Running the above will put the Trakt User's personal rating into the critic box 
 * Audience rating matches the TMDb rating of `82%`.
 * Note how the values have changed dramatically and all match between the overlay, plex ratings, and external sites.
 
-The log will show Komet updating those values.
+The log will show Kometa updating those values.
 
 ```
 | Processing: 1/1 Star Wars: Episode IV - A New Hope     |
@@ -197,7 +197,7 @@ The log will show Komet updating those values.
 | Critic Rating | 6.0                                    |
 ```
 
-* And the poster reflects those numbers, though with the wrong icons, since that's what **Komet has been told to do**.
+* And the poster reflects those numbers, though with the wrong icons, since that's what **Kometa has been told to do**.
 * The Plex UI still shows RT icons, and it always will, even though the numbers displayed are no longer RT ratings.  Plex has no idea.
 
 #### Use Trakt Rating
@@ -274,7 +274,7 @@ This config file is the **only linkage** between the ratings we are setting and 
 
 You can see that the Plex UI still shows the RT icons with the Trakt and TMDb numbers we put into the relevant fields, since again, it has no idea those numbers got changed behind its back.
 
-The poster displays the correct icons because we told Komet to do so in the config file.
+The poster displays the correct icons because we told Kometa to do so in the config file.
 
 ## Why do different Images appear for the same source?
 

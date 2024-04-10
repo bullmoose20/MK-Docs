@@ -130,11 +130,11 @@ work. Any value not specified will use its default value if it has one if not it
 
 ??? abstract "Variable Lists (click to expand)"
 
-    * **File-Specific Template Variables** are variables available specifically for this Komet Defaults file.
+    * **File-Specific Template Variables** are variables available specifically for this Kometa Defaults file.
 
-    * **Overlay Template Variables** are additional variables shared across the Komet Overlay Defaults.
+    * **Overlay Template Variables** are additional variables shared across the Kometa Overlay Defaults.
 
-    * **Overlay Text Template Variables** are additional variables shared across the Komet Text Overlay Defaults.
+    * **Overlay Text Template Variables** are additional variables shared across the Kometa Text Overlay Defaults.
 
     ??? example "Default Template Variable Values (click to expand)"
 

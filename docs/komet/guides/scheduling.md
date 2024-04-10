@@ -2,52 +2,52 @@
 search:
   boost: 3
 ---
-# Scheduling Komet Runs Guide
+# Scheduling Kometa Runs Guide
 
-Komet is designed to be a background running service that "wakes up" and "sleeps" when it is scheduled to do so. By default unless configured using the [Time to Run Command](../environmental.md#time-to-run), Komet expects to run every day at 5AM local time.
+Kometa is designed to be a background running service that "wakes up" and "sleeps" when it is scheduled to do so. By default unless configured using the [Time to Run Command](../environmental.md#time-to-run), Kometa expects to run every day at 5AM local time.
 
 Whilst it is possible to have `python plex-meta-manager.py` running in an open window constantly, this is not the recommended approach as it relies on an always-open command window that can be obtrusive to the user.
 
-Instead, it is recommended to set an automated scheduling service so that Komet can run in the background when scheduled to without any visible impact to the user (other than the Plex libraries and playlists updating).
+Instead, it is recommended to set an automated scheduling service so that Kometa can run in the background when scheduled to without any visible impact to the user (other than the Plex libraries and playlists updating).
 
-**To control how individual parts of Komet are scheduled see the [Schedule detail](../../config/schedule.md)**
+**To control how individual parts of Kometa are scheduled see the [Schedule detail](../../config/schedule.md)**
 
 IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path to that directory on *your* system.
 
 === "Docker"
-    Using docker is the simplest and most robust solution to automating Komet scheduling.
+    Using docker is the simplest and most robust solution to automating Kometa scheduling.
     
-    When running Komet within docker, the session will resume after a system reboot (assuming Docker is set to start at system startup, which is the default) and Komet will run in the background at all times.
+    When running Kometa within docker, the session will resume after a system reboot (assuming Docker is set to start at system startup, which is the default) and Kometa will run in the background at all times.
     
-    There's a [Docker Walkthrough](../install/docker.md) with more detailed instructions on setting up Komet within docker. The simplest command to facilitate a docker run is:
+    There's a [Docker Walkthrough](../install/docker.md) with more detailed instructions on setting up Kometa within docker. The simplest command to facilitate a docker run is:
     
     ```
     docker run -d \
       --restart=unless-stopped \
       -e TZ=<TIMEZONE> \
       -v /path/to/config:/config:rw \
-      meisnate12/komet
+      meisnate12/kometa
     ```
-    Change `/path/to/config` to reflect where you've installed Komet.
+    Change `/path/to/config` to reflect where you've installed Kometa.
 
     TZ=<TIMEZONE>
-    <TIMEZONE> is replaced with your local timezone, or the timezone your device is in that is running Komet. For a list of available timezones, please see [Timezones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). You want to replace <TIMEZONE> with the TZ Database Name. 
+    <TIMEZONE> is replaced with your local timezone, or the timezone your device is in that is running Kometa. For a list of available timezones, please see [Timezones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). You want to replace <TIMEZONE> with the TZ Database Name. 
     
     ```
     TZ=America/New_York
     ```
     
-    This will run Komet in the background persistently until it is stopped by the user. While the docker container will be persistently running, Komet will not begin the run until the scheduled time.
+    This will run Kometa in the background persistently until it is stopped by the user. While the docker container will be persistently running, Kometa will not begin the run until the scheduled time.
     
-    Further customizations of the docker run command can be used to specify set times to run Komet, further information on this and other Run Commands can be found [here](../environmental.md#time-to-run)
+    Further customizations of the docker run command can be used to specify set times to run Kometa, further information on this and other Run Commands can be found [here](../environmental.md#time-to-run)
 
 === "Windows Task Scheduler"
     
-    Windows Task Scheduler is advised for those who followed the Windows instructions in the [Local Walkthrough Guides](../install/local.md) and/or do not want to run Komet within docker.
+    Windows Task Scheduler is advised for those who followed the Windows instructions in the [Local Walkthrough Guides](../install/local.md) and/or do not want to run Kometa within docker.
     
     Windows Task Scheduler allows the user to run commands and services at scheduled times and intervals.
     
-    There are two methods of running Komet:
+    There are two methods of running Kometa:
     * Single run Scheduled Task
       * Background run Scheduled Task
     
@@ -57,9 +57,9 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
     
     ### Background Run Scheduled Task
     
-    This method will start Komet at system startup and will keep Komet running in the background indefinitely. The user can then define set days and times for the Configuration File to be processed, and Komet will handle processing as and when required.
+    This method will start Kometa at system startup and will keep Kometa running in the background indefinitely. The user can then define set days and times for the Configuration File to be processed, and Kometa will handle processing as and when required.
     
-    This is the recommended approach as it allows the user additional control over how and when Komet processes.
+    This is the recommended approach as it allows the user additional control over how and when Kometa processes.
     
     If you don't specify a time, the script will run at 5AM each day.  You can change this with the [time-to-run](../environmental.md#time-to-run) runtime flag.
 
@@ -68,10 +68,10 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
         1. Create a `waiter.cmd` file by opening the text editor (i.e. Notepad, TextEdit) and pasting the following code:
         
            ```batch
-           cd C:\Users\USERNAMEHERE\Komet
-           .\komet-venv\Scripts\python .\plex_meta_manager.py
+           cd C:\Users\USERNAMEHERE\Kometa
+           .\kometa-venv\Scripts\python .\plex_meta_manager.py
            ```
-           * This will navigate to the Komet directory, then run Komet. At the scheduled time [as defined within Komet], Komet will process the Configuration File and will then wait until the next scheduled time.
+           * This will navigate to the Kometa directory, then run Kometa. At the scheduled time [as defined within Kometa], Kometa will process the Configuration File and will then wait until the next scheduled time.
         
         2. Open Task Scheduler by searching for it in the Start Menu or by opening the Run window (Windows + R) and typing taskschd.msc before hitting OK.
         
@@ -83,11 +83,11 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
         
               ![task-scheduler](images/scheduling-03-task-scheduler-main.png)
         
-        4. Give the task a name, in this example `Background Komet` and then select "Next"
+        4. Give the task a name, in this example `Background Kometa` and then select "Next"
         
               ![task-scheduler](images/scheduling-06-basic-task-02.png)
         
-        5. Choose the frequency that Komet should run and then select "Next", `When the computer starts` is recommended.
+        5. Choose the frequency that Kometa should run and then select "Next", `When the computer starts` is recommended.
         
               ![task-scheduler](images/scheduling-06-basic-task-03.png)
         
@@ -95,36 +95,36 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
         
               ![task-scheduler](images/scheduling-06-basic-task-04.png)
         
-        7. Click "Browse", Navigate to the Komet directory and choose `waiter.cmd`, which was created in Step 1, then select "Open".  NOTE: Your path may vary from the illustration here; navigate to the file you created and saved in Step 1.
+        7. Click "Browse", Navigate to the Kometa directory and choose `waiter.cmd`, which was created in Step 1, then select "Open".  NOTE: Your path may vary from the illustration here; navigate to the file you created and saved in Step 1.
         
               ![task-scheduler](images/scheduling-06-basic-task-05.png)
         
-        8. Copy the directory everything up to but not including `waiter.cmd` from the "Program/Script" field, and paste it into the "Start in" field.  This is `C:\User\IEUser\Komet-1.15.1` in the example below, then select "next".  NOTE: Your path may vary from the illustration or example.
+        8. Copy the directory everything up to but not including `waiter.cmd` from the "Program/Script" field, and paste it into the "Start in" field.  This is `C:\User\IEUser\Kometa-1.15.1` in the example below, then select "next".  NOTE: Your path may vary from the illustration or example.
         
               ![task-scheduler](images/scheduling-06-basic-task-06.png)
         
         9. Click "Finish".
         
-        10. Click "Task Schedule Library" on the left. The "Background Komet" task should be visible.
+        10. Click "Task Schedule Library" on the left. The "Background Kometa" task should be visible.
         
-        Komet will now launch at system startup, but will wait until the user-specified scheduled time before executing, and will then wait in the background for the next scheduled run.
+        Kometa will now launch at system startup, but will wait until the user-specified scheduled time before executing, and will then wait in the background for the next scheduled run.
         
     
     ### Single Run Scheduled Task
     
-    This method will start Komet at the desired time, immediately begin running the Configuration File and will then kill the process once it has completed.
+    This method will start Kometa at the desired time, immediately begin running the Configuration File and will then kill the process once it has completed.
     
     ??? abstract "Single Run Scheduled Task"
         
         1. Create a `runner.cmd` file by opening the text editor (i.e. Notepad, TextEdit) and pasting the following code:
         
            ```batch
-           cd C:\Users\USERNAMEHERE\Komet
-           .\komet-venv\Scripts\python .\plex_meta_manager.py --run
+           cd C:\Users\USERNAMEHERE\Kometa
+           .\kometa-venv\Scripts\python .\plex_meta_manager.py --run
            ```
-           * This will navigate to the Komet directory, then launch Komet using the `-r`/`--run` flag which triggers an immediate run. Once complete, Komet will exit.
+           * This will navigate to the Kometa directory, then launch Kometa using the `-r`/`--run` flag which triggers an immediate run. Once complete, Kometa will exit.
         
-              Save this file to C:\Users\USERNAMEHERE\Komet\runner.cmd`.
+              Save this file to C:\Users\USERNAMEHERE\Kometa\runner.cmd`.
         
         2. Open Task Scheduler by searching for it in the Start Menu or by opening the Run window (Windows + R) and typing taskschd.msc before hitting OK.
         
@@ -136,15 +136,15 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
         
               ![task-scheduler](images/scheduling-03-task-scheduler-main.png)
         
-        4. Give the task a name, in this example `Run Komet` and then select "Next"
+        4. Give the task a name, in this example `Run Kometa` and then select "Next"
         
               ![task-scheduler](images/scheduling-04-basic-task-01.png)
         
-        5. Choose the frequency that Komet should run and then select "Next", `Daily` is recommended.
+        5. Choose the frequency that Kometa should run and then select "Next", `Daily` is recommended.
         
               ![task-scheduler](images/scheduling-04-basic-task-02.png)
         
-        6. Specify the first date and time at which Komet should run and then select "Next".
+        6. Specify the first date and time at which Kometa should run and then select "Next".
         
               ![task-scheduler](images/scheduling-04-basic-task-03.png)
         
@@ -152,11 +152,11 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
         
               ![task-scheduler](images/scheduling-04-basic-task-04.png)
         
-        8. Click "Browse", Navigate to the Komet directory and choose `runner.cmd`, which was created in Step 1, then select "Open".
+        8. Click "Browse", Navigate to the Kometa directory and choose `runner.cmd`, which was created in Step 1, then select "Open".
         
               ![task-scheduler](images/scheduling-04-basic-task-05.png)
         
-        9. Copy the directory everything up to but not including `runner.cmd` from the "Program/Script" field, and paste it into the "Start in" field.  This is `C:\User\IEUser\Komet-1.15.1` in the example below, then select "next".
+        9. Copy the directory everything up to but not including `runner.cmd` from the "Program/Script" field, and paste it into the "Start in" field.  This is `C:\User\IEUser\Kometa-1.15.1` in the example below, then select "next".
         
               ![task-scheduler](images/scheduling-04-basic-task-06.png)
         
@@ -164,11 +164,11 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
         
            ![task-scheduler](images/scheduling-04-basic-task-07.png)
    
-        11. Click "Task Schedule Library" on the left. The Komet Run task should be visible.
+        11. Click "Task Schedule Library" on the left. The Kometa Run task should be visible.
         
            ![task-scheduler](images/scheduling-04-basic-task-09.png)
         
-        Komet will now run at the set date/time you selected in Step 6, and will run each subsequent day at the same time.
+        Kometa will now run at the set date/time you selected in Step 6, and will run each subsequent day at the same time.
 
 
 === "MacOS Launchd Service"
@@ -177,9 +177,9 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
 
     A couple examples; you'll want to edit the THINGS IN ALL CAPS to reflect your system.
 
-    Change `/path/to/komet` to reflect where you've installed Komet.
+    Change `/path/to/kometa` to reflect where you've installed Kometa.
 
-    Keep Komet running constantly, let it wait to do its thing at 3AM:
+    Keep Kometa running constantly, let it wait to do its thing at 3AM:
     
        ```
        <?xml version="1.0" encoding="UTF-8"?>
@@ -187,22 +187,22 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
        <plist version="1.0">
        <dict>
         <key>Label</key>
-        <string>com.YOUR_USERNAME.komet</string>
+        <string>com.YOUR_USERNAME.kometa</string>
         <key>ProgramArguments</key>
         <array>
             <string>sh</string>
             <string>-c</string>
-            <string>komet-venv/bin/python plex-meta-manager.py --config /path/to/komet-config/config.yml</string>
+            <string>kometa-venv/bin/python plex-meta-manager.py --config /path/to/kometa-config/config.yml</string>
         </array>
         <key>UserName</key>
         <string>YOUR_USERNAME</string>
         <key>WorkingDirectory</key>
-        <string>/PATH/TO/KOMET</string>
+        <string>/PATH/TO/KOMETA</string>
        </dict>
        </plist>
        ```  
 
-    Run Komet every 6 hours, running it immediately and letting it quit:
+    Run Kometa every 6 hours, running it immediately and letting it quit:
     
        ```
        <?xml version="1.0" encoding="UTF-8"?>
@@ -210,12 +210,12 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
        <plist version="1.0">
        <dict>
         <key>Label</key>
-        <string>com.YOUR_USERNAME.komet</string>
+        <string>com.YOUR_USERNAME.kometa</string>
         <key>ProgramArguments</key>
         <array>
             <string>sh</string>
             <string>-c</string>
-            <string>komet-venv/bin/python plex-meta-manager.py --config /path/to/komet-config/config.yml --run</string>
+            <string>kometa-venv/bin/python plex-meta-manager.py --config /path/to/kometa-config/config.yml --run</string>
         </array>
         <key>StartCalendarInterval</key>
         <array>
@@ -239,14 +239,14 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
         <key>UserName</key>
         <string>YOUR_USERNAME</string>
         <key>WorkingDirectory</key>
-        <string>/PATH/TO/KOMET</string>
+        <string>/PATH/TO/KOMETA</string>
        </dict>
        </plist>
        ```
 
        A useful tool to generate these plist files is [https://zerolaunched.herokuapp.com/](https://zerolaunched.herokuapp.com/)
     
-       Save this file as `com.YOUR_USERNAME.komet.plist` in `~/Library/LaunchAgents`.
+       Save this file as `com.YOUR_USERNAME.kometa.plist` in `~/Library/LaunchAgents`.
 
     2. Load and start the agent 🚀
 
@@ -256,13 +256,13 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
 
        ```
        cd ~/Library/LaunchAgents/
-       launchctl bootstrap gui/YOUR-USER-ID com.YOUR_USERNAME.komet.plist
+       launchctl bootstrap gui/YOUR-USER-ID com.YOUR_USERNAME.kometa.plist
        ```
 
      And then kick-start it with:
 
        ```
-       launchctl kickstart -k gui/YOUR-USER-ID/com.YOUR_USERNAME.komet
+       launchctl kickstart -k gui/YOUR-USER-ID/com.YOUR_USERNAME.kometa
        ```
     
        Note that this command uses the *label*, not the plist filename. The -k options means that the service will first be killed, if running.
@@ -274,15 +274,15 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
     1. Create the service file:
     
        ```bash
-       sudo nano /etc/systemd/system/komet.service
+       sudo nano /etc/systemd/system/kometa.service
        ```
     
        Put the following into the file:
        ```
-       # /etc/systemd/system/komet.service
+       # /etc/systemd/system/kometa.service
     
        [Unit]
-       Description=Komet
+       Description=Kometa
        After=network-online.target
     
        [Service]
@@ -291,8 +291,8 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
        Type=simple
        Environment=LC_ALL=C.UTF-8
        Environment=LANG=C.UTF-8
-       WorkingDirectory=/path/to/komet
-       ExecStart=/path/to/komet/komet-venv/bin/python /path/to/komet/plex_meta_manager.py
+       WorkingDirectory=/path/to/kometa
+       ExecStart=/path/to/kometa/kometa-venv/bin/python /path/to/kometa/plex_meta_manager.py
        Restart=always
        RestartSec=10
     
@@ -302,9 +302,9 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
     
        Change `USER` and `GROUP` to reflect your user and group.
     
-       Change `/path/to/komet` to reflect where you've installed Komet.
+       Change `/path/to/kometa` to reflect where you've installed Kometa.
     
-       NOTE: This is assuming you created the `komet-venv` virtual environment as described in the [Local Walkthrough](../install/local.md)
+       NOTE: This is assuming you created the `kometa-venv` virtual environment as described in the [Local Walkthrough](../install/local.md)
     
        Save and close the file.
     
@@ -324,7 +324,7 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
 === "cron"
     The cron utility is used for running scripts and commands at regular intervals, and at specific times and dates. It’s built into most Operating Systems (namely Linux and Mac), and provides a very useful way to schedule tasks on your server. It also works for running Docker commands on a schedule.
     
-    1. Decide when you want to run Komet
+    1. Decide when you want to run Kometa
     
        `cron` needs a specific syntax to express schedules.  A cron schedule is something like "Every Tuesday at 4" or "5 minutes past every other hour".
     
@@ -335,13 +335,13 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
        A command you could use for this:
     
        ```
-       cd /path/to/plex-meta-manager && komet-venv/bin/python plex_meta_manager.py --config config/config.yml --run
+       cd /path/to/plex-meta-manager && kometa-venv/bin/python plex_meta_manager.py --config config/config.yml --run
        ```
-       Change `/path/to/plex-meta-manager` to reflect where you've installed Komet.
+       Change `/path/to/plex-meta-manager` to reflect where you've installed Kometa.
 
        This is an example, which does nothing but run the script immediately.  If you want to add additional flags you can do so.
 
-       NOTE: This is assuming you created the `komet-venv` virtual environment as described in the [Local Walkthrough](../install/local.md)
+       NOTE: This is assuming you created the `kometa-venv` virtual environment as described in the [Local Walkthrough](../install/local.md)
     
     2. Open the system crontab for editing:
     

@@ -11,6 +11,6 @@ You should see the new collection:
 
 ![Finished Collections](../images/wt-finished.png)
 
-When you click into each, you’ll see the movies that Komet added to each collection.
+When you click into each, you’ll see the movies that Kometa added to each collection.
 
-Each time you run the script, new movies that match the collection definitions will be added.  For example, if you don’t have “The ShawShank Redemption” now, when you download it and run Komet again it will be added to the IMDB 250 collection.
+Each time you run the script, new movies that match the collection definitions will be added.  For example, if you don’t have “The ShawShank Redemption” now, when you download it and run Kometa again it will be added to the IMDB 250 collection.

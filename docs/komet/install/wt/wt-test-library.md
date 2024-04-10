@@ -1,4 +1,4 @@
-While going through this process, Komet is going to load the movies in your library, create some collections, and apply some overlays.  If you have a large library, this will be very time-consuming.
+While going through this process, Kometa is going to load the movies in your library, create some collections, and apply some overlays.  If you have a large library, this will be very time-consuming.
 
 For learning and testing, you would be well-advised to create a small test library of a reasonable size, where reasonable it probably below a thousand.
 

@@ -6,9 +6,9 @@ search:
 # Library Attributes
 
 Within the [Configuration File](overview.md), the `libraries` attribute specifies the Plex libraries that the user wants
-Komet to act on.
+Kometa to act on.
 
-Attributes are used to instruct Komet what actions to take, such as "load the following libraries" or 
+Attributes are used to instruct Kometa what actions to take, such as "load the following libraries" or 
 "execute the following Collection Definition files". These attributes can be specified individually per library, or can 
 be inherited from the global value if it has been set. If an attribute is specified at both the library and global 
 level, then the library level attribute will take priority.
@@ -21,7 +21,7 @@ The available attributes for each library are as follows:
 
     <div id="library-name" />*Required only when trying to use multiple servers with the same name.*
 
-    Each library that the user wants Komet to interact with must be documented with a library attribute. 
+    Each library that the user wants Kometa to interact with must be documented with a library attribute. 
 
     A library attribute is represented by the mapping name (i.e. `Movies` or `TV Shows`), this must have a unique name 
     that correlates with a library of the same name within the Plex Media Server.
@@ -85,8 +85,8 @@ The available attributes for each library are as follows:
               - default: network
         ```
 
-        By default, when `collection_files` is missing Komet will look within the root Komet directory for a 
-        collection file called `<MAPPING_NAME>.yml`. In this example, Komet will look for a file named 
+        By default, when `collection_files` is missing Kometa will look within the root Kometa directory for a 
+        collection file called `<MAPPING_NAME>.yml`. In this example, Kometa will look for a file named 
         `TV Shows.yml`.
         
         ```yaml
@@ -102,11 +102,11 @@ The available attributes for each library are as follows:
 
     ???+ tip
     
-        As of Komet 1.20.0 "Metadata Files" refers to YAML files which refers to managing the metadata of 
+        As of Kometa 1.20.0 "Metadata Files" refers to YAML files which refers to managing the metadata of 
         items [movies, shows, music] within your library, and "Collection Files" refers to YAML files which define 
         Collections.
     
-        In previous version of Komet, "Metadata Files" could mean either of the above.
+        In previous version of Kometa, "Metadata Files" could mean either of the above.
 
     <hr style="margin: 0px;">
     
@@ -200,7 +200,7 @@ The available attributes for each library are as follows:
     
     **Attribute:** `template_variables`
     
-    **Accepted Values:** [Dictionary](../komet/yaml.md#dictionaries) of values specified by each particular file.
+    **Accepted Values:** [Dictionary](../kometa/yaml.md#dictionaries) of values specified by each particular file.
 
     **Default Value:** `None`
 
@@ -272,7 +272,7 @@ The available attributes for each library are as follows:
     ???+ warning "Proceed with Caution"
 
         When set to `true`, this will remove all overlays from your library every run, but will not delete 
-        the overlaid images from your system, resulting in [image bloat](../komet/scripts/image-cleanup.md).
+        the overlaid images from your system, resulting in [image bloat](../kometa/scripts/image-cleanup.md).
 
     <hr style="margin: 0px;">
     
@@ -301,7 +301,7 @@ The available attributes for each library are as follows:
     ???+ warning "Proceed with Caution"
 
         When set to `true`, this will reapply all overlays on each run even if there is no need to do so, which will result in 
-        [image bloat](../komet/scripts/image-cleanup.md).
+        [image bloat](../kometa/scripts/image-cleanup.md).
 
     <hr style="margin: 0px;">
     
@@ -331,7 +331,7 @@ The available attributes for each library are as follows:
     ???+ warning "Proceed with Caution"
 
         This will reset all posters to the desired source on each run and will reapply 
-        all overlays on each run, which will result in [image bloat](../komet/scripts/image-cleanup.md).
+        all overlays on each run, which will result in [image bloat](../kometa/scripts/image-cleanup.md).
 
     <hr style="margin: 0px;">
     
@@ -357,7 +357,7 @@ The available attributes for each library are as follows:
 
     <div id="schedule-overlays" />Used to schedule overlays to run when desired. Overlays are applied all at once in a 
     batch therefore you cannot schedule individual Overlay Files, as any unscheduled overlay file will be removed each 
-    time Komet is run.
+    time Kometa is run.
 
     <hr style="margin: 0px;">
     
@@ -684,6 +684,6 @@ This example is an advanced version of the library mappings which highlights som
       monitor: true
       availability: announced
       quality_profile: HD-1080p
-      tag: komet
+      tag: kometa
       search: false
     ```

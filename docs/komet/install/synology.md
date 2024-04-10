@@ -1,6 +1,6 @@
 # Synology Walkthrough
 
-This is a quick walkthrough of setting up the Komet Docker container in the Synology UI.
+This is a quick walkthrough of setting up the Kometa Docker container in the Synology UI.
 
 ## Prerequisite: Installing Docker
 
@@ -12,7 +12,7 @@ This is a quick walkthrough of setting up the Komet Docker container in the Syno
 
     ![Prerequisite 2](images/synology-02.png)
 
-## Installing Komet
+## Installing Kometa
 
 1.  Open the Docker app.
 
@@ -21,7 +21,7 @@ This is a quick walkthrough of setting up the Komet Docker container in the Syno
 2.  Search and Download the Image.
 
     1.  Click Registry.
-    2.  Search for `meisnate12/komet`.
+    2.  Search for `meisnate12/kometa`.
     3.  Select the Repository.
     4.  Click Download.
 
@@ -40,7 +40,7 @@ This is a quick walkthrough of setting up the Komet Docker container in the Syno
 4.  Select the Image and Create a Container.
 
     1.  Click Image.
-    2.  Select the `meisnate12/komet` Image.
+    2.  Select the `meisnate12/kometa` Image.
     3.  Click Launch.
 
     ![Step 4](images/synology-06.png)
@@ -71,7 +71,7 @@ This is a quick walkthrough of setting up the Komet Docker container in the Syno
 
         Click "Save" to save the settings and go back to the General Settings Screen.
 
-    8.  Click "Next" from the General Settings Screen to get to the Port Settings Screen where you just want to click "Next" as Komet has no Ports.
+    8.  Click "Next" from the General Settings Screen to get to the Port Settings Screen where you just want to click "Next" as Kometa has no Ports.
 
         ![](images/dsm7-05.png)
 
@@ -79,7 +79,7 @@ This is a quick walkthrough of setting up the Komet Docker container in the Syno
 
         ![](images/dsm7-06.png)
 
-    10.  Select from your Synology File System where you want to store your Komet config files and then enter `/config` as the "Mount path". Then click "Next" to go to the Summary Page.
+    10.  Select from your Synology File System where you want to store your Kometa config files and then enter `/config` as the "Mount path". Then click "Next" to go to the Summary Page.
 
         ![](images/dsm7-07.png)
 
@@ -93,7 +93,7 @@ This is a quick walkthrough of setting up the Komet Docker container in the Syno
 
         ![](images/dsm6-01.png)
 
-    6.  Next we need to add your config folder to the container. Select the "Volume" Tab, click "Add Folder," and select from your Synology File System where you want to store your Komet config files.
+    6.  Next we need to add your config folder to the container. Select the "Volume" Tab, click "Add Folder," and select from your Synology File System where you want to store your Kometa config files.
 
         ![](images/dsm6-02.png)
 

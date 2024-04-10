@@ -6,12 +6,12 @@
 ##############################################################################
 
 external_templates:
-  pmm: templates
+  default: templates
   template_variables:
     collection_section: "125"
     
 translations:
-  pmm: translations
+  default: translations
   
 templates:
   aspect:

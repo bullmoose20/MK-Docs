@@ -1,5 +1,5 @@
-name: Komet Default Issue
-description: Post here if there is an issue with the komet defaults or for missing images for komet default overlays or posters.
+name: Kometa Default Issue
+description: Post here if there is an issue with the kometa defaults or for missing images for kometa default overlays or posters.
 title: '[Defaults]: '
 labels: ['defaults']
 assignees: ['meisnate12', 'bullmoose20', 'YozoraXCII']
@@ -9,8 +9,8 @@ body:
     attributes:
       value: >
         **THIS IS NOT THE PLACE TO ASK FOR SUPPORT OR FEATURE REQUESTS!**
-        Please use [Komet Discord](https://metamanager.wiki/en/latest/discord/) and post your question under the `pmm-support` channel for support issues.
-        Please use [Komet Features](https://features.metamanager.wiki/) to request and upvote features.
+        Please use [Kometa Discord](https://metamanager.wiki/en/latest/discord/) and post your question under the ` kometa-support` channel for support issues.
+        Please use [Kometa Features](https://features.metamanager.wiki/) to request and upvote features.
   - type: input
     id: file
     attributes:

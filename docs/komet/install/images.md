@@ -3,7 +3,7 @@
 You should use the official docker image:
 
 ```
-meisnate12/komet
+meisnate12/kometa
 ```
 
 All the examples in the wiki are assuming the use of this image, and many do not work with non-official Docker images due to differences in how the authors have chosen to construct their images.
@@ -12,22 +12,22 @@ One alternate image we see a lot is the Linuxserver image, due to its prominent 
 
 ## LXML Images
 
-In March 2024, lxml, a prerequisite for operating Komet, ceased support for older CPUs. This impedes users from running Komet on unsupported hardware.
+In March 2024, lxml, a prerequisite for operating Kometa, ceased support for older CPUs. This impedes users from running Kometa on unsupported hardware.
 
-To address this issue, we have implemented 'lxml' variants for each Komet branch (master, develop, and nightly). These variants resume compatibility with older hardware by freezing lxml on a previous version which has wider hardware support.
+To address this issue, we have implemented 'lxml' variants for each Kometa branch (master, develop, and nightly). These variants resume compatibility with older hardware by freezing lxml on a previous version which has wider hardware support.
 
-To transition to the lxml branch, simply prepend 'lxml-' to the branch name you are currently utilizing. For instance, `meisnate12/komet:lxml-master`, `meisnate12/komet:lxml-develop` and `meisnate12/komet:lxml-nightly`.
+To transition to the lxml branch, simply prepend 'lxml-' to the branch name you are currently utilizing. For instance, `meisnate12/kometa:lxml-master`, `meisnate12/kometa:lxml-develop` and `meisnate12/kometa:lxml-nightly`.
 
 ## LinuxServer
 
-The first image offered in unRAID for Komet is the Linuxserver.io image [`linuxserver/plex-meta-manager`]
+The first image offered in unRAID for Kometa is the Linuxserver.io image [`linuxserver/plex-meta-manager`]
 
-This image is different to the official image [meisnate12/komet] in a few ways that cause a variety of problems particularly for new users.
+This image is different to the official image [meisnate12/kometa] in a few ways that cause a variety of problems particularly for new users.
 
 One typical error is something like:
 
 ```
-Path does not exist: /run/s6/services/komet/config/SOMETHING
+Path does not exist: /run/s6/services/kometa/config/SOMETHING
 ```
 
 The result is that the stock config file and a lot of the examples found in the wiki and config repo don't work.
@@ -43,13 +43,13 @@ The LSIO image:
 3. Doesn't support [runtime flags](../environmental.md), only ENV vars. This means that a command like:
 
    ```
-   docker run -it --rm -v /opt/komet/config:/config linuxserver/plex-meta-manager --config config/config.yml -r --run-libraries "Movies - 4K DV"
+   docker run -it --rm -v /opt/kometa/config:/config linuxserver/plex-meta-manager --config config/config.yml -r --run-libraries "Movies - 4K DV"
    ```
 
    doesn't work with the LSIO image; it would have to be:
 
    ```
-   docker run -it --rm -v /opt/komet/config:/config -e KOMET_CONFIG=/config/config.yml -e KOMET_RUN=true -e KOMET_LIBRARIES="Movies - 4K DV" linuxserver/plex-meta-manager
+   docker run -it --rm -v /opt/kometa/config:/config -e KOMET_CONFIG=/config/config.yml -e KOMET_RUN=true -e KOMET_LIBRARIES="Movies - 4K DV" linuxserver/plex-meta-manager
    ```
 
 4. Doesn't do manual runs correctly; they loop over and over. That command in the previous bullet point [which uses `KOMET_RUN` to run it right now] will run over and over until you manually kill the container.  The same thing using the official image will run once and quit, as expected.

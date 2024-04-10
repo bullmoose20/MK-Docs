@@ -1,4 +1,4 @@
-Komet provides an extensive collection of "default" collection files.
+Kometa provides an extensive collection of "default" collection files.
 
 These files provide a simple way for you to create collections based on franchises or awards or actors, etc.
 

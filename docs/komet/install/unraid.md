@@ -1,8 +1,8 @@
 # unRAID Walkthrough
 
-This article will walk you through getting Komet set up and running via Docker.  It will cover:
+This article will walk you through getting Kometa set up and running via Docker.  It will cover:
 
-1. Installing Komet unRAID app
+1. Installing Kometa unRAID app
 2. Retrieving the image
 3. Setting up the initial config file
 4. Setting up a collection file and creating a couple sample collections
@@ -10,8 +10,8 @@ This article will walk you through getting Komet set up and running via Docker. 
 
 The specific steps you will be taking:
 
-1. Verify that Komet unRAID app is installed and install it if not
-2. Use `unRAID APPS` to retrieve the Komet Docker image
+1. Verify that Kometa unRAID app is installed and install it if not
+2. Use `unRAID APPS` to retrieve the Kometa Docker image
 3. Create a directory for your config files and learn how to tell app to use it
 4. Gather two things that the script requires:
 
@@ -23,9 +23,9 @@ The specific steps you will be taking:
     1. use `unRAID >_Console` to run the commands
     2. use a text editor to modify a couple of text files until you have a working config file and a single working collection file.
 
-If the idea of editing YAML files by hand is daunting, this may not be the tool for you.  All the configuration of Komet is done via YAML text files, so if you are unable or unwilling to learn how those work, you should stop here.
+If the idea of editing YAML files by hand is daunting, this may not be the tool for you.  All the configuration of Kometa is done via YAML text files, so if you are unable or unwilling to learn how those work, you should stop here.
 
-Finally, this walkthrough is intended to give you a basic grounding in how to get the script running.  It doesn't cover how to create your own collections, or how to add overlays, or any of the myriad other things Komet is capable of.  It provides a simple "Getting Started" guide for those for whom the standard install instructions make no sense; presumably because you've never run a unRAID app (Docker container) before.
+Finally, this walkthrough is intended to give you a basic grounding in how to get the script running.  It doesn't cover how to create your own collections, or how to add overlays, or any of the myriad other things Kometa is capable of.  It provides a simple "Getting Started" guide for those for whom the standard install instructions make no sense; presumably because you've never run a unRAID app (Docker container) before.
 
 ## Prerequisites.
 
@@ -35,7 +35,7 @@ Anywhere you see
 something like this
 ```
 
-That’s a command you’re going to type or paste into your unRAID Komet `>_Console` terminal (Linux).
+That’s a command you’re going to type or paste into your unRAID Kometa `>_Console` terminal (Linux).
 
 **IMPORTANT NOTES:**
 
@@ -53,12 +53,12 @@ That’s a command you’re going to type or paste into your unRAID Komet `>_Con
 
 ### Installing Community Applications in unRAID
 
-Thankfully, getting Komet working on unRAID is a fairly simple task. unRAID works mostly with docker containers, so the pre-built container available on docker hub works perfectly with a little configuration.
+Thankfully, getting Kometa working on unRAID is a fairly simple task. unRAID works mostly with docker containers, so the pre-built container available on docker hub works perfectly with a little configuration.
 To install a container from docker hub, you will need community applications - a very popular plugin for unRAID servers. If you don't already have this installed, you can install it [here](https://forums.unraid.net/topic/38582-plug-in-community-applications/)
 
-### Installing Komet in unRAID
+### Installing Kometa in unRAID
 
-1. Head to the `Apps` tab of unRAID (Community Applications), and search `komet` in the upper right search box. There will be a couple of results shown, but you should ignore them ([Why?](images.md)) and use the official image.
+1. Head to the `Apps` tab of unRAID (Community Applications), and search `kometa` in the upper right search box. There will be a couple of results shown, but you should ignore them ([Why?](images.md)) and use the official image.
 
 2. Click the `Install` button on the Template from Sohjiro's Repository Tools.
 
@@ -72,9 +72,9 @@ To install a container from docker hub, you will need community applications - a
 
 #### Important note on Docker images
 
-This tutorial uses the official image, and you should, too.  Don't change `meisnate12/komet` to the `linuxserver.io` image or any other. Other images may have [idiosyncracies](images.md) that will prevent this walkthrough from working.  The official image *will* behave exactly as documented below.  Others very possibly won't.
+This tutorial uses the official image, and you should, too.  Don't change `meisnate12/kometa` to the `linuxserver.io` image or any other. Other images may have [idiosyncracies](images.md) that will prevent this walkthrough from working.  The official image *will* behave exactly as documented below.  Others very possibly won't.
 
-The great thing about Docker is that all the setup you'd have to do to run Komet is already done inside the docker image.
+The great thing about Docker is that all the setup you'd have to do to run Kometa is already done inside the docker image.
 
 First let's start the container. Oops! The container won't start? 
 This is going to fail with an error. That's expected.
@@ -84,7 +84,7 @@ You should see something like this in the unRAID logs for the container:
 ```
 Config Error: config not found at //config
 ```
-We need to have a file called `config.yml` in the correct directory for Komet to start. Open up an unRAID terminal session by clicking on the terminal icon `>_` in the top right of unRAID.
+We need to have a file called `config.yml` in the correct directory for Kometa to start. Open up an unRAID terminal session by clicking on the terminal icon `>_` in the top right of unRAID.
 
 === ":fontawesome-brands-linux: Linux"
 
@@ -94,7 +94,7 @@ We need to have a file called `config.yml` in the correct directory for Komet to
     touch /mnt/user/appdata/plex-meta-manager/config/config.yml
     ```
 
-You can now close the unRAID terminal and start the Komet container.
+You can now close the unRAID terminal and start the Kometa container.
 
 **_From this point forward, you can Console `>_Console` into the running container as it will stay running_**
 
@@ -127,10 +127,10 @@ First, make a copy of the template:
 
     Get a copy of the template to edit [type this into your terminal]:
     ```
-    curl -fLvo config/config.yml https://raw.githubusercontent.com/meisnate12/komet/master/config/config.yml.template
+    curl -fLvo config/config.yml https://raw.githubusercontent.com/meisnate12/kometa/master/config/config.yml.template
     ```
 
-Now open the copy in an editor on the machine of your choice (Use Linux tab below for the Unraid Komet `_>Console`):
+Now open the copy in an editor on the machine of your choice (Use Linux tab below for the Unraid Kometa `_>Console`):
 
 {%
    include-markdown "./wt/wt-editor.md"
@@ -142,7 +142,7 @@ Now open the copy in an editor on the machine of your choice (Use Linux tab belo
 
 #### Testing the config file
 
-Save the file (Use Linux tab below for the Unraid Komet `_>Console`):
+Save the file (Use Linux tab below for the Unraid Kometa `_>Console`):
 
 {%
    include-markdown "./wt/wt-save.md"
@@ -178,13 +178,13 @@ So let's run the script and see this happen:
 
 ### Setting up a collection file and creating a sample collection.
 
-(Use Linux tab below for the Unraid Komet `_>Console`):
+(Use Linux tab below for the Unraid Kometa `_>Console`):
 
 {%
    include-markdown "./wt/wt-05-local-file.md"
 %}
 
-Save the file (Use Linux tab below for the Unraid Komet `_>Console`):
+Save the file (Use Linux tab below for the Unraid Kometa `_>Console`):
 
 {%
    include-markdown "./wt/wt-save.md"
@@ -206,7 +206,7 @@ Then run the script again:
    include-markdown "./wt/wt-07-overlay-add.md"
 %}
 
-Save the file (Use Linux tab below for the Unraid Komet `_>Console`):
+Save the file (Use Linux tab below for the Unraid Kometa `_>Console`):
 
 {%
    include-markdown "./wt/wt-save.md"
@@ -235,10 +235,10 @@ Then run the script again:
 %}
 ### I want to use the develop branch
 
-Add the `develop` tag to the image name in your `Repository:` setting for the Komet unRAID app: [meisnate12/komet:develop]
+Add the `develop` tag to the image name in your `Repository:` setting for the Kometa unRAID app: [meisnate12/kometa:develop]
 
 ```
-meisnate12/komet:develop
+meisnate12/kometa:develop
                              ^^^^^^^
 ```
 
@@ -246,10 +246,10 @@ This may not work if you are not using the official image; for example, it does 
 
 ### I want to use the nightly branch
 
-Add the `nightly` tag to the image name in your `Repository:` setting for the Komet unRAID app: [meisnate12/komet:nightly]
+Add the `nightly` tag to the image name in your `Repository:` setting for the Kometa unRAID app: [meisnate12/kometa:nightly]
 
 ```
-meisnate12/komet:nightly
+meisnate12/kometa:nightly
                              ^^^^^^^
 ```
 
@@ -257,10 +257,10 @@ This may not work if you are not using the official image; for example, it does 
 
 ### I want to ensure I am using the master branch
 
-Add the `latest` tag to the image name in your `Repository:` setting for the Komet unRAID app: [meisnate12/komet:latest]
+Add the `latest` tag to the image name in your `Repository:` setting for the Kometa unRAID app: [meisnate12/kometa:latest]
 
 ```
-meisnate12/komet:latest
+meisnate12/kometa:latest
                              ^^^^^^
 ```
 

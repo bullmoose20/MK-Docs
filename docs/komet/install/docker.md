@@ -1,6 +1,6 @@
 # Docker Walkthrough
 
-This article will walk you through getting Komet set up and running via Docker.  It will cover:
+This article will walk you through getting Kometa set up and running via Docker.  It will cover:
 
 1. Installing Docker
 2. Retrieving the image
@@ -11,9 +11,9 @@ This article will walk you through getting Komet set up and running via Docker. 
 The specific steps you will be taking:
 
 1. Verify that Docker is installed and install it if not
-2. Use `docker` to retrieve the Komet Docker image
+2. Use `docker` to retrieve the Kometa Docker image
 3. Create a directory for your config files and learn how to tell Docker to use it
-4. Gather two things that Komet requires:
+4. Gather two things that Kometa requires:
     - TMDb API Key
     - Plex URL and Token
 5. Then, iteratively:
@@ -22,9 +22,9 @@ The specific steps you will be taking:
 
 Note that running a Docker container is inherently a pretty technical process.  If you are unable or unwilling to learn the rudiments of using Docker, this may not be the tool for you.
 
-If the idea of editing YAML files by hand is daunting, this may not be the tool for you.  All the configuration of Komet is done via YAML text files, so if you are unable or unwilling to learn how those work, you should stop here.
+If the idea of editing YAML files by hand is daunting, this may not be the tool for you.  All the configuration of Kometa is done via YAML text files, so if you are unable or unwilling to learn how those work, you should stop here.
 
-Finally, this walkthrough is intended to give you a basic grounding in how to get Komet running.  It doesn't cover how to create your own collections, or how to add overlays, or any of the myriad other things Komet is capable of.  It provides a simple "Getting Started" guide for those for whom the standard install instructions make no sense; presumably because you've never run a Docker container before.
+Finally, this walkthrough is intended to give you a basic grounding in how to get Kometa running.  It doesn't cover how to create your own collections, or how to add overlays, or any of the myriad other things Kometa is capable of.  It provides a simple "Getting Started" guide for those for whom the standard install instructions make no sense; presumably because you've never run a Docker container before.
 
 
 ## Prerequisites
@@ -108,14 +108,14 @@ If that doesn't work, stop here until you fix that.  Diagnoing and repairing Doc
 
 #### Important note on Docker images
 
-This tutorial uses the official image, and you should, too.  Don't change `meisnate12/komet` to the `linuxserver.io` image or any other; other images may have [idiosyncracies](images.md) that will prevent this walkthrough from working.  The official image *will* behave exactly as documented below.  Others very possibly won't.
+This tutorial uses the official image, and you should, too.  Don't change `meisnate12/kometa` to the `linuxserver.io` image or any other; other images may have [idiosyncracies](images.md) that will prevent this walkthrough from working.  The official image *will* behave exactly as documented below.  Others very possibly won't.
 
-The great thing about Docker is that all the setup you'd have to do to run Komet is already done inside the docker image.
+The great thing about Docker is that all the setup you'd have to do to run Kometa is already done inside the docker image.
 
 That means we can just jump right into running it.  At the command prompt, type:
 
 ```
-docker run --rm meisnate12/komet --run
+docker run --rm meisnate12/kometa --run
 
 ```
 
@@ -124,8 +124,8 @@ This is going to fail with an error.  That's expected.
 You should see something like this:
 
 ``` { .shell .no-copy }
-Unable to find image 'meisnate12/komet:latest' locally
-latest: Pulling from meisnate12/komet
+Unable to find image 'meisnate12/kometa:latest' locally
+latest: Pulling from meisnate12/kometa
 7d63c13d9b9b: Already exists
 6ad2a11ca37b: Already exists
 8076cdef4689: Pull complete
@@ -136,7 +136,7 @@ ed6716577767: Pull complete
 0547721ab7a3: Pull complete
 ea4d35bce959: Pull complete
 Digest: sha256:472be179a75259e07e68a3da365851b58c2f98383e02ac815804299da6f99824
-Status: Downloaded newer image for meisnate12/komet:latest
+Status: Downloaded newer image for meisnate12/kometa:latest
 Config Error: config not found at //config
 ```
 
@@ -144,7 +144,7 @@ That error means you don’t have a config file, but we know that most everythin
 
 ### Setting up a volume map
 
-Komet, inside that Docker container, can only see other things *inside the container*.  We want to add our own files for config and metadata, so we need to set something up that lets Komet see files we create *outside* the container.  This is called a "volume map".
+Kometa, inside that Docker container, can only see other things *inside the container*.  We want to add our own files for config and metadata, so we need to set something up that lets Kometa see files we create *outside* the container.  This is called a "volume map".
 
 Go to your home directory and create a new directory:
 
@@ -152,22 +152,22 @@ Go to your home directory and create a new directory:
 
 ``` { .shell .no-copy linenums="1"}
 cd ~ #(1)!
-mkdir komet #(2)!
+mkdir kometa #(2)!
 ```
 
 1.  This changes to your home directory, which will be something like `/home/yourname` or `/Users/yourname` or `C:\Users\YourName` depending on the platform.
-2.  This creates a directory called "komet"
+2.  This creates a directory called "kometa"
 
 cd into that directory and create another directory:
 
 [type this into your terminal]
 
 ``` { .shell .no-copy linenums="1"}
-cd ~/komet #(1)!
+cd ~/kometa #(1)!
 mkdir config #(2)!
 ```
 
-1.  This navigates to the komet folder within your home directory.
+1.  This navigates to the kometa folder within your home directory.
 2.  This creates a directory called "config"
 
 3. get the full path:
@@ -183,19 +183,19 @@ This will display a full path:
 === ":fontawesome-brands-linux: Linux"
 
       ``` { .shell .no-copy }
-      /home/YOURUSERNAME/komet
+      /home/YOURUSERNAME/kometa
       ```
 
 === ":fontawesome-brands-apple: macOS"
 
       ``` { .shell .no-copy }
-      /Users/YOURUSERNAME/komet
+      /Users/YOURUSERNAME/kometa
       ```
 
 === ":fontawesome-brands-windows: Windows"
 
       ``` { .shell .no-copy }
-      C:\Users\YOURUSERNAME\komet
+      C:\Users\YOURUSERNAME\kometa
       ```
 
 Add "config" onto the end of that to get the host path to your config directory, for example:
@@ -203,19 +203,19 @@ Add "config" onto the end of that to get the host path to your config directory,
 === ":fontawesome-brands-linux: Linux"
 
       ```
-      /home/YOURUSERNAME/komet/config
+      /home/YOURUSERNAME/kometa/config
       ```
 
 === ":fontawesome-brands-apple: macOS"
    
       ```
-      /Users/YOURUSERNAME/komet/config
+      /Users/YOURUSERNAME/kometa/config
       ```
 
 === ":fontawesome-brands-windows: Windows"
 
       ```
-      C:\Users\YOURUSERNAME\komet\config
+      C:\Users\YOURUSERNAME\kometa\config
       ```
 
 
@@ -224,26 +224,26 @@ You'll need to add this to the docker command every time you run it, like this:
 === ":fontawesome-brands-linux: Linux"
 
       ```
-      docker run --rm -it -v "/home/YOURUSERNAME/komet/config:/config:rw" meisnate12/komet
+      docker run --rm -it -v "/home/YOURUSERNAME/kometa/config:/config:rw" meisnate12/kometa
       ```
 
 === ":fontawesome-brands-apple: macOS"
 
       ```
-      docker run --rm -it -v "/Users/YOURUSERNAME/plex-meta-manager/config:/config:rw" meisnate12/komet
+      docker run --rm -it -v "/Users/YOURUSERNAME/plex-meta-manager/config:/config:rw" meisnate12/kometa
       ```
 
 === ":fontawesome-brands-windows: Windows"
 
       ```
-      docker run --rm -it -v "C:\Users\YOURUSERNAME\plex-meta-manager\config:/config:rw" meisnate12/komet
+      docker run --rm -it -v "C:\Users\YOURUSERNAME\plex-meta-manager\config:/config:rw" meisnate12/kometa
       ```
 
 
 If you run that command now it will display a similar error to before, but without all the image loading:
 
 ``` { .bash .no-copy }
-$ docker run --rm -it -v "/Users/mroche/plex-meta-manager/config:/config:rw" meisnate12/komet --run
+$ docker run --rm -it -v "/Users/mroche/plex-meta-manager/config:/config:rw" meisnate12/kometa --run
 Config Error: config not found at //config
 ```
 
@@ -300,19 +300,19 @@ First, make a copy of the template:
    
       Get a copy of the template to edit [type this into your terminal]:
       ```
-      curl -fLvo config/config.yml https://raw.githubusercontent.com/meisnate12/komet/master/config/config.yml.template
+      curl -fLvo config/config.yml https://raw.githubusercontent.com/meisnate12/kometa/master/config/config.yml.template
       ```
 
 === ":fontawesome-brands-apple: macOS"
 
       Get a copy of the template to edit [type this into your terminal]:
       ```
-      curl -fLvo config/config.yml https://raw.githubusercontent.com/meisnate12/komet/master/config/config.yml.template
+      curl -fLvo config/config.yml https://raw.githubusercontent.com/meisnate12/kometa/master/config/config.yml.template
       ```
 
 === ":fontawesome-brands-windows: Windows"
 
-      Go to [this URL](https://raw.githubusercontent.com/meisnate12/komet/master/config/config.yml.template) using a web browser; choose the "Save" command, then save the file at:
+      Go to [this URL](https://raw.githubusercontent.com/meisnate12/kometa/master/config/config.yml.template) using a web browser; choose the "Save" command, then save the file at:
       ```
       C:\Users\YOURUSERNAME\plex-meta-manager\config\config.yml
       ```
@@ -339,7 +339,7 @@ Save the file:
 %}
 
 
-Then run Komet again:
+Then run Kometa again:
 
 {%
    include-markdown "./wt/wt-run-docker.md"
@@ -358,7 +358,7 @@ Then run Komet again:
 %}
 
 
-So let's run Komet and see this happen:
+So let's run Kometa and see this happen:
 
 {%
    include-markdown "./wt/wt-run-docker.md"
@@ -384,7 +384,7 @@ Save the file:
 %}
 
 
-Then run Komet again:
+Then run Kometa again:
 
 {%
    include-markdown "./wt/wt-run-docker.md"
@@ -410,7 +410,7 @@ Save the file:
 %}
 
 
-Then run Komet again:
+Then run Kometa again:
 
 {%
    include-markdown "./wt/wt-run-docker.md"
@@ -441,7 +441,7 @@ Then run Komet again:
 Add the `develop` tag to the image name in your run command [or wherever you specify the image in your environment]
 
 ```
-docker run --rm -it -v "Komet_PATH_GOES_HERE:/config:rw" meisnate12/komet:develop --run
+docker run --rm -it -v "Komet_PATH_GOES_HERE:/config:rw" meisnate12/kometa:develop --run
                                                                                                   ^^^^^^^
 ```
 
@@ -452,7 +452,7 @@ This may not work if you are not using the official image; for example, it does 
 Add the `nightly` tag to the image name in your run command [or wherever you specify the image in your environment]
 
 ```
-docker run --rm -it -v "Komet_PATH_GOES_HERE:/config:rw" meisnate12/komet:nightly --run
+docker run --rm -it -v "Komet_PATH_GOES_HERE:/config:rw" meisnate12/kometa:nightly --run
                                                                                                   ^^^^^^^
 ```
 
@@ -463,7 +463,7 @@ This may not work if you are not using the official image; for example, it does 
 Add the `latest` tag to the image name in your run command [or wherever you specify the image in your environment]
 
 ```
-docker run --rm -it -v "Komet_PATH_GOES_HERE:/config:rw" meisnate12/komet:latest --run
+docker run --rm -it -v "Komet_PATH_GOES_HERE:/config:rw" meisnate12/kometa:latest --run
                                                                                                   ^^^^^^
 ```
 

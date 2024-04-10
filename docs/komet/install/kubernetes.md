@@ -1,6 +1,6 @@
 # Kubernetes Walkthrough
 
-This article will walk you through getting Komet set up and running in Kubernetes.  It will cover:
+This article will walk you through getting Kometa set up and running in Kubernetes.  It will cover:
 
 1. Creating the Kubernetes CronJob
 2. Creating configuration files as Config Maps
@@ -14,7 +14,7 @@ do not, but are interested, [minikube](https://minikube.sigs.k8s.io/docs/start/)
 
 ## Creating the Kubernetes CronJob
 
-When running Komet in Kubernetes, executing it as a CronJob gives us the ability to define a schedule for execution and have
+When running Kometa in Kubernetes, executing it as a CronJob gives us the ability to define a schedule for execution and have
 Kubernetes manage the rest.
 
 Some parts of this to tweak to your needs:
@@ -40,7 +40,7 @@ spec:
             runAsGroup: 1000
           containers:
             - name: plex-media-manager
-              image: meisnate12/komet:latest
+              image: meisnate12/kometa:latest
               imagePullPolicy: IfNotPresent
               args: [ "--run", "--read-only-config" ]
               resources:
@@ -53,7 +53,7 @@ spec:
               volumeMounts:
                 - name: config
                   mountPath: /config
-                - name: komet-config
+                - name: kometa-config
                   mountPath: /config/config.yml
                   subPath: config.yml
                 - name: movie-config
@@ -67,8 +67,8 @@ spec:
               persistentVolumeClaim:
                 claimName: plex-media-manager
             - configMap:
-                name: komet-config
-              name: komet-config
+                name: kometa-config
+              name: kometa-config
             - configMap:
                 name: movie-config
               name: movie-config
@@ -104,12 +104,12 @@ spec:
 
 ## Creating the Config Maps
 
-In Kubernetes, configurations are managed via Config Maps.  So we deploy the configurations for Komet as config maps.  The
-minimum requirement is the Komet config, but the example here assumes you have a separate config for movies and tv shows.
+In Kubernetes, configurations are managed via Config Maps.  So we deploy the configurations for Kometa as config maps.  The
+minimum requirement is the Kometa config, but the example here assumes you have a separate config for movies and tv shows.
 
-### Komet Config
+### Kometa Config
 
-Here's a config map for the `config.yml` file for Komet.  Note there are many placeholders that will need update based on
+Here's a config map for the `config.yml` file for Kometa.  Note there are many placeholders that will need update based on
 your environment and needs.
 
 Follow the [Trakt Attributes](../../config/trakt.md) directions for generating the OAuth authorization
@@ -179,7 +179,7 @@ data:
       monitor: false
       availability: cinemas
       quality_profile: HD - 720p/1080p
-      tag: komet
+      tag: kometa
       add_existing: false
       search: false
       radarr_path:
@@ -195,7 +195,7 @@ data:
       language_profile: English
       series_type: standard
       season_folder: true
-      tag: komet
+      tag: kometa
       search: true
       cutoff_search: false
       sonarr_path:
@@ -212,7 +212,7 @@ data:
           created_at: 1642462048
 kind: ConfigMap
 metadata:
-  name: komet-config
+  name: kometa-config
   namespace: media
 ```
 
@@ -324,7 +324,7 @@ spec:
                   mountPath: /config
           containers:
             - name: plex-media-manager
-              image: meisnate12/komet:latest
+              image: meisnate12/kometa:latest
               imagePullPolicy: Always
               args: [ "--run", "--read-only-config" ]
               resources:
@@ -337,7 +337,7 @@ spec:
               volumeMounts:
                 - name: config
                   mountPath: /config
-                - name: komet-config
+                - name: kometa-config
                   mountPath: /config/config.yml
                   subPath: config.yml
                 - name: movie-config
@@ -348,8 +348,8 @@ spec:
               persistentVolumeClaim:
                 claimName: plex-media-manager
             - configMap:
-                name: komet-config
-              name: komet-config
+                name: kometa-config
+              name: kometa-config
             - configMap:
                 name: movie-config
               name: movie-config

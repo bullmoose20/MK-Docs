@@ -1,8 +1,8 @@
 # Local Walkthrough
 
-This article will walk you through getting Komet set up and running.  It will cover:
+This article will walk you through getting Kometa set up and running.  It will cover:
 
-1.  Retrieving the Komet code
+1.  Retrieving the Kometa code
 2.  Installing requirements
 3.  Setting up the initial config file
 4.  Setting up a collection file and creating a couple sample collections.
@@ -12,7 +12,7 @@ The specific steps you will be taking:
 1.  Verify that Python 3.8 or better is installed and install it if not
 2.  Verify that the Git tools are installed and install them if not
 3.  Use `git` to retrieve the code
-4.  Install requirements [extra bits of code required for Komet]
+4.  Install requirements [extra bits of code required for Kometa]
 5.  Gather two things that the script requires:
     1. TMDb API Key
     2. Plex URL and Token
@@ -21,11 +21,11 @@ The specific steps you will be taking:
     1. use `python` to run the script
     2. use a text editor to modify a couple of text files until you have a working config file and a single working collection file.
 
-Note that running a Python script is inherently a pretty technical process.  If you are unable or unwilling to learn the rudiments of using tools like python and git, you should probably strongly consider running Komet in [Docker](docker.md).  That will eliminate the Python and git installs from this process and make it as simple as it can be.
+Note that running a Python script is inherently a pretty technical process.  If you are unable or unwilling to learn the rudiments of using tools like python and git, you should probably strongly consider running Kometa in [Docker](docker.md).  That will eliminate the Python and git installs from this process and make it as simple as it can be.
 
-If the idea of editing YAML files by hand is daunting, this may not be the tool for you.  All the configuration of Komet is done via YAML text files, so if you are unable or unwilling to learn how those work, you should stop here.
+If the idea of editing YAML files by hand is daunting, this may not be the tool for you.  All the configuration of Kometa is done via YAML text files, so if you are unable or unwilling to learn how those work, you should stop here.
 
-Finally, this walkthrough is intended to give you a basic grounding in how to get the script running.  It doesn't cover how to create your own collections, or how to add overlays, or any of the myriad other things Komet is capable of.  It provides a simple "Getting Started" guide for those for whom the standard install instructions make no sense; presumably because you've never run a Python script before.
+Finally, this walkthrough is intended to give you a basic grounding in how to get the script running.  It doesn't cover how to create your own collections, or how to add overlays, or any of the myriad other things Kometa is capable of.  It provides a simple "Getting Started" guide for those for whom the standard install instructions make no sense; presumably because you've never run a Python script before.
 
 ## Prerequisites.
 
@@ -47,7 +47,7 @@ That’s a command you’re going to type or paste into your terminal (OSX or Li
 
 ???+ danger "Important"
 
-    This walkthrough is assuming you are doing the entire process on the same platform; i.e. you're installing Komet and editing its config files on a single Linux, Windows, or OS X machine.  It doesn't account for situations like running Komet on a Linux machine while editing the config files on your Windows box.
+    This walkthrough is assuming you are doing the entire process on the same platform; i.e. you're installing Kometa and editing its config files on a single Linux, Windows, or OS X machine.  It doesn't account for situations like running Kometa on a Linux machine while editing the config files on your Windows box.
 
 ### Prepare a small test library [optional]
 
@@ -111,7 +111,7 @@ If this doesn't return `3.8.0` or higher, you'll need to get Python 3 installed.
     
     #### Why the next-to-latest?
     
-    There is one dependency [`lxml`] that lags behind new Python releases; this will cause a failure when installing requirements in a moment if the newest Python version is too new [at time of writing the current is 3.11, and the requirements install fails on the lxml library].  You can avoid this by using the next-to-latest release.  At some point this will no longer be a problem, but that is outside the control of Komet.
+    There is one dependency [`lxml`] that lags behind new Python releases; this will cause a failure when installing requirements in a moment if the newest Python version is too new [at time of writing the current is 3.11, and the requirements install fails on the lxml library].  You can avoid this by using the next-to-latest release.  At some point this will no longer be a problem, but that is outside the control of Kometa.
     
     Once downloaded, run the installer.  Tick “Add to path” checkbox at the bottom and click “Install Now”.
     
@@ -122,7 +122,7 @@ If this doesn't return `3.8.0` or higher, you'll need to get Python 3 installed.
 
 ### Installing git
 
-To copy the Komet code to your machine, we'll be using git.  This may be installed on Mac or Linux, and probably isn't in Windows.
+To copy the Kometa code to your machine, we'll be using git.  This may be installed on Mac or Linux, and probably isn't in Windows.
 
 First let's check if it's installed already [type this into your terminal]:
 
@@ -153,7 +153,7 @@ If this doesn't return a version number, you'll need to get git installed.
 
 ---
 
-### Retrieving the Komet code
+### Retrieving the Kometa code
 
 Now we're going to use `git` to make a copy of the code on your local computer.
 
@@ -161,22 +161,22 @@ Clone the repo into your home directory and go into that directory [type this in
 
 ```
 cd ~
-git clone https://github.com/meisnate12/komet
+git clone https://github.com/meisnate12/kometa
 cd Plex-Meta-Manager
 ```
 
 **NOTE: The rest of this walkthrough assumes you are staying in this directory in this terminal/Powershell window.**
 
-**IMPORTANT: In the future, when you want to run Komet at the command line, you have to be in this directory.**
+**IMPORTANT: In the future, when you want to run Kometa at the command line, you have to be in this directory.**
 
-When you open a command window to run Komet, the first step will always be:
+When you open a command window to run Kometa, the first step will always be:
 
 ```
 cd ~
 cd Plex-Meta-Manager
 ```
 
-There are parts of the code that are assuming and expecting that you will be in this directory when you run Komet [the fonts used in overlays are one example].  Be sure that you are always in this directory when you run Komet.
+There are parts of the code that are assuming and expecting that you will be in this directory when you run Kometa [the fonts used in overlays are one example].  Be sure that you are always in this directory when you run Kometa.
 
 <details>
   <summary>What did that do?</summary>
@@ -186,9 +186,9 @@ There are parts of the code that are assuming and expecting that you will be in 
   ```
   This changes to your home directory, which will be something like `/home/yourname` or `/Users/yourname` or `C:\Users\YourName` depending on the platform.
   ```
-  git clone https://github.com/meisnate12/komet
+  git clone https://github.com/meisnate12/kometa
   ```
-  This uses `git` to make a copy of (`clone`) the Komet code from where it is stored on `github`.
+  This uses `git` to make a copy of (`clone`) the Kometa code from where it is stored on `github`.
   ```
   cd Plex-Meta-Manager
   ```
@@ -224,11 +224,11 @@ This walkthrough is going to use a "virtual environment", since that provides a 
 
     [type this into your terminal]
     ```
-    python3 -m venv komet-venv
+    python3 -m venv kometa-venv
     ```
     If you see an error like:
     ```
-    Error: Command '['/home/mroche/Plex-Meta-Manager/komet-venv/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1.
+    Error: Command '['/home/mroche/Plex-Meta-Manager/kometa-venv/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1.
     ```
     You probably need to make sure the Python 3.9-specific virtualenv support library is installed:
     [type this into your terminal]
@@ -241,14 +241,14 @@ This walkthrough is going to use a "virtual environment", since that provides a 
 
     [type this into your terminal]
     ```
-    python3 -m venv komet-venv
+    python3 -m venv kometa-venv
     ```
 
 === ":fontawesome-brands-windows: Windows"
 
     [type this into your terminal]
     ```
-    python -m venv komet-venv
+    python -m venv kometa-venv
     ```
     If you see:
     ```
@@ -261,15 +261,15 @@ This walkthrough is going to use a "virtual environment", since that provides a 
   <summary>What did that do?</summary>
 
   ```
-  python3 -m venv komet-venv
+  python3 -m venv kometa-venv
   ```
-  This tells Python3 to use the `venv` module to create a virtual environment called `komet-venv`.  The only visible effect will be the creation of a `komet-venv` directory.
+  This tells Python3 to use the `venv` module to create a virtual environment called `kometa-venv`.  The only visible effect will be the creation of a `kometa-venv` directory.
 </details>
 
 That command will not produce any output if it works; it will display an error if a problem occurs.  If everything is fine, you will be looking at something like this:
 
 ```
-> python -m venv komet-venv
+> python -m venv kometa-venv
 >
 ```
 
@@ -281,27 +281,27 @@ That will create the virtual environment, and then you need to activate it:
 
     [type this into your terminal]
     ```
-    source komet-venv/bin/activate
+    source kometa-venv/bin/activate
     ```
 
 === ":fontawesome-brands-apple: macOS"
 
     [type this into your terminal]
     ```
-    source komet-venv/bin/activate
+    source kometa-venv/bin/activate
     ```
 
 === ":fontawesome-brands-windows: Windows"
 
     [type this into your terminal]
     ```
-    .\komet-venv\Scripts\activate
+    .\kometa-venv\Scripts\activate
     ```
     If you see something like this:
     ```powershell
-    .\komet-venv\Scripts\activate : File C:\Users\mroche\Plex-Meta-Manager\komet-venv\Scripts\Activate.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink LinkID=135170.
+    .\kometa-venv\Scripts\activate : File C:\Users\mroche\Plex-Meta-Manager\kometa-venv\Scripts\Activate.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink LinkID=135170.
     At line:1 char:1
-    + .\komet-venv\Scripts\activate
+    + .\kometa-venv\Scripts\activate
     + ~~~~~~~~~~~~~~~~~~~~~~~~~~~
         + CategoryInfo          : SecurityError: (:) [], PSSecurityException
         + FullyQualifiedErrorId : UnauthorizedAccess
@@ -318,19 +318,19 @@ That command will not produce any output if it works; it will display an error i
 You may see a change in your prompt, something like this:
 
 ```
-➜  Plex-Meta-Manager git:(master) ✗ source komet-venv/bin/activate
-(komet-venv) ➜  Plex-Meta-Manager git:(master) ✗
+➜  Plex-Meta-Manager git:(master) ✗ source kometa-venv/bin/activate
+(kometa-venv) ➜  Plex-Meta-Manager git:(master) ✗
 ```
 
-Note that the prompt now shows the name of the virtual environment.  You may not see this; it's dependent on *your* terminal configuration, not anything to do with Python or Komet.
+Note that the prompt now shows the name of the virtual environment.  You may not see this; it's dependent on *your* terminal configuration, not anything to do with Python or Kometa.
 
 <details>
   <summary>What did that do?</summary>
 
-  This tells Python to make the virtual environment "active", which means to use the copy of python that is available there, install all support libraries there, etc.  This keeps the Komet code and its runtime environment totally separate from your host machine's environment.
+  This tells Python to make the virtual environment "active", which means to use the copy of python that is available there, install all support libraries there, etc.  This keeps the Kometa code and its runtime environment totally separate from your host machine's environment.
 </details>
 
-An advantage of doing this in a virtual environment is that in the event something goes wrong with this part of the setup, you can delete that komet-venv directory and do the setup again.
+An advantage of doing this in a virtual environment is that in the event something goes wrong with this part of the setup, you can delete that kometa-venv directory and do the setup again.
 
 **IMPORTANT: In the future, when you want to run the script, you will need to do this "activation" step every time.  Not the venv creation, just the activation**:
 
@@ -338,21 +338,21 @@ An advantage of doing this in a virtual environment is that in the event somethi
 
     [type this into your terminal]
     ```
-    source komet-venv/bin/activate
+    source kometa-venv/bin/activate
     ```
 
 === ":fontawesome-brands-apple: macOS"
 
     [type this into your terminal]
     ```
-    source komet-venv/bin/activate
+    source kometa-venv/bin/activate
     ```
 
 === ":fontawesome-brands-windows: Windows"
 
     [type this into your terminal]
     ```
-    .\komet-venv\Scripts\activate
+    .\kometa-venv\Scripts\activate
     ```
 
 ### Installing requirements
@@ -379,7 +379,7 @@ Installing collected packages: urllib3, idna, charset-normalizer, certifi, six, 
     Running setup.py install for arrapi ... done
 Successfully installed PlexAPI-4.7.0 arrapi-1.1.3 certifi-2021.10.8 charset-normalizer-2.0.7 idna-3.3 lxml-4.6.3 pathvalidate-2.4.1 pillow-8.3.2 requests-2.26.0 retrying-1.3.3 ruamel.yaml-0.17.10 ruamel.yaml.clib-0.2.6 schedule-1.1.0 six-1.16.0 tmdbv3api-1.7.6 urllib3-1.26.7
 WARNING: You are using pip version 21.1.3; however, version 21.3 is available.
-You should consider upgrading via the '/Users/mroche/Plex-Meta-Manager/komet-venv/bin/python -m pip install --upgrade pip' command.
+You should consider upgrading via the '/Users/mroche/Plex-Meta-Manager/kometa-venv/bin/python -m pip install --upgrade pip' command.
 ```
 
 Don't worry about the WARNING about `pip version thus-and-such` if it comes up.
@@ -409,7 +409,7 @@ Don't worry about the WARNING about `pip version thus-and-such` if it comes up.
 <details>
   <summary>What did that do?</summary>
 
-  This told Python to use the `pip` module to install some libraries that Komet needs.
+  This told Python to use the `pip` module to install some libraries that Kometa needs.
 </details>
 
 Let’s make sure it’s working so far.
@@ -500,7 +500,7 @@ Save the file:
 
 {% include-markdown "./wt/wt-save.md" %}
 
-Then run Komet again:
+Then run Kometa again:
 
 {% include-markdown "./wt/wt-run-shell.md" %}
 
@@ -510,7 +510,7 @@ Then run Komet again:
 
 {% include-markdown "./wt/wt-04-default-intro.md" %}
 
-So let's run Komet and see this happen:
+So let's run Kometa and see this happen:
 
 
 {% include-markdown "./wt/wt-run-shell.md" %}
@@ -525,7 +525,7 @@ Save the file:
 
 {% include-markdown "./wt/wt-save.md" %}
 
-Then run Komet again:
+Then run Kometa again:
 
 {% include-markdown "./wt/wt-run-shell.md" %}
 
@@ -539,7 +539,7 @@ Save the file:
 
 {% include-markdown "./wt/wt-save.md" %}
 
-Then run Komet again:
+Then run Kometa again:
 
 {% include-markdown "./wt/wt-run-shell.md" %}
 
@@ -563,7 +563,7 @@ deactivate
    include-markdown "./wt/wt-10-scheduling.md"
 %}
 
-### I want to update to the latest version of Komet
+### I want to update to the latest version of Kometa
 
 === ":fontawesome-brands-linux: Linux"
 
@@ -571,7 +571,7 @@ deactivate
     ```
     cd ~/Plex-Meta-Manager
     git pull
-    source komet-venv/bin/activate
+    source kometa-venv/bin/activate
     python -m pip install -r requirements.txt
     ```
 
@@ -581,7 +581,7 @@ deactivate
     ```
     cd ~/Plex-Meta-Manager
     git pull
-    source komet-venv/bin/activate
+    source kometa-venv/bin/activate
     python -m pip install -r requirements.txt
     ```
 
@@ -591,7 +591,7 @@ deactivate
     ```
     cd ~\Plex-Meta-Manager
     git pull
-    .\komet-venv\Scripts\activate
+    .\kometa-venv\Scripts\activate
     python -m pip install -r requirements.txt
     ```
 
@@ -605,7 +605,7 @@ deactivate
     cd ~/Plex-Meta-Manager
     git checkout develop
     git pull
-    source komet-venv/bin/activate
+    source kometa-venv/bin/activate
     python -m pip install -r requirements.txt
     ```
 
@@ -616,7 +616,7 @@ deactivate
     cd ~/Plex-Meta-Manager
     git checkout develop
     git pull
-    source komet-venv/bin/activate
+    source kometa-venv/bin/activate
     python -m pip install -r requirements.txt
     ```
 
@@ -627,7 +627,7 @@ deactivate
     cd ~/Plex-Meta-Manager
     git checkout develop
     git pull
-    .\komet-venv\Scripts\activate
+    .\kometa-venv\Scripts\activate
     python -m pip install -r requirements.txt
     ```
 

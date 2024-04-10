@@ -28,11 +28,11 @@ title: Home
 [![Feature Requests](https://img.shields.io/badge/Feature%20Requests-00bc8c?style=plastic)](https://features.metamanager.wiki/)
 </center>
 
-Komet (formerly known as Plex Meta Manager) is a powerful tool designed to give you complete control over your media libraries. With Komet, you can take your customization to the next level, with granular control over metadata, collections, overlays, and much more.
+Kometa (formerly known as Plex Meta Manager) is a powerful tool designed to give you complete control over your media libraries. With Kometa, you can take your customization to the next level, with granular control over metadata, collections, overlays, and much more.
 
-Transform your media library with Komet and discover its full potential! Connect to third-party services like TMDb, Trakt, and IMDb, among others, to create one-of-a-kind collections, overlays and more. Your media library will stand out and be tailored to your specific needs.
+Transform your media library with Kometa and discover its full potential! Connect to third-party services like TMDb, Trakt, and IMDb, among others, to create one-of-a-kind collections, overlays and more. Your media library will stand out and be tailored to your specific needs.
 
-## What Can Komet Do?
+## What Can Kometa Do?
 
 
 <div class="grid cards" markdown>
@@ -43,7 +43,7 @@ Transform your media library with Komet and discover its full potential! Connect
 
     Elevate your library with beautifully crafted metadata - customize artwork, titles, summaries, and more to create a stunning library.
 
--   :octicons-sliders-16:{ .lg .middle } __Komet Defaults__
+-   :octicons-sliders-16:{ .lg .middle } __Kometa Defaults__
 
     ---
 
@@ -80,63 +80,63 @@ Transform your media library with Komet and discover its full potential! Connect
 
 ## Demo Video
 
-The below YouTube video has been created by one of our community members to showcase some of the things that Komet can do for you. 
+The below YouTube video has been created by one of our community members to showcase some of the things that Kometa can do for you. 
 
-<iframe width="840" height="472" src="https://www.youtube.com/embed/nTfCUtKWTYI?si=PUvELjmqFUu4p9yk" title="Komet Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="840" height="472" src="https://www.youtube.com/embed/nTfCUtKWTYI?si=PUvELjmqFUu4p9yk" title="Kometa Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Example Komet Libraries 
+## Example Kometa Libraries 
 
-Here are some examples of the things you can achieve using Komet!
+Here are some examples of the things you can achieve using Kometa!
 
-**Example Movie Collections using the [Komet Defaults](defaults/collections.md)** (click to enlarge):
+**Example Movie Collections using the [Kometa Defaults](defaults/collections.md)** (click to enlarge):
 
 ![Movie Collection Preview](images/movie-collection-preview.png){width="600"}
 
-**Example Show Overlays using the [Komet Defaults](defaults/overlays.md)** (click to enlarge):
+**Example Show Overlays using the [Kometa Defaults](defaults/overlays.md)** (click to enlarge):
 
 ![Show Library Preview](images/show-library-preview.png){ width="600" }
 
-## Komet Defaults
+## Kometa Defaults
 
-Want your library to look like the above images?  With the [Komet Defaults](defaults/guide.md) you can! These powerful and modular files were designed by the Komet team to make it simple to create a personalized, one-of-a-kind media collection without the hassle of manually defining each one.
+Want your library to look like the above images?  With the [Kometa Defaults](defaults/guide.md) you can! These powerful and modular files were designed by the Kometa team to make it simple to create a personalized, one-of-a-kind media collection without the hassle of manually defining each one.
 
-Want to see what the community has to offer? Check out the [Komet Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs) repository on GitHub to see user-submitted configuration files, or even add your own to the mix!
+Want to see what the community has to offer? Check out the [Kometa Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs) repository on GitHub to see user-submitted configuration files, or even add your own to the mix!
 
-With Komet, you can also manage metadata for all your media types, from movies and shows to music and more. And since your metadata is managed outside your libraries, you'll never have to worry about losing your customizations in the event of a media server database loss, you can simply reapply them! It is also easy to move your customizations between servers if you need to.
+With Kometa, you can also manage metadata for all your media types, from movies and shows to music and more. And since your metadata is managed outside your libraries, you'll never have to worry about losing your customizations in the event of a media server database loss, you can simply reapply them! It is also easy to move your customizations between servers if you need to.
 
 ## Getting Started
 
-To get started with Komet, follow these simple steps:
+To get started with Kometa, follow these simple steps:
 
-1. Install Komet on your device. You can find the installation instructions for a variety of platforms [here](komet/install/overview.md).
+1. Install Kometa on your device. You can find the installation instructions for a variety of platforms [here](kometa/install/overview.md).
 
-2. Once you have installed Komet, create your [Configuration File](config/overview.md). This file contains important information such as URLs and credentials needed to connect to services like Plex and TMDb
+2. Once you have installed Kometa, create your [Configuration File](config/overview.md). This file contains important information such as URLs and credentials needed to connect to services like Plex and TMDb
 
-3. After creating the Configuration File, you can start updating Metadata and building automatic Collections by creating a [Collection File](files/collections.md) for each Library you want to work with. If you'd rather use some of our pre-made Collection Files, take a look at the [Komet Defaults](defaults/guide.md)
+3. After creating the Configuration File, you can start updating Metadata and building automatic Collections by creating a [Collection File](files/collections.md) for each Library you want to work with. If you'd rather use some of our pre-made Collection Files, take a look at the [Kometa Defaults](defaults/guide.md)
 
 4. Finally, check out the [Wiki](https://metamanager.wiki/), you'll find new and exciting ways to truly unlock the potential of your libraries.
 
 ## Step-by-Step Guides
 
-If you're a beginner to the concepts of Python, Git and/or Komet and find the above steps challenging, don't worry. We've got some step-by-step guides that can help you get started. These guides will take you through the process of installing Komet, creating your Configuration File and getting some basic Collections up and running.
+If you're a beginner to the concepts of Python, Git and/or Kometa and find the above steps challenging, don't worry. We've got some step-by-step guides that can help you get started. These guides will take you through the process of installing Kometa, creating your Configuration File and getting some basic Collections up and running.
 
 For those who need full installation walkthroughs, please refer to the following walkthrough guides:
 
-  * [Local Walkthrough](komet/install/local.md) - follow this if you are running the script directly on Windows, OS X, or Linux
-  * [Docker Walkthrough](komet/install/docker.md) - this discusses using Docker at the command line
+  * [Local Walkthrough](kometa/install/local.md) - follow this if you are running the script directly on Windows, OS X, or Linux
+  * [Docker Walkthrough](kometa/install/docker.md) - this discusses using Docker at the command line
 
 If you are using unRAID, Kubernetes, QNAP, or Synology refer to the following basic guide to Docker container setup for each system:
 
-**this doesn't cover the Komet setup specifics found in the guides above with regard to creating the config file and collection file, so you may want to go through the [Docker Walkthrough](komet/install/docker.md) first on your computer to gain that understanding.**
+**this doesn't cover the Kometa setup specifics found in the guides above with regard to creating the config file and collection file, so you may want to go through the [Docker Walkthrough](kometa/install/docker.md) first on your computer to gain that understanding.**
 
-  * [unRAID Walkthrough](komet/install/unraid.md)
-  * [Kubernetes Walkthrough](komet/install/kubernetes.md)
-  * [QNAP Walkthrough](komet/install/qnap.md)
-  * [Synology Walkthrough](komet/install/synology.md)
+  * [unRAID Walkthrough](kometa/install/unraid.md)
+  * [Kubernetes Walkthrough](kometa/install/kubernetes.md)
+  * [QNAP Walkthrough](kometa/install/qnap.md)
+  * [Synology Walkthrough](kometa/install/synology.md)
 
 ## Example Usage
 
-Komet puts you in control of your media library by letting you create custom Collections that make discovering and organizing your content a breeze. With powerful search and filtering options, you can build Collections based on popular builders like TMDb, IMDb, Trakt, and many more.
+Kometa puts you in control of your media library by letting you create custom Collections that make discovering and organizing your content a breeze. With powerful search and filtering options, you can build Collections based on popular builders like TMDb, IMDb, Trakt, and many more.
 
 Imagine having Collections like these at your fingertips:
 
@@ -148,31 +148,31 @@ Imagine having Collections like these at your fingertips:
   * Actors
   * Decades
 
-Komet gives you endless possibilities to curate and organize your media library any way you want. Create custom Collections and Overlays that fit your unique preferences and make discovering your content effortless.
+Kometa gives you endless possibilities to curate and organize your media library any way you want. Create custom Collections and Overlays that fit your unique preferences and make discovering your content effortless.
 
-But if you don't want to spend time manually creating Collections and Overlays, we've got you covered. Check out the [Komet Defaults](defaults/guide.md) - a handcrafted selection of tried-and-tested Collections and Overlays made by the Komet team.
+But if you don't want to spend time manually creating Collections and Overlays, we've got you covered. Check out the [Kometa Defaults](defaults/guide.md) - a handcrafted selection of tried-and-tested Collections and Overlays made by the Kometa team.
 
 ## Alternate Branches
 
-The Develop and Nightly branches are "beta" versions of Komet that are updated more frequently than the stable version (Master branch). These branches are where bug fixes, new features, and other changes are added before being released to the Master branch.
+The Develop and Nightly branches are "beta" versions of Kometa that are updated more frequently than the stable version (Master branch). These branches are where bug fixes, new features, and other changes are added before being released to the Master branch.
 
-However, these branches (especially Nightly) are recommended for more technical users who don't mind updating frequently to get the latest changes. Keep in mind that these beta branches may have bugs or other issues that could cause problems with Komet or your media server. So, if you're not comfortable with technical issues, it's best to stick with the Master branch.
+However, these branches (especially Nightly) are recommended for more technical users who don't mind updating frequently to get the latest changes. Keep in mind that these beta branches may have bugs or other issues that could cause problems with Kometa or your media server. So, if you're not comfortable with technical issues, it's best to stick with the Master branch.
 
 ??? "Develop Branch (click to expand)"
 
     [![Develop GitHub commits since latest stable release (by SemVer)](https://img.shields.io/github/commits-since/meisnate12/plex-meta-manager/latest/develop?label=Commits%20in%20Develop&style=plastic)](https://github.com/meisnate12/Plex-Meta-Manager/tree/develop)
 
-    The [develop](https://github.com/meisnate12/Plex-Meta-Manager/tree/develop) branch has the most updated **documented** fixes and enhancements to Komet.  This version is tested and documented to some degree, but it is still an active Develop branch, so there may be rough edges.
+    The [develop](https://github.com/meisnate12/Plex-Meta-Manager/tree/develop) branch has the most updated **documented** fixes and enhancements to Kometa.  This version is tested and documented to some degree, but it is still an active Develop branch, so there may be rough edges.
 
     Switching to `develop`:
 
     === "Running in Docker"
         Add ":develop" to the image name in your run command or configuration:
             ```
-            meisnate12/komet:develop
+            meisnate12/kometa:develop
             ```
     === "Running on the Host"
-        In the directory where you cloned Komet:
+        In the directory where you cloned Kometa:
             ```bash
             git checkout develop
             ```
@@ -189,17 +189,17 @@ However, these branches (especially Nightly) are recommended for more technical 
     
     **This branch will have squashed commits which can cause `git pull`/`git fetch` to error you can use `git reset origin/nightly --hard` to fix the branch.**
     
-    The [nightly](https://github.com/meisnate12/Plex-Meta-Manager/tree/nightly) branch has the absolute latest version of Komet, but it could easily break, there is no guarantee that it even works, and any new features will not be documented until they have progressed enough to reach the develop branch.
+    The [nightly](https://github.com/meisnate12/Plex-Meta-Manager/tree/nightly) branch has the absolute latest version of Kometa, but it could easily break, there is no guarantee that it even works, and any new features will not be documented until they have progressed enough to reach the develop branch.
 
     Switching to `nightly`:
 
     === "Running in Docker"
         Add ":nightly" to the image name in your run command or configuration:
             ```
-            meisnate12/komet:nightly
+            meisnate12/kometa:nightly
             ```
     === "Running on the Host"
-        In the directory where you cloned Komet:
+        In the directory where you cloned Kometa:
             ```bash
             git checkout nightly
             ```
@@ -208,31 +208,31 @@ However, these branches (especially Nightly) are recommended for more technical 
             git checkout master
             ```
 
-    As this branch is subject to extreme change, there is no promise of the feature being documented in the [nightly](https://metamanager.wiki/en/nightly/) branch of the wiki and all discussions relating to changes made in the nightly branch will be held within the [Komet Discord Server](https://metamanager.wiki/en/latest/discord/).
+    As this branch is subject to extreme change, there is no promise of the feature being documented in the [nightly](https://metamanager.wiki/en/nightly/) branch of the wiki and all discussions relating to changes made in the nightly branch will be held within the [Kometa Discord Server](https://metamanager.wiki/en/latest/discord/).
 
 ???+ tip "`lmxl` Variants for Unsupported Hardware"
 
-    In March 2024, lxml, a prerequisite for operating Komet, ceased support for older CPUs. This impedes users from running Komet on unsupported hardware.
+    In March 2024, lxml, a prerequisite for operating Kometa, ceased support for older CPUs. This impedes users from running Kometa on unsupported hardware.
 
-    To address this issue, we have implemented 'lxml' variants for each Komet branch (master, develop, and nightly). These variants resume compatibility with older hardware by freezing lxml on a previous version which has wider hardware support.
+    To address this issue, we have implemented 'lxml' variants for each Kometa branch (master, develop, and nightly). These variants resume compatibility with older hardware by freezing lxml on a previous version which has wider hardware support.
 
     To transition to the lxml branch, simply prepend 'lxml-' to the branch name you are currently utilizing. For instance, `meisnate12/plex-meta-manager:lxml-master`, `meisnate12/plex-meta-manager:lxml-develop` and `meisnate12/plex-meta-manager:lxml-nightly`.
 
 ## Discord Support Server
 
-If you're looking for support for any questions or issues you might have, or if you just want to be a part of our growing community, Join the [Komet Discord Server](https://metamanager.wiki/en/latest/discord/).
+If you're looking for support for any questions or issues you might have, or if you just want to be a part of our growing community, Join the [Kometa Discord Server](https://metamanager.wiki/en/latest/discord/).
 
 ## Feature Requests
 
-At Komet, we value our community's input and actively seek feedback to drive the evolution of our product. We want to hear your ideas on how to enhance Komet, and we encourage you to visit our [Feature Request](https://features.metamanager.wiki/features) page to share your thoughts or vote on what features you would like to see added next. Your voice matters and helps shape the future of Komet, so please don't hesitate to join in the conversation and be a part of our community-driven development process.
+At Kometa, we value our community's input and actively seek feedback to drive the evolution of our product. We want to hear your ideas on how to enhance Kometa, and we encourage you to visit our [Feature Request](https://features.metamanager.wiki/features) page to share your thoughts or vote on what features you would like to see added next. Your voice matters and helps shape the future of Kometa, so please don't hesitate to join in the conversation and be a part of our community-driven development process.
 
 ## Errors and Configuration Questions
 
-If you're having trouble, we recommend first joining the [Komet Discord Server](https://metamanager.wiki/en/latest/discord/) and seeking support there. If that isn't possible for you, here's what you can do:
+If you're having trouble, we recommend first joining the [Kometa Discord Server](https://metamanager.wiki/en/latest/discord/) and seeking support there. If that isn't possible for you, here's what you can do:
 
 * If you get an error, update to the latest version and check if the issue persists. If it does, report the bug by filling out the [Bug Report](https://github.com/meisnate12/Plex-Meta-Manager/issues/new?assignees=meisnate12&labels=status%3Anot-yet-viewed%2C+bug&template=bug_report.md&title=Bug%3A+) template.
-* If you spot a mistake or have an idea to improve the [Komet Wiki](https://metamanager.wiki/), submit a request using the [Wiki Request](https://github.com/meisnate12/Plex-Meta-Manager/issues/new?assignees=meisnate12&labels=status%3Anot-yet-viewed%2C+documentation&template=3.docs_request.yml&title=%5BDocs%5D%3A+) template.
-* If you have a question about metadata configuration, start a discussion on the [Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions). Remember, the community helps shape the future of Komet, so your input is valuable!
+* If you spot a mistake or have an idea to improve the [Kometa Wiki](https://metamanager.wiki/), submit a request using the [Wiki Request](https://github.com/meisnate12/Plex-Meta-Manager/issues/new?assignees=meisnate12&labels=status%3Anot-yet-viewed%2C+documentation&template=3.docs_request.yml&title=%5BDocs%5D%3A+) template.
+* If you have a question about metadata configuration, start a discussion on the [Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions). Remember, the community helps shape the future of Kometa, so your input is valuable!
 
 For support on any of the above, visit the [Discord server](https://metamanager.wiki/en/latest/discord/).
 

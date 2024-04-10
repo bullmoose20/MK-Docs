@@ -45,7 +45,7 @@ Note that the `template_variables:` section only needs to be used if you do want
 
     === "File-Specific Template Variables"
 
-        The below template variables are available specifically for this Komet Defaults file.
+        The below template variables are available specifically for this Kometa Defaults file.
 
         Be sure to also check out the "Shared Template Variables" tab for additional variables.
 

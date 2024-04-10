@@ -1,6 +1,6 @@
 # File Blocks
 
-When using Komet, the structure of each library is made using File Blocks
+When using Kometa, the structure of each library is made using File Blocks
 
 ???+ example "Example Library Structure"
 
@@ -11,8 +11,8 @@ When using Komet, the structure of each library is made using File Blocks
           - default: imdb
     ```
 
-    In the above example, `collection_files` is the type of File, which tells Komet that the entries that follow will 
-    create/update collections and `- default:` is the type of Path, which Komet that the file it is looking for is a Komet 
+    In the above example, `collection_files` is the type of File, which tells Kometa that the entries that follow will 
+    create/update collections and `- default:` is the type of Path, which Kometa that the file it is looking for is a Kometa 
     Defaults file.
 
     These ideas will be further outlined on this page.
@@ -46,17 +46,17 @@ Every file block under the parent attribute begins with a `-`.
 ### Location Types and Paths
 
 There are multiple location types that can be used to call a file. They can either be on the local system, online at an 
-url, part of the [Komet Defaults](../defaults/guide.md), directly from the 
-[Komet User Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs) repository, or from another 
+url, part of the [Kometa Defaults](../defaults/guide.md), directly from the 
+[Kometa User Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs) repository, or from another 
 [`Custom Repository`](settings.md).
 
 The location types are outlined as follows:
 
 ??? blank "`file` - Used to run a local file.<a class="headerlink" href="#file" title="Permanent link">¶</a>"
 
-    <div id="file" />Used to run a file which is located within the system that Komet is being run from.
+    <div id="file" />Used to run a file which is located within the system that Kometa is being run from.
 
-    File locations need to be accessible to Komet at those paths; this is typically only something you need to consider 
+    File locations need to be accessible to Kometa at those paths; this is typically only something you need to consider 
     when using Docker.
     
     ???+ example "Example"
@@ -70,10 +70,10 @@ The location types are outlined as follows:
 
 ??? blank "`folder` - Used to run all local files in a directory.<a class="headerlink" href="#folder" title="Permanent link">¶</a>"
 
-    <div id="folder" />Used to run all files located in a directory which is located within the system that Komet is being 
+    <div id="folder" />Used to run all files located in a directory which is located within the system that Kometa is being 
     run from.
 
-    Folder locations need to be accessible to Komet at those paths; this is typically only something you need to consider 
+    Folder locations need to be accessible to Kometa at those paths; this is typically only something you need to consider 
     when using Docker.
     
     ???+ example "Example"
@@ -101,9 +101,9 @@ The location types are outlined as follows:
               - url: https://example.com/path/to/file.yml
         ```
 
-??? blank "`default` - Used to run a built-in [Komet Defaults](../defaults/guide.md) file.<a class="headerlink" href="#default" title="Permanent link">¶</a>"
+??? blank "`default` - Used to run a built-in [Kometa Defaults](../defaults/guide.md) file.<a class="headerlink" href="#default" title="Permanent link">¶</a>"
 
-    <div id="default" />Used to run a built-in Komet Defaults file. The values you'd enter here are listed in the 
+    <div id="default" />Used to run a built-in Kometa Defaults file. The values you'd enter here are listed in the 
     [default usage guide](../defaults/guide.md).
     
     ???+ example "Example"
@@ -115,10 +115,10 @@ The location types are outlined as follows:
               - default: oscars
         ```
 
-??? blank "`git` - Used to run a file hosted on the [Komet User Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs) repository.<a class="headerlink" href="#git" title="Permanent link">¶</a>"
+??? blank "`git` - Used to run a file hosted on the [Kometa User Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs) repository.<a class="headerlink" href="#git" title="Permanent link">¶</a>"
 
     <div id="git" />Used to run a file hosted on the 
-    [Komet User Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs) repository.
+    [Kometa User Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs) repository.
 
     Note that you enter the bits of the items path relative to the top level of the repo [`meisnate12/People`] and you 
     don't need the `.yml` extension.
@@ -143,7 +143,7 @@ The location types are outlined as follows:
     ???+ example "Example"
 
         This is assuming the `custom_repo` setting is 
-        `https://github.com/meisnate12/komet-Configs/tree/master/meisnate12`.
+        `https://github.com/meisnate12/kometa-Configs/tree/master/meisnate12`.
         
         ```yaml
         libraries:
@@ -167,7 +167,7 @@ You can have some control of the files from inside your Configuration file by us
     
     **Attribute:** `template_variables`
     
-    **Accepted Values:** [Dictionary](../komet/yaml.md#dictionaries) of values specified by each particular file.
+    **Accepted Values:** [Dictionary](../kometa/yaml.md#dictionaries) of values specified by each particular file.
 
     **Default Value:** `None`
 
@@ -233,7 +233,7 @@ You can have some control of the files from inside your Configuration file by us
 
     ???+ tip 
     
-        Assets can be stored anywhere on the host system that Komet has visibility of (i.e. if using docker, the directory 
+        Assets can be stored anywhere on the host system that Kometa has visibility of (i.e. if using docker, the directory 
         must be mounted/visible to the docker container).
 
     <hr style="margin: 0px;">

@@ -22,7 +22,7 @@ I’ve removed some of the lines for space, but have left the important bits:
 ...
 ```
 
-You can see there that Komet found its config file, was able to connect to TMDb, was able to connect to Plex, and then failed trying to read the “Movies-NOSUCHLIBRARY" library, which of course doesn’t exist.
+You can see there that Kometa found its config file, was able to connect to TMDb, was able to connect to Plex, and then failed trying to read the “Movies-NOSUCHLIBRARY" library, which of course doesn’t exist.
 
 Open the config file again and change "Movies-NOSUCHLIBRARY" to reflect *your own* Movie library in Plex.
 
@@ -47,7 +47,7 @@ libraries:
       - default: imdb                # This is a file within the defaults folder in the Repository
       # see the wiki for how to use local files, folders, URLs, or files from git
 playlist_files:
-  - default: playlist                # This is a file within Komet's defaults folder
+  - default: playlist                # This is a file within Kometa's defaults folder
   # see the wiki for how to use local files, folders, URLs, or files from git
 ```
 

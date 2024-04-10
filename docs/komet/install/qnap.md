@@ -1,10 +1,10 @@
 # QNAP Walkthrough
 
-This is a quick walkthrough of setting up the Komet Docker container in the QNAP "Container Station" UI.
+This is a quick walkthrough of setting up the Kometa Docker container in the QNAP "Container Station" UI.
 
 The "Container Station" UI on your QNAP may differ from these screenshots, but the concepts are the same:
 
-1. Create a container based on the `meisnate12/komet` image.
+1. Create a container based on the `meisnate12/kometa` image.
 2. Set environment variables to control the container's behavior [optional].
 3. Point the container to the directory where your configuration files are to be stored.
 
@@ -27,9 +27,9 @@ Detailed steps:
         Under the "Image" section you will be typing in the name and version of the docker image you wish to pull. Type in the image you wish to use as follows:
     
         ```
-        meisnate12/komet:latest
-        meisnate12/komet:develop
-        meisnate12/komet:nightly
+        meisnate12/kometa:latest
+        meisnate12/kometa:develop
+        meisnate12/kometa:nightly
         ```
 
     4. Then click Pull.
@@ -108,7 +108,7 @@ Detailed steps:
     
         ![](images/qnap1.png)
 
-    2. Search for `meisnate12/komet`.
+    2. Search for `meisnate12/kometa`.
 
         On the "Docker Hub" tab you should see the image; click on it and click "Install".
         
@@ -129,7 +129,7 @@ Detailed steps:
 
         IMPORTANT: **DO NOT REMOVE** ANY ELEMENT OF THAT TEXT.  DO NOT ENTER ANYTHING INTO THE "Command" FIELD.
 
-        For example, you could enter the following into the "Entrypoint" field to make Komet run immediately when the container starts up: `/tini -s python3 plex_meta_manager.py -- --run`
+        For example, you could enter the following into the "Entrypoint" field to make Kometa run immediately when the container starts up: `/tini -s python3 plex_meta_manager.py -- --run`
 
         Typically, in a Docker environment, this sort of thing is done via Environment Variables [the next step here].  Editing the "Entrypoint" is not recommended, as it's easy to render the container non-functional if you are not sure what you're doing.
 
@@ -143,7 +143,7 @@ Detailed steps:
 
         Anything you can do via command-line arguments can be done with Environment Variables, which is more typical in Docker environments.
 
-        For example, you could add an environment variable named `KOMET_RUN` with a value of `True` to make Komet run immediately when the container starts up.
+        For example, you could add an environment variable named `KOMET_RUN` with a value of `True` to make Kometa run immediately when the container starts up.
 
         Information on available Environment Variables can be found [here](../environmental.md)
 

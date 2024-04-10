@@ -13,7 +13,7 @@ Supported Library Types: Movie, Show
 
 !!! important
 
-    As of Komet release 1.21, the keys associated with this Defaults file has changed.
+    As of Kometa release 1.21, the keys associated with this Defaults file has changed.
 
     If you are setting custom images, you will need to use `<<originals_key>>`
 
@@ -73,9 +73,9 @@ work. Any value not specified will use its default value if it has one if not it
 
 ??? abstract "Variable Lists (click to expand)"
 
-    * **File-Specific Template Variables** are variables available specifically for this Komet Defaults file.
+    * **File-Specific Template Variables** are variables available specifically for this Kometa Defaults file.
 
-    * **Shared Template Variables** are additional variables shared across the Komet Defaults.
+    * **Shared Template Variables** are additional variables shared across the Kometa Defaults.
 
     * **Shared Separator Variables** are additional variables available since this Default contains a 
     [Separator](../separators.md).

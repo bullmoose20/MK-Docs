@@ -50,11 +50,11 @@ libraries:                       # This is called out once within the config.yml
     collection_files:
       - file: config/Music.yml   # This is a local file THAT YOU MIGHT CREATE
 playlist_files:
-  - default: playlist                # This is a file within Komet's defaults folder
+  - default: playlist                # This is a file within Kometa's defaults folder
   # see the wiki for how to use local files, folders, URLs, or files from git
 ```
 
-You will ultimately need an entry here for each of the libraries on which you want Komet to act.  Those top-level elements [Movies, TV Shows, Anime, Music] are names of libraries on your Plex server.
+You will ultimately need an entry here for each of the libraries on which you want Kometa to act.  Those top-level elements [Movies, TV Shows, Anime, Music] are names of libraries on your Plex server.
 
 For now, delete the “TV Shows”, “Anime”, and "Music" sections from the config file and change the name of the “Movies” section to “Movies-NOSUCHLIBRARY":
 
@@ -68,7 +68,7 @@ libraries:
       - default: imdb                # This is a file within the defaults folder in the Repository
       # see the wiki for how to use local files, folders, URLs, or files from git
 playlist_files:
-  - default: playlist                # This is a file within Komet's defaults folder
+  - default: playlist                # This is a file within Kometa's defaults folder
   # see the wiki for how to use local files, folders, URLs, or files from git
 ```
 

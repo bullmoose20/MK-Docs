@@ -30,7 +30,7 @@ arguments = {
     "debug": {"args": "db", "type": "bool", "help": "Run with Debug Logs Reporting to the Command Window"},
     "trace": {"args": "tr", "type": "bool", "help": "Run with extra Trace Debug Logs"},
     "log-requests": {"args": ["lr", "log-request"], "type": "bool", "help": "Run with all Requests printed"},
-    "timeout": {"args": "ti", "type": "int", "default": 180, "help": "Komet Global Timeout (Default: 180)"},
+    "timeout": {"args": "ti", "type": "int", "default": 180, "help": "Kometa Global Timeout (Default: 180)"},
     "collections-only": {"args": ["co", "collection-only"], "type": "bool", "help": "Run only collection files"},
     "metadata-only": {"args": ["mo", "metadatas-only"], "type": "bool", "help": "Run only metadata files"},
     "playlists-only": {"args": ["po", "playlist-only"], "type": "bool", "help": "Run only playlist files"},
@@ -117,7 +117,7 @@ plex_token = None
 i = 0
 while i < len(unknown):
     test_var = str(unknown[i]).lower().replace("_", "-")
-    if test_var.startswith(("--pmm-", "--komet-")) or test_var in ["-pu", "--plex-url", "-pt", "--plex-token"]:
+    if test_var.startswith(("--pmm-", "--kometa-")) or test_var in ["-pu", "--plex-url", "-pt", "--plex-token"]:
         if test_var in ["-pu", "--plex-url"]:
             plex_url = str(unknown[i + 1])
         elif test_var in ["-pt", "--plex-token"]:
@@ -168,7 +168,7 @@ elif not os.path.exists(os.path.join(default_dir, "config.yml")):
     print(f"Config Error: config not found at {os.path.abspath(default_dir)}")
     sys.exit(0)
 
-logger = MyLogger("Komet", default_dir, run_args["width"], run_args["divider"][0], run_args["ignore-ghost"],
+logger = MyLogger("Kometa", default_dir, run_args["width"], run_args["divider"][0], run_args["ignore-ghost"],
                   run_args["tests"] or run_args["debug"], run_args["trace"], run_args["log-requests"])
 
 from modules import util
@@ -229,22 +229,14 @@ def start(attrs):
     logger.add_main_handler()
     logger.separator()
     logger.info("")
-    logger.info_center("                                        ██                                      ")
-    logger.info_center("                                      ███                                       ")
-    logger.info_center("                                ██ █████                                        ")
-    logger.info_center("                              ████████                                          ")
-    logger.info_center("                         ████████████ ██                                        ")
-    logger.info_center("                       ████████████████                                         ")
-    logger.info_center("                     █████████████████                                          ")
-    logger.info_center("                   ██████████████████                                           ")
-    logger.info_center("████    █████     ███████████████████           █████  ███████████ █████████████")
-    logger.info_center("████  ██████    ███       ██████████   █       ██████  ███████████ █████████████")
-    logger.info_center("████ █████     ██          ████████  ████     ███████  █████            ████    ")
-    logger.info_center("█████████     ██            █████   ██████   ████████  ███████████      ████    ")
-    logger.info_center("█████████     ██            ████   ██████████████████  ███████████      ████    ")
-    logger.info_center("████ ██████    ██           ██     ████ █████████████  █████            ████    ")
-    logger.info_center("████  ██████    ███       ███      ████  █████  █████  ████████████     ████    ")
-    logger.info_center("████    █████     █████████        ████   ███   █████  ████████████     ████    ")
+    logger.info_center("##    ##  #######  ##     ## ######## ########    ###   ")
+    logger.info_center("##   ##  ##     ## ###   ### ##          ##      ## ##  ")
+    logger.info_center("##  ##   ##     ## #### #### ##          ##     ##   ## ")
+    logger.info_center("#####    ##     ## ## ### ## ######      ##    ##     ##")
+    logger.info_center("##  ##   ##     ## ##     ## ##          ##    #########")
+    logger.info_center("##   ##  ##     ## ##     ## ##          ##    ##     ##")
+    logger.info_center("##    ##  #######  ##     ## ########    ##    ##     ##")
+    logger.info("")
     if is_lxml:
         system_ver = "lxml Docker"
     elif is_linuxserver:
@@ -301,9 +293,9 @@ def start(attrs):
             logger.debug(f"--{akey} (KOMET_{akey.replace('-', '_').upper()}): {ext}{run_args[akey]}{ext}")
     logger.debug("")
     if secret_args:
-        logger.debug("Komet Secrets Read:")
+        logger.debug("Kometa Secrets Read:")
         for sec in secret_args:
-            logger.debug(f"--komet-{sec} (KOMET_{sec.upper().replace('-', '_')}): (redacted)")
+            logger.debug(f"--kometa-{sec} (KOMET_{sec.upper().replace('-', '_')}): (redacted)")
         logger.debug("")
     logger.separator(f"Starting {start_type}Run")
     config = None
@@ -903,7 +895,7 @@ def run_collection(config, library, metadata, requested_collections):
             library.notify(e, collection=mapping_name)
             logger.stacktrace()
             logger.error(e)
-            library.status[str(mapping_name)]["status"] = "Komet Failure"
+            library.status[str(mapping_name)]["status"] = "Kometa Failure"
             library.status[str(mapping_name)]["errors"].append(e)
         except Exception as e:
             library.notify(f"Unknown Error: {e}", collection=mapping_name)
@@ -1084,7 +1076,7 @@ def run_playlists(config):
                 config.notify(e, server=server_name, playlist=mapping_name)
                 logger.stacktrace()
                 logger.error(e)
-                status[mapping_name]["status"] = "PMM Failure"
+                status[mapping_name]["status"] = "Kometa Failure"
                 status[mapping_name]["errors"].append(e)
             except Exception as e:
                 config.notify(f"Unknown Error: {e}", server=server_name, playlist=mapping_name)
@@ -1142,4 +1134,4 @@ if __name__ == "__main__":
                         logger.error(f"Time Error: {valid_times}")
                 time.sleep(60)
     except KeyboardInterrupt:
-        logger.separator("Exiting Komet")
+        logger.separator("Exiting Kometa")

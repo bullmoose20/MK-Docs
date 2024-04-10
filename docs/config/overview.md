@@ -1,15 +1,15 @@
 # Config File
 
-Komet uses a YAML configuration file; this file contains settings that determine how Komet 
+Kometa uses a YAML configuration file; this file contains settings that determine how Kometa 
 behaves, and the required connection details needed to connect to Plex Media Server, Radarr, Sonarr, and other 
 third-party services via API.
 
-By default, and unless otherwise stated, Komet looks for the configuration file at `/config/config.yml`.
+By default, and unless otherwise stated, Kometa looks for the configuration file at `/config/config.yml`.
 
 A template Configuration File can be found in the 
 [GitHub Repo](https://github.com/meisnate12/Plex-Meta-Manager/blob/master/config/config.yml.template).
 
-This table outlines the third-party services that Komet can make use of. Each service has specific 
+This table outlines the third-party services that Kometa can make use of. Each service has specific 
 requirements for setup that can be found by clicking the links within the table.
 
 | Attribute                                   | Required                                                              |

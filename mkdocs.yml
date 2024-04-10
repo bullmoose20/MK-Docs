@@ -1,8 +1,8 @@
-site_name: Komet Wiki
+site_name: Kometa Wiki
 site_author: meisnate12
-site_description: Komet is an open-source python project allowing you to unlock the potential of your media server.
+site_description: Kometa is an open-source python project allowing you to unlock the potential of your media server.
 site_url: https://<slug>.metamanager.wiki/en/latest/
-repo_name: Komet Docker Image
+repo_name: Kometa Docker Image
 repo_url: https://github.com/meisnate12/Plex-Meta-Manager
 
 theme:
@@ -128,40 +128,40 @@ extra_javascript:
   - stylesheets/branch.js
 
 nav:
-  - KOMET:
+  - KOMETA:
       - Home: index.md
       - INSTALLATION:
-        - Installing Komet: komet/install/overview.md
-        - Docker Images: komet/install/images.md
+        - Installing Kometa: kometa/install/overview.md
+        - Docker Images: kometa/install/images.md
         - Walkthroughs: &walkthroughs
-          - Local (Win/Mac/Linux): komet/install/local.md
-          - Docker: komet/install/docker.md
-          - unRAID: komet/install/unraid.md
-          - Kubernetes: komet/install/kubernetes.md
-          - QNAP: komet/install/qnap.md
-          - Synology: komet/install/synology.md
+          - Local (Win/Mac/Linux): kometa/install/local.md
+          - Docker: kometa/install/docker.md
+          - unRAID: kometa/install/unraid.md
+          - Kubernetes: kometa/install/kubernetes.md
+          - QNAP: kometa/install/qnap.md
+          - Synology: kometa/install/synology.md
       - POST-INSTALL:
-        - Run Commands & Env Variables: komet/environmental.md
-        - YAML Files Explained: komet/yaml.md
-        - Log Files & Common Errors:  komet/logs.md
-        - Frequently Asked Questions: komet/faqs.md
+        - Run Commands & Env Variables: kometa/environmental.md
+        - YAML Files Explained: kometa/yaml.md
+        - Log Files & Common Errors: kometa/logs.md
+        - Frequently Asked Questions: kometa/faqs.md
         - Explanation Guides: &guides
-          - Overview: komet/guides/overview.md
-          - Plex Ratings Explained: komet/guides/ratings.md
-          - Scheduling Komet Runs Guide: komet/guides/scheduling.md
-          - Image Asset Directory Guide: komet/guides/assets.md
-          - Formula 1 Metadata Guide: komet/guides/formula.md
+          - Overview: kometa/guides/overview.md
+          - Plex Ratings Explained: kometa/guides/ratings.md
+          - Scheduling Kometa Runs Guide: kometa/guides/scheduling.md
+          - Image Asset Directory Guide: kometa/guides/assets.md
+          - Formula 1 Metadata Guide: kometa/guides/formula.md
         - Companion Scripts: &scripts
-          - Overview: komet/scripts/overview.md
-          - Plex Image Cleanup: komet/scripts/image-cleanup.md
-          - Komet Overlay Reset: komet/scripts/overlay-reset.md
+          - Overview: kometa/scripts/overview.md
+          - Plex Image Cleanup: kometa/scripts/image-cleanup.md
+          - Kometa Overlay Reset: kometa/scripts/overlay-reset.md
       - USEFUL LINKS: &links
         - Feature Requests: https://features.metamanager.wiki/
         - Bugs & Issues: https://github.com/meisnate12/Plex-Meta-Manager/issues
         - User Configs Repository: https://github.com/meisnate12/Plex-Meta-Manager-Configs
         - Discord Server: https://metamanager.wiki/en/latest/discord/
-        - Donate/Sponsor Komet: https://github.com/sponsors/meisnate12
-        - Acknowledgements: komet/acknowledgements.md
+        - Donate/Sponsor Kometa: https://github.com/sponsors/meisnate12
+        - Acknowledgements: kometa/acknowledgements.md
   - CONFIGURATION FILE:
       - Overview: config/overview.md
       - STRUCTURE:
@@ -187,7 +187,7 @@ nav:
         - AniDB: config/anidb.md
         - MyAnimeList: config/myanimelist.md
         - Trakt and MyAnimeList Authentication: config/auth.md
-  - KOMET DEFAULTS:
+  - KOMETA DEFAULTS:
       - Defaults Usage Guide: defaults/guide.md
       - Defaults Files: defaults/files.md
       - COLLECTIONS DEFAULTS:

@@ -1,4 +1,4 @@
-If the default collection files do not allow you to create the collections you want, you can define your own collections in your own collection files to do whatever you like within the capabilities of Komet.  We will create a simple collection that will contain 20 comedy movies released since 2012.
+If the default collection files do not allow you to create the collections you want, you can define your own collections in your own collection files to do whatever you like within the capabilities of Kometa.  We will create a simple collection that will contain 20 comedy movies released since 2012.
 
 First, open the collection file [this will create the file if it doesn't already exist]:
 

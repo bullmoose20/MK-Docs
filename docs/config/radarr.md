@@ -11,7 +11,7 @@ they're found missing while updating a library's collections.
     
     Radarr V2 may work, but it is not supported. Please upgrade to V3 if you can.
 
-Items in your List Exclusions will be ignored by Komet.
+Items in your List Exclusions will be ignored by Kometa.
 
 A `radarr` mapping can be either in the root of the config file as global mapping for all libraries, or you can specify 
 the `radarr` mapping individually per library.
@@ -32,7 +32,7 @@ radarr:
   monitor: false
   availability: announced
   quality_profile: HD-1080p
-  tag: komet
+  tag: kometa
   search: false
   radarr_path: /media
   plex_path: /share/CACHEDEV1_DATA/Multimedia
@@ -46,7 +46,7 @@ radarr:
 | `add_existing`     | Adds all existing movies in collections to Radarr.<br>Use the `radarr_add_existing` [Radarr Setting](../files/arr.md#radarr-definition-settings) in the collection definition to add existing per collection.<br>**boolean:** true or false                                                             | false       |  :fontawesome-solid-circle-xmark:{ .red }  |
 | `upgrade_existing` | Upgrades all existing movies in collections to match the Quality Profile of the collection.<br>Use the `radarr_upgrade_existing` [Radarr Setting](../files/arr.md#radarr-definition-settings) in the collection definition to upgrade the Quality Profile per collection.<br>**boolean:** true or false | false       |  :fontawesome-solid-circle-xmark:{ .red }  |
 | `monitor_existing` | Ensures all existing movies in collections match your monitor setting.<br>Use the `radarr_monitor_existing` [Radarr Setting](../files/arr.md#radarr-definition-settings) in the collection definition to match the monitor setting per collection.<br>**boolean:** true or false                        | false       |  :fontawesome-solid-circle-xmark:{ .red }  |
-| `ignore_cache`     | Ignores Komet's cache when adding items to Radarr.<br>Use the `radarr_ignore_cache` [Radarr Setting](../files/arr.md#radarr-definition-settings) in the collection definition to ignore per collection.<br>**boolean:** true or false                                                                     | false       |  :fontawesome-solid-circle-xmark:{ .red }  |
+| `ignore_cache`     | Ignores Kometa's cache when adding items to Radarr.<br>Use the `radarr_ignore_cache` [Radarr Setting](../files/arr.md#radarr-definition-settings) in the collection definition to ignore per collection.<br>**boolean:** true or false                                                                     | false       |  :fontawesome-solid-circle-xmark:{ .red }  |
 | `root_folder_path` | Default Root Folder Path to use when adding new movies.<br>Use the `radarr_folder` [Radarr Setting](../files/arr.md#radarr-definition-settings) in the collection definition to set the Root Folder per collection.                                                                                     | N/A         | :fontawesome-solid-circle-check:{ .green } |
 | `monitor`          | Monitor the movie when adding new movies.<br>Use the `radarr_monitor` [Radarr Setting](../files/arr.md#radarr-definition-settings) in the collection definition to set the Monitor value per collection.<br>**Options:** `true`, `false`                                                                | true        |  :fontawesome-solid-circle-xmark:{ .red }  |
 | `availability`     | Default Minimum Availability to use when adding new movies.<br>Use the `radarr_availability` [Radarr Setting](../files/arr.md#radarr-definition-settings) in the collection definition to set the Availability per collection.<br>**Options:** `announced`, `cinemas`, `released`, `db`                 | `announced` | :fontawesome-solid-circle-check:{ .green } |

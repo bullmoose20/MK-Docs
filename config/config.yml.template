@@ -4,33 +4,33 @@ libraries:                           # This is called out once within the config
   Movies:                            # These are names of libraries in your Plex
     remove_overlays: false           # Set this to true to remove all overlays
     collection_files:
-      - default: basic               # This is a file within Komet's defaults folder
-      - default: imdb                # This is a file within Komet's defaults folder
+      - default: basic               # This is a file within Kometa's defaults folder
+      - default: imdb                # This is a file within Kometa's defaults folder
       # see the wiki for how to use local files, folders, URLs, or files from git
     overlay_files:
-      - default: ribbon              # This is a file within Komet's defaults folder
+      - default: ribbon              # This is a file within Kometa's defaults folder
       # see the wiki for how to use local files, folders, URLs, or files from git
   TV Shows:
     remove_overlays: false           # Set this to true to remove all overlays
     collection_files:
-      - default: basic               # This is a file within Komet's defaults folder
-      - default: imdb                # This is a file within Komet's defaults folder
+      - default: basic               # This is a file within Kometa's defaults folder
+      - default: imdb                # This is a file within Kometa's defaults folder
       # see the wiki for how to use local files, folders, URLs, or files from git
     overlay_files:
-      - default: ribbon              # This is a file within Komet's defaults folder
+      - default: ribbon              # This is a file within Kometa's defaults folder
       # see the wiki for how to use local files, folders, URLs, or files from git
   Anime:
     collection_files:
-      - default: basic               # This is a file within Komet's defaults folder
-      - default: anilist             # This is a file within Komet's defaults folder
+      - default: basic               # This is a file within Kometa's defaults folder
+      - default: anilist             # This is a file within Kometa's defaults folder
       # see the wiki for how to use local files, folders, URLs, or files from git
   Music:
     collection_files:
       - file: config/Music.yml       # This is a local file THAT YOU MIGHT CREATE
 playlist_files:
-  - default: playlist                # This is a file within Komet's defaults folder
+  - default: playlist                # This is a file within Kometa's defaults folder
     template_variables:
-      libraries: Movies, TV Shows    # list of libraries that you want the Komet Defaults playlists to look at
+      libraries: Movies, TV Shows    # list of libraries that you want the Kometa Defaults playlists to look at
   # see the wiki for how to use local files, folders, URLs, or files from git
 settings:
   run_order:

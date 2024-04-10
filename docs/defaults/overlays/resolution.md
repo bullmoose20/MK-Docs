@@ -82,7 +82,7 @@ the [TRaSH Guides](https://trash-guides.info/) filename naming scheme
 
 ## "Dovetail" versions
 
-In the Komet log, you may see references to versions of these overlays with `-Dovetail` appended:
+In the Kometa log, you may see references to versions of these overlays with `-Dovetail` appended:
 
 ```
 |                             4K-Plus-Dovetail Overlay in Movies                             |
@@ -129,9 +129,9 @@ work. Any value not specified will use its default value if it has one if not it
 
 ??? abstract "Variable Lists (click to expand)"
 
-    * **File-Specific Template Variables** are variables available specifically for this Komet Defaults file.
+    * **File-Specific Template Variables** are variables available specifically for this Kometa Defaults file.
 
-    * **Overlay Template Variables** are additional variables shared across the Komet Overlay Defaults.
+    * **Overlay Template Variables** are additional variables shared across the Kometa Overlay Defaults.
 
     ??? example "Default Template Variable Values (click to expand)"
 

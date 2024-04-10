@@ -1,4 +1,4 @@
-JSON schemas for Komet YAML files
+JSON schemas for Kometa YAML files
 
 limitations:
 

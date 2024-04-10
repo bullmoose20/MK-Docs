@@ -1,7 +1,7 @@
 
 # Run Commands & Environment Variables
 
-The basic command to run Komet is as follows:
+The basic command to run Kometa is as follows:
 
 === "Windows / Mac / Linux"
 
@@ -12,10 +12,10 @@ The basic command to run Komet is as follows:
 === "Docker"
 
     ``` py
-    docker run --rm -it -v "/<ROOT_KOMET_DIRECTORY_HERE>/config:/config:rw" meisnate12/komet
+    docker run --rm -it -v "/<ROOT_KOMET_DIRECTORY_HERE>/config:/config:rw" meisnate12/kometa
     ```
 
-To customize the running of Komet according to your needs, you can use either run commands or environmental 
+To customize the running of Kometa according to your needs, you can use either run commands or environmental 
 variables. Environmental variables take precedence over run command attributes. However, if you encounter a race 
 condition where an attribute has been set both via an environmental variable and a shell command, the environmental 
 variable will be given priority.
@@ -43,7 +43,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --collections-only --run
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --collections-only --run
             ```
 
 ??? blank "Config Location&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-c`/`--config`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_CONFIG`<a class="headerlink" href="#config" title="Permanent link">¶</a>"
@@ -66,12 +66,12 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --config /data/config.yml
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --config /data/config.yml
             ```
 
 ??? blank "Time to Run&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-t`/`--times`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_TIMES`<a class="headerlink" href="#times" title="Permanent link">¶</a>"
 
-    <div id="times" />Specify the time of day that Komet will run. Will default to `05:00` when not 
+    <div id="times" />Specify the time of day that Kometa will run. Will default to `05:00` when not 
     specified.
 
     <hr style="margin: 0px;">
@@ -89,7 +89,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --times 22:00,03:00
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --times 22:00,03:00
             ```
 
 ??? blank "Run Immediately&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-r`/`--run`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_RUN`<a class="headerlink" href="#run" title="Permanent link">¶</a>"
@@ -109,7 +109,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --run
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --run
             ```
 
 ??? blank "Run Tests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-ts`/`--tests`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_TESTS`<a class="headerlink" href="#tests" title="Permanent link">¶</a>"
@@ -130,7 +130,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --tests
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --tests
             ```
         === "Example Collection File"
     
@@ -163,7 +163,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --debug
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --debug
             ```
 
 ??? blank "Trace&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-tr`/`--trace`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_TRACE`<a class="headerlink" href="#trace" title="Permanent link">¶</a>"
@@ -183,7 +183,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --trace
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --trace
             ```
 
 ??? blank "Log Requests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-lr`/`--log-requests`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_LOG_REQUESTS`<a class="headerlink" href="#log-requests" title="Permanent link">¶</a>"
@@ -204,7 +204,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --log-requests
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --log-requests
             ```
 
 ??? blank "Timeout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-ti`/`--timeout`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_TIMEOUT`<a class="headerlink" href="#timeout" title="Permanent link">¶</a>"
@@ -226,7 +226,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --timeout 360
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --timeout 360
             ```
 
 ??? blank "Collections Only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-co`/`--collections-only`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_COLLECTIONS_ONLY`<a class="headerlink" href="#collections-only" title="Permanent link">¶</a>"
@@ -246,7 +246,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --collections-only
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --collections-only
             ```
 
 ??? blank "Metadata Only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-mo`/`--metadata-only`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_METADATA_ONLY`<a class="headerlink" href="#metadata-only" title="Permanent link">¶</a>"
@@ -266,7 +266,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --metadata-only
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --metadata-only
             ```
 
 ??? blank "Playlists Only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-po`/`--playlists-only`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_PLAYLISTS_ONLY`<a class="headerlink" href="#playlists-only" title="Permanent link">¶</a>"
@@ -286,7 +286,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --playlists-only
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --playlists-only
             ```
 
 ??? blank "Operations Only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-op`/`--operations-only`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_OPERATIONS_ONLY`<a class="headerlink" href="#operations-only" title="Permanent link">¶</a>"
@@ -306,7 +306,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --operations-only
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --operations-only
             ```
 
 ??? blank "Overlays Only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-ov`/`--overlays-only`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_OVERLAYS_ONLY`<a class="headerlink" href="#overlays-only" title="Permanent link">¶</a>"
@@ -326,7 +326,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --overlays-only
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --overlays-only
             ```
 
 ??? blank "Run Collections&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-rc`/`--run-collections`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_RUN_COLLECTIONS`<a class="headerlink" href="#run-collections" title="Permanent link">¶</a>"
@@ -349,7 +349,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --run-collections "Harry Potter|Star Wars"
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --run-collections "Harry Potter|Star Wars"
             ```
 
 ??? blank "Run Libraries&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-rl`/`--run-libraries`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_RUN_LIBRARIES`<a class="headerlink" href="#run-libraries" title="Permanent link">¶</a>"
@@ -372,7 +372,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --run-libraries "Movies - 4K|TV Shows - 4K"
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --run-libraries "Movies - 4K|TV Shows - 4K"
             ```
 
 ??? blank "Run Files&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-rf`/`--run-files`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_RUN_FILES`<a class="headerlink" href="#run-files" title="Permanent link">¶</a>"
@@ -399,7 +399,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --run-files "Movies.yml|MovieCharts"
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --run-files "Movies.yml|MovieCharts"
             ```
 
 ??? blank "Ignore Schedules&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-is`/`--ignore-schedules`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_IGNORE_SCHEDULES`<a class="headerlink" href="#ignore-schedules" title="Permanent link">¶</a>"
@@ -420,7 +420,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --ignore-schedules
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --ignore-schedules
             ```
 
 ??? blank "Ignore Ghost&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-ig`/`--ignore-ghost`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_IGNORE_GHOST`<a class="headerlink" href="#ignore-ghost" title="Permanent link">¶</a>"
@@ -441,7 +441,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --ignore-ghost
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --ignore-ghost
             ```
 
 ??? blank "Delete Collections&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-dc`/`--delete-collections`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_DELETE_COLLECTIONS`<a class="headerlink" href="#delete-collections" title="Permanent link">¶</a>"
@@ -451,7 +451,7 @@ different ways to specify these things.
     ???+ warning
          
         You will lose **all** collections in the library - this will delete all collections, including ones not created 
-        or maintained by Komet.
+        or maintained by Kometa.
 
     <hr style="margin: 0px;">
 
@@ -466,7 +466,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --delete-collections
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --delete-collections
             ```
 
 ??? blank "Delete Labels&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-dl`/`--delete-labels`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_DELETE_LABELS`<a class="headerlink" href="#delete-labels" title="Permanent link">¶</a>"
@@ -475,7 +475,7 @@ different ways to specify these things.
 
     ???+ warning
     
-        To preserve functionality of Komet, this will **not** remove the Overlay label, which is required for Komet to know 
+        To preserve functionality of Kometa, this will **not** remove the Overlay label, which is required for Kometa to know 
         which items have Overlays applied.
     
         This will impact any [Smart Label Collections](../files/builders/smart.md#smart-label) that you have in your 
@@ -497,7 +497,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --delete-labels
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --delete-labels
             ```
 
 ??? blank "Resume Run&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-re`/`--resume`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_RESUME`<a class="headerlink" href="#resume" title="Permanent link">¶</a>"
@@ -518,7 +518,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --resume "Star Wars"
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --resume "Star Wars"
             ```
 
 ??? blank "No Countdown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-nc`/`--no-countdown`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_NO_COUNTDOWN`<a class="headerlink" href="#no-countdown" title="Permanent link">¶</a>"
@@ -538,7 +538,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --no-countdown
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --no-countdown
             ```
 
 ??? blank "No Missing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-nm`/`--no-missing`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_NO_MISSING`<a class="headerlink" href="#no-missing" title="Permanent link">¶</a>"
@@ -558,7 +558,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --no-missing
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --no-missing
             ```
 
 ??? blank "No Report&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-nr`/`--no-report`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_NO_REPORT`<a class="headerlink" href="#no-report" title="Permanent link">¶</a>"
@@ -578,7 +578,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --no-report
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --no-report
             ```
 
 ??? blank "Read Only Config&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-ro`/`--read-only-config`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_READ_ONLY_CONFIG`<a class="headerlink" href="#read-only-config" title="Permanent link">¶</a>"
@@ -598,7 +598,7 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --read-only-config
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --read-only-config
             ```
 
 ??? blank "Divider Character&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-d`/`--divider`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_DIVIDER`<a class="headerlink" href="#divider" title="Permanent link">¶</a>"
@@ -616,7 +616,7 @@ different ways to specify these things.
     !!! example
         === "Local Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --divider *
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --divider *
             python plex_meta_manager.py --divider *
             ```
         === "Docker Environment"
@@ -642,12 +642,12 @@ different ways to specify these things.
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --width 150
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --width 150
             ```
 
-??? blank "Config Secrets&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`--komet-***`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_***`<a class="headerlink" href="#komet-vars" title="Permanent link">¶</a>"
+??? blank "Config Secrets&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`--kometa-***`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_***`<a class="headerlink" href="#kometa-vars" title="Permanent link">¶</a>"
 
-    <div id="komet-vars" />All Run Commands that are in the format `--komet-***` and Environment Variables that are in the 
+    <div id="kometa-vars" />All Run Commands that are in the format `--kometa-***` and Environment Variables that are in the 
     format `KOMET_***`, where `***` is the name you want to call the variable, will be loaded in as Config Secrets.
     
     These Config Secrets can be loaded into the config by placing `<<***>>` in any field in the config, where `***` is 
@@ -655,18 +655,18 @@ different ways to specify these things.
 
     <hr style="margin: 0px;">
 
-    **Shell Flags:** `--komet-***` (ex. `--komet-mysecret 123456789`)
+    **Shell Flags:** `--kometa-***` (ex. `--kometa-mysecret 123456789`)
 
     **Environment Variable:** `KOMET_***` (ex. `KOMET_MYSECRET=123456789`)
 
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --komet-mysecret 123456789
+            python plex_meta_manager.py --kometa-mysecret 123456789
             ```
         === "Docker Environment"
             ```
-            docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet --komet-mysecret 123456789
+            docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --kometa-mysecret 123456789
             ```
     
         **Example Config Usage:**

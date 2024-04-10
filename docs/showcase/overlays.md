@@ -1,8 +1,8 @@
 # Overlays Showcase
 
-This page is designed to show the art of the possible when using Overlays within Komet.
+This page is designed to show the art of the possible when using Overlays within Kometa.
 
-Each showcased photo has been confirmed to be fully functional with Komet v1.19.0. We cannot guarantee functionality beyond that version.
+Each showcased photo has been confirmed to be fully functional with Kometa v1.19.0. We cannot guarantee functionality beyond that version.
 
 ## Example 1
 
@@ -12,7 +12,7 @@ Each showcased photo has been confirmed to be fully functional with Komet v1.19.
     
     This example shows a minimalistic Overlay application with the resolution, audio codec and video format on display.
 
-    This example uses three Komet Default Overlay files: [Resolution](../defaults/overlays/resolution.md), [Audio Codec](../defaults/overlays/audio_codec.md) and [Video Format](../defaults/overlays/video_format.md).
+    This example uses three Kometa Default Overlay files: [Resolution](../defaults/overlays/resolution.md), [Audio Codec](../defaults/overlays/audio_codec.md) and [Video Format](../defaults/overlays/video_format.md).
 
     Resolution is used to identify if the movie is 4K for example, and also highlights if a movie is Dolby Vision or HDR.
 
@@ -45,7 +45,7 @@ Each showcased photo has been confirmed to be fully functional with Komet v1.19.
     
     This example shows a minimalistic Overlay application with the ratings and ribbon of the movie.
 
-    This example uses two Komet Default Overlay files: [Ratings](../defaults/overlays/ratings.md) and [Ribbon](../defaults/overlays/ribbon.md).
+    This example uses two Kometa Default Overlay files: [Ratings](../defaults/overlays/ratings.md) and [Ribbon](../defaults/overlays/ribbon.md).
 
     Ratings are set to show the Rotten Tomatoes Audience & Critic scores, as well as the IMDb score.
 
@@ -101,7 +101,7 @@ Each showcased photo has been confirmed to be fully functional with Komet v1.19.
     
     This example shows a minimalistic Overlay application with the ratings applied at the bottom of the poster
 
-    This example uses two Komet Default Overlay files: [Ratings](../defaults/overlays/ratings.md) and [Runtimes](../defaults/overlays/runtimes.md).
+    This example uses two Kometa Default Overlay files: [Ratings](../defaults/overlays/ratings.md) and [Runtimes](../defaults/overlays/runtimes.md).
 
     Ratings are set to show the TMDb, Trakt and IMDb ratings, which have been set using [Library Operations](../config/operations.md#mass--rating-update)
 

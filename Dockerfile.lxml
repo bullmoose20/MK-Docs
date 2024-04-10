@@ -23,4 +23,4 @@ RUN echo "**** install system packages ****" \
  && rm -rf /requirements.txt /tmp/* /var/tmp/* /var/lib/apt/lists/*
  COPY . /
 VOLUME /config
-ENTRYPOINT ["/tini", "-s", "python3", "komet.py", "--"]
+ENTRYPOINT ["/tini", "-s", "python3", "kometa.py", "--"]

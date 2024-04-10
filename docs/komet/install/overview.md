@@ -1,6 +1,6 @@
-# Installing Komet
+# Installing Kometa
 
-Generally, Komet can be installed in one of two ways:
+Generally, Kometa can be installed in one of two ways:
 
 1. Running on a system as a Python script [we will refer to this as a "local" install]
 2. Running as a Docker container
@@ -11,11 +11,11 @@ For this reason, it's generally recommended that you install via Docker rather t
 
 If you have some specific reason to avoid Docker, or you prefer running it as a Python script for some particular reason, then this general recommendation is not aimed at you.  It's aimed at someone who doesn't have an existing compelling reason to choose one over the other.
 
-## Where to install Komet
+## Where to install Kometa
 
-Komet communicates with all services [Plex, Radarr, Trakt, etc] via their network APIs, so Komet does *not* have to be installed on the same machine as Plex.  Komet does not require [nor would it use] access to the filesystem behind your Plex libraries.
+Kometa communicates with all services [Plex, Radarr, Trakt, etc] via their network APIs, so Kometa does *not* have to be installed on the same machine as Plex. Kometa does not require [nor would it use] access to the filesystem behind your Plex libraries.
 
-Perhaps your Plex server is remote and you want to run Komet on a machine in your home.  That's fine.  The relative locations of Komet and Plex have no effect on the installation [except perhaps the URL you would use in the config].
+Perhaps your Plex server is remote and you want to run Kometa on a machine in your home.  That's fine.  The relative locations of Kometa and Plex have no effect on the installation [except perhaps the URL you would use in the config].
 
 ## Install Walkthroughs
 
@@ -28,7 +28,7 @@ For those who need full installation walkthroughs, please refer to the following
 
 If you are using unRAID, Kubernetes, QNAP, or Synology refer to the following basic guide to Docker container setup for each system:
 
-**this doesn't cover the Komet setup specifics found in the guides above with regard to creating the config file and collection file, so you may want to go through the [Docker Walkthrough](docker.md) first on your computer to gain that understanding.**
+**this doesn't cover the Kometa setup specifics found in the guides above with regard to creating the config file and collection file, so you may want to go through the [Docker Walkthrough](docker.md) first on your computer to gain that understanding.**
 
   * [unRAID Walkthrough](unraid.md)
   * [Kubernetes Walkthrough](kubernetes.md)
@@ -37,14 +37,14 @@ If you are using unRAID, Kubernetes, QNAP, or Synology refer to the following ba
 
 ## Local Install Overview
 
-Komet is compatible with Python 3.8 through 3.11. Later versions may function but are untested.
+Kometa is compatible with Python 3.8 through 3.11. Later versions may function but are untested.
 
 These are high-level steps which assume the user has knowledge of python and pip, and the general ability to troubleshoot issues. For a detailed step-by-step walkthrough, refer to the [Local Walkthrough](local.md) guide.
 
 1. Clone or [download and unzip](https://github.com/meisnate12/Plex-Meta-Manager/archive/refs/heads/master.zip) the repo.
 
 ```shell
-git clone https://github.com/meisnate12/komet
+git clone https://github.com/meisnate12/kometa
 ```
 2. Install dependencies:
 
@@ -58,10 +58,10 @@ pip install -r requirements.txt
 pip install -r requirements.txt --ignore-installed
 ```
 
-At this point Komet has been installed, and you can verify installation by running:
+At this point Kometa has been installed, and you can verify installation by running:
 
 ```shell
-python komet.py
+python kometa.py
 ```
 
 ## Docker Install Overview
@@ -69,7 +69,7 @@ python komet.py
 ### Docker Run:
 
 ```shell
-docker run -it -v <PATH_TO_CONFIG>:/config:rw meisnate12/komet
+docker run -it -v <PATH_TO_CONFIG>:/config:rw meisnate12/kometa
 ```
 
 - The `-it` flag allows you to interact with the script when needed (such as for Trakt or MyAnimeList authentication).
@@ -85,7 +85,7 @@ Example Docker Run command:
 These docs are assuming you have a basic understanding of Docker concepts.  One place to get familiar with Docker would be the [official tutorial](https://www.docker.com/101-tutorial/).
 
 ```shell
-docker run -it -v "X:\Media\Komet\config:/config:rw" meisnate12/komet
+docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa
 ```
 
 ### Docker Compose:
@@ -95,7 +95,7 @@ This is an example docker-compose which will have to be edited to suit your envi
 ```yaml
 services:
   plex-meta-manager:
-    image: meisnate12/komet
+    image: meisnate12/kometa
     container_name: plex-meta-manager
     environment:
       - TZ=TIMEZONE #optional
@@ -106,13 +106,13 @@ services:
 
 ### Dockerfile
 
-A `Dockerfile` is included within the GitHub repository for those who require it, although this is only suggested for those with knowledge of dockerfiles. The official Komet build is available on the [Dockerhub Website](https://hub.docker.com/r/meisnate12/plex-meta-manager).
+A `Dockerfile` is included within the GitHub repository for those who require it, although this is only suggested for those with knowledge of dockerfiles. The official Kometa build is available on the [Dockerhub Website](https://hub.docker.com/r/meisnate12/plex-meta-manager).
 
 ## Customizing the docker-compose file with runtime flags and ENV vars
 
-Komet's behavior can be modified in a variety of ways using either runtime flags or environment variables.  These flags and vars are detailed [here](../environmental.md).
+Kometa's behavior can be modified in a variety of ways using either runtime flags or environment variables.  These flags and vars are detailed [here](../environmental.md).
 
-This is optional, and is not necessary to run Komet.  Many if not most users will have no reason to do this and can use something more like the basic docker-compose just above.
+This is optional, and is not necessary to run Kometa.  Many if not most users will have no reason to do this and can use something more like the basic docker-compose just above.
 
 This example docker-compose would create a container that runs immediately upon start (rather than waiting until 5AM), uses a particular config file, processes only overlays on only one library, and exits when done.  Those four changes are made by the four `environment:` entries, which are discussed in detail after the example:
 
@@ -121,7 +121,7 @@ As with the one above, this is an example docker-compose which will have to be e
 ```yaml
 services:
   plex-meta-manager:
-    image: meisnate12/komet
+    image: meisnate12/kometa
     container_name: plex-meta-manager
     environment:
       - KOMET_RUN=true
@@ -132,12 +132,12 @@ services:
       - /path/to/config:/config
 ```
 
-`- KOMET_RUN=true` tells Komet to run right away,
+`- KOMET_RUN=true` tells Kometa to run right away,
 
-`- KOMET_CONFIG=/config/special-config.yml` points Komet at a particular config file,
+`- KOMET_CONFIG=/config/special-config.yml` points Kometa at a particular config file,
 
-`- KOMET_OVERLAYS_ONLY=true` tells Komet to run overlays only, and 
+`- KOMET_OVERLAYS_ONLY=true` tells Kometa to run overlays only, and 
 
-`- KOMET_RUN_LIBRARIES=Movies` tells Komet to process only a library called "Movies"
+`- KOMET_RUN_LIBRARIES=Movies` tells Kometa to process only a library called "Movies"
 
 Again, a list of the available environment variables can be found [here](../environmental.md).

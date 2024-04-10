@@ -1,8 +1,8 @@
 # Smart Builders
 
-Smart Builders allow Komet to create Smart Collections in two different ways.
+Smart Builders allow Kometa to create Smart Collections in two different ways.
 
-The results of these builders are dynamic and do not require Komet to re-run in order to update, instead they will update automatically as the data within your Plex Library updates (i.e. if new media is added)
+The results of these builders are dynamic and do not require Kometa to re-run in order to update, instead they will update automatically as the data within your Plex Library updates (i.e. if new media is added)
 
 ???+ note
     
@@ -38,7 +38,7 @@ This is extremely useful because smart collections don't follow normal show/hide
 
 To have the Smart Label Collections to eliminate Plex Collectionless you have to go all in on using them. A good rule of thumb to make sure this works correctly is that every item in your library should have a max of one non-smart collection.
 
-Reach out on the [Komet Discord](https://metamanager.wiki/en/latest/discord/) or in the [GitHub Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions) for help if you're having any issues getting this to work properly.
+Reach out on the [Kometa Discord](https://metamanager.wiki/en/latest/discord/) or in the [GitHub Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions) for help if you're having any issues getting this to work properly.
 
 ## Smart Filter
 
@@ -189,7 +189,7 @@ Tag filter can take multiple values as a **list or a comma-separated string**.
 | `track_source`             | Uses the Track's Source attribute to match                                  |  :fontawesome-solid-circle-xmark:{ .red }  |  :fontawesome-solid-circle-xmark:{ .red }  | :fontawesome-solid-circle-check:{ .green } |
 | `track_label`              | Uses the Track's Label attribute to match                                   |  :fontawesome-solid-circle-xmark:{ .red }  |  :fontawesome-solid-circle-xmark:{ .red }  | :fontawesome-solid-circle-check:{ .green } |
 
-<sup>1</sup> You can use `current_year` to have Komet use the current years value. This can be combined with a `-#` at the end to subtract that number of years. i.e. `current_year-2`
+<sup>1</sup> You can use `current_year` to have Kometa use the current years value. This can be combined with a `-#` at the end to subtract that number of years. i.e. `current_year-2`
 
 ## Date Filters
 
@@ -267,7 +267,7 @@ No number filter can take multiple values.
 | `album_critic_rating`      | Uses the Album's critic rating attribute to match<br>**Range:** `0.0` - `10.0`              |  :fontawesome-solid-circle-xmark:{ .red }  |  :fontawesome-solid-circle-xmark:{ .red }  | :fontawesome-solid-circle-check:{ .green } |
 | `track_user_rating`        | Uses the Track's user rating attribute to match<br>**Range:** `0.0` - `10.0`                |  :fontawesome-solid-circle-xmark:{ .red }  |  :fontawesome-solid-circle-xmark:{ .red }  | :fontawesome-solid-circle-check:{ .green } |
 
-<sup>1</sup> You can use `current_year` to have Komet use the current years value. This can be combined with a `-#` at the end to subtract that number of years. i.e. `current_year-2`
+<sup>1</sup> You can use `current_year` to have Kometa use the current years value. This can be combined with a `-#` at the end to subtract that number of years. i.e. `current_year-2`
 
 ## Boolean Filters
 

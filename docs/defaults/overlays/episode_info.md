@@ -30,9 +30,9 @@ work. Any value not specified will use its default value if it has one if not it
 
 ??? abstract "Variable Lists (click to expand)"
 
-    * **Overlay Template Variables** are additional variables shared across the Komet Overlay Defaults.
+    * **Overlay Template Variables** are additional variables shared across the Kometa Overlay Defaults.
 
-    * **Overlay Text Template Variables** are additional variables shared across the Komet Text Overlay Defaults.
+    * **Overlay Text Template Variables** are additional variables shared across the Kometa Text Overlay Defaults.
 
     ??? example "Default Template Variable Values (click to expand)"
 

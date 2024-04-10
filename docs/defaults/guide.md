@@ -1,10 +1,10 @@
 # Defaults Usage Guide
 
-Komet includes a pre-created set of Collection Files and Overlay Files which can be found in the "defaults" folder in the root of your Komet installation directory.
+Kometa includes a pre-created set of Collection Files and Overlay Files which can be found in the "defaults" folder in the root of your Kometa installation directory.
 
 These files offer an easy-to-use and customizable set of Collections and Overlays that the user can achieve without having to worry about creating the files that make the collections and overlays possible.
 
-All Collections come with a matching poster to make a clean, consistent set of collections in your library. These files are stored in the [Komet Images](https://github.com/meisnate12/Plex-Meta-Manager-Images) Repository and each poster is downloaded straight to your Plex Collection when you run Komet.
+All Collections come with a matching poster to make a clean, consistent set of collections in your library. These files are stored in the [Kometa Images](https://github.com/meisnate12/Plex-Meta-Manager-Images) Repository and each poster is downloaded straight to your Plex Collection when you run Kometa.
 
 Credits to Sohjiro, Bullmoose20, Yozora, Cpt Kuesel, and anon_fawkes for helping drive this entire Default Set of Configs through the concept, design and implementation.
 

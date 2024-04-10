@@ -78,11 +78,11 @@ This file would then be defined in my `config.yml` file as a `playlist_files` it
 
     1.  Note that Playlist files are not called within the `libraries` section, they are defined at the root identation 
     as you can see here
-    2.  `config` refers to the location that you mapped to `config` when following the Komet Installation Guides.
+    2.  `config` refers to the location that you mapped to `config` when following the Kometa Installation Guides.
 
 ## Playlist Attributes
 
-Komet can automatically build and update playlists defined within the `playlists` attribute.
+Kometa can automatically build and update playlists defined within the `playlists` attribute.
 
 These are the attributes which can be utilized within the Playlist File:
 
@@ -94,7 +94,7 @@ These are the attributes which can be utilized within the Playlist File:
 
 * `playlists` is required in order to run the Playlist File.
 * You can find example Playlist Files in the 
-[Komet Configs Repository](https://github.com/meisnate12/Plex-Meta-Manager-Configs)
+[Kometa Configs Repository](https://github.com/meisnate12/Plex-Meta-Manager-Configs)
 * Plex does not support the "Continue Watching" feature for playlists, you can
 [vote for the feature here](https://forums.plex.tv/t/playlists-remember-position-for-subsequent-resume/84866/39)
 

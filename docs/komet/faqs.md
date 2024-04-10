@@ -12,23 +12,23 @@ If you have a question that is not answered here, try entering some keywords int
 
 This section aims to answer the most commonly asked questions that users have.
 
-### Komet Versions & Updating
+### Kometa Versions & Updating
 
-The commands here should work in any terminal on the respective platforms, but that can't be guaranteed. If you know shortcuts for some of these things, go ahead and use them. For example, in many terminals, `cd ~/Komet` is the same as `cd /Users/YOUR_USERNAME/Komet`.  
+The commands here should work in any terminal on the respective platforms, but that can't be guaranteed. If you know shortcuts for some of these things, go ahead and use them. For example, in many terminals, `cd ~/Kometa` is the same as `cd /Users/YOUR_USERNAME/Kometa`.  
 
-Your Komet installation may not be located at the paths referenced below. These are the paths used in the walkthroughs in this documentation, so if you installed it somewhere else you will have to change the path[s] to reflect your system and the choices you made during installation.
+Your Kometa installation may not be located at the paths referenced below. These are the paths used in the walkthroughs in this documentation, so if you installed it somewhere else you will have to change the path[s] to reflect your system and the choices you made during installation.
 
-??? question "How do I update to the latest version of Komet?"
+??? question "How do I update to the latest version of Kometa?"
 
     === ":fontawesome-brands-linux: Linux"
     
         [type this into your terminal, changing `YOUR_USERNAME` to your username]
 
-            cd /Users/YOUR_USERNAME/Komet
+            cd /Users/YOUR_USERNAME/Kometa
             git stash
             git stash clear
             git pull
-            source komet-venv/bin/activate
+            source kometa-venv/bin/activate
             python -m pip install -r requirements.txt
 
         These two commands:
@@ -36,18 +36,18 @@ Your Komet installation may not be located at the paths referenced below. These 
             git stash
             git stash clear
 
-        Will reset any changes you have made to Komet-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
+        Will reset any changes you have made to Kometa-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
 
     
     === ":fontawesome-brands-apple: macOS"
     
         [type this into your terminal, changing `YOUR_USERNAME` to your username]
 
-            cd /Users/YOUR_USERNAME/Komet
+            cd /Users/YOUR_USERNAME/Kometa
             git stash
             git stash clear
             git pull
-            source komet-venv/bin/activate
+            source kometa-venv/bin/activate
             python -m pip install -r requirements.txt
 
         These two commands:
@@ -55,18 +55,18 @@ Your Komet installation may not be located at the paths referenced below. These 
             git stash
             git stash clear
 
-        Will reset any changes you have made to Komet-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
+        Will reset any changes you have made to Kometa-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
 
     === ":fontawesome-brands-windows: Windows"
     
         [type this into your terminal, changing `YOUR_USERNAME` to your username and the drive letter if needed]
 
             C:
-            cd C:\Users\YOUR_USERNAME\Komet
+            cd C:\Users\YOUR_USERNAME\Kometa
             git stash
             git stash clear
             git pull
-            .\komet-venv\Scripts\activate
+            .\kometa-venv\Scripts\activate
             python -m pip install -r requirements.txt
 
         These two commands:
@@ -74,13 +74,13 @@ Your Komet installation may not be located at the paths referenced below. These 
             git stash
             git stash clear
 
-        Will reset any changes you have made to Komet-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
+        Will reset any changes you have made to Kometa-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
 
     === ":fontawesome-brands-docker: Docker"
     
         [type this into your terminal]
 
-            docker pull meisnate12/komet:TAG_HERE
+            docker pull meisnate12/kometa:TAG_HERE
 
         replacing TAG_HERE with latest, develop, or nightly [whichever you are currently using]
 
@@ -94,12 +94,12 @@ Your Komet installation may not be located at the paths referenced below. These 
     
         [type this into your terminal, changing `YOUR_USERNAME` to your username]
 
-            cd /Users/YOUR_USERNAME/Komet
+            cd /Users/YOUR_USERNAME/Kometa
             git stash
             git stash clear
             git checkout develop
             git pull
-            source komet-venv/bin/activate
+            source kometa-venv/bin/activate
             python -m pip install -r requirements.txt
 
 
@@ -108,18 +108,18 @@ Your Komet installation may not be located at the paths referenced below. These 
             git stash
             git stash clear
 
-        Will reset any changes you have made to Komet-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
+        Will reset any changes you have made to Kometa-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
 
     === ":fontawesome-brands-apple: macOS"
     
         [type this into your terminal, changing `YOUR_USERNAME` to your username]
 
-            cd /Users/YOUR_USERNAME/Komet
+            cd /Users/YOUR_USERNAME/Kometa
             git stash
             git stash clear
             git checkout develop
             git pull
-            source komet-venv/bin/activate
+            source kometa-venv/bin/activate
             python -m pip install -r requirements.txt
 
         These two commands:
@@ -127,19 +127,19 @@ Your Komet installation may not be located at the paths referenced below. These 
             git stash
             git stash clear
 
-        Will reset any changes you have made to Komet-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
+        Will reset any changes you have made to Kometa-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
 
     === ":fontawesome-brands-windows: Windows"
     
         [type this into your terminal, changing `YOUR_USERNAME` to your username and the drive letter if needed]
 
             C:
-            cd C:\Users\YOUR_USERNAME\Komet
+            cd C:\Users\YOUR_USERNAME\Kometa
             git stash
             git stash clear
             git checkout develop
             git pull
-            .\komet-venv\Scripts\activate
+            .\kometa-venv\Scripts\activate
             python -m pip install -r requirements.txt
 
         These two commands:
@@ -147,15 +147,15 @@ Your Komet installation may not be located at the paths referenced below. These 
             git stash
             git stash clear
 
-        Will reset any changes you have made to Komet-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
+        Will reset any changes you have made to Kometa-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
 
     === ":fontawesome-brands-docker: Docker"
     
         [type this into your terminal]
 
-            docker pull meisnate12/komet:develop
+            docker pull meisnate12/kometa:develop
 
-        Then recreate your container via whatever means you used to create it [docker run, docker-compose, etc.], changing the image in the docker command or the `docker-compose.yml` to `meisnate12/komet:develop`.
+        Then recreate your container via whatever means you used to create it [docker run, docker-compose, etc.], changing the image in the docker command or the `docker-compose.yml` to `meisnate12/kometa:develop`.
 
         If you are using Docker on a NAS like Synology or UNRaid, they will provide some means of doing those two things.
 
@@ -166,12 +166,12 @@ Your Komet installation may not be located at the paths referenced below. These 
     
         [type this into your terminal, changing `YOUR_USERNAME` to your username]
 
-            cd /Users/YOUR_USERNAME/Komet
+            cd /Users/YOUR_USERNAME/Kometa
             git stash
             git stash clear
             git checkout nightly
             git pull
-            source komet-venv/bin/activate
+            source kometa-venv/bin/activate
             python -m pip install -r requirements.txt
 
         These two commands:
@@ -179,18 +179,18 @@ Your Komet installation may not be located at the paths referenced below. These 
             git stash
             git stash clear
 
-        Will reset any changes you have made to Komet-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
+        Will reset any changes you have made to Kometa-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
 
     === ":fontawesome-brands-apple: macOS"
     
         [type this into your terminal, changing `YOUR_USERNAME` to your username]
 
-            cd /Users/YOUR_USERNAME/Komet
+            cd /Users/YOUR_USERNAME/Kometa
             git stash
             git stash clear
             git checkout nightly
             git pull
-            source komet-venv/bin/activate
+            source kometa-venv/bin/activate
             python -m pip install -r requirements.txt
 
         These two commands:
@@ -198,19 +198,19 @@ Your Komet installation may not be located at the paths referenced below. These 
             git stash
             git stash clear
 
-        Will reset any changes you have made to Komet-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
+        Will reset any changes you have made to Kometa-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
 
     === ":fontawesome-brands-windows: Windows"
     
         [type this into your terminal, changing `YOUR_USERNAME` to your username and the drive letter if needed]
 
             C:
-            cd C:\Users\YOUR_USERNAME\Komet
+            cd C:\Users\YOUR_USERNAME\Kometa
             git stash
             git stash clear
             git checkout nightly
             git pull
-            .\komet-venv\Scripts\activate
+            .\kometa-venv\Scripts\activate
             python -m pip install -r requirements.txt
 
         These two commands:
@@ -218,15 +218,15 @@ Your Komet installation may not be located at the paths referenced below. These 
             git stash
             git stash clear
 
-        Will reset any changes you have made to Komet-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
+        Will reset any changes you have made to Kometa-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
 
     === ":fontawesome-brands-docker: Docker"
     
         [type this into your terminal]
 
-            docker pull meisnate12/komet:nightly
+            docker pull meisnate12/kometa:nightly
 
-        Then recreate your container via whatever means you used to create it [docker run, docker-compose, etc.], changing the image in the docker command or the `docker-compose.yml` to `meisnate12/komet:nightly`.
+        Then recreate your container via whatever means you used to create it [docker run, docker-compose, etc.], changing the image in the docker command or the `docker-compose.yml` to `meisnate12/kometa:nightly`.
 
         If you are using Docker on a NAS like Synology or UNRaid, they will provide some means of doing those two things.
 
@@ -236,12 +236,12 @@ Your Komet installation may not be located at the paths referenced below. These 
     
         [type this into your terminal, changing `YOUR_USERNAME` to your username]
 
-            cd /Users/YOUR_USERNAME/Komet
+            cd /Users/YOUR_USERNAME/Kometa
             git stash
             git stash clear
             git checkout master
             git pull
-            source komet-venv/bin/activate
+            source kometa-venv/bin/activate
             python -m pip install -r requirements.txt
 
         These two commands:
@@ -249,18 +249,18 @@ Your Komet installation may not be located at the paths referenced below. These 
             git stash
             git stash clear
 
-        Will reset any changes you have made to Komet-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
+        Will reset any changes you have made to Kometa-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
 
     === ":fontawesome-brands-apple: macOS"
     
         [type this into your terminal, changing `YOUR_USERNAME` to your username]
 
-            cd /Users/YOUR_USERNAME/Komet
+            cd /Users/YOUR_USERNAME/Kometa
             git stash
             git stash clear
             git checkout master
             git pull
-            source komet-venv/bin/activate
+            source kometa-venv/bin/activate
             python -m pip install -r requirements.txt
 
         These two commands:
@@ -268,19 +268,19 @@ Your Komet installation may not be located at the paths referenced below. These 
             git stash
             git stash clear
 
-        Will reset any changes you have made to Komet-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
+        Will reset any changes you have made to Kometa-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
 
     === ":fontawesome-brands-windows: Windows"
     
         [type this into your terminal, changing `YOUR_USERNAME` to your username and the drive letter if needed]
 
             C:
-            cd C:\Users\YOUR_USERNAME\Komet
+            cd C:\Users\YOUR_USERNAME\Kometa
             git stash
             git stash clear
             git checkout master
             git pull
-            .\komet-venv\Scripts\activate
+            .\kometa-venv\Scripts\activate
             python -m pip install -r requirements.txt
 
         These two commands:
@@ -288,36 +288,36 @@ Your Komet installation may not be located at the paths referenced below. These 
             git stash
             git stash clear
 
-        Will reset any changes you have made to Komet-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
+        Will reset any changes you have made to Kometa-owned files [YOUR CONFIG FILES ARE NOT AFFECTED]. You shouldn't be doing this, so typically this will not lose any of your work. If you have done this, the assumption is that you know enough about `git` to know how to prevent that from happening.
 
     === ":fontawesome-brands-docker: Docker"
     
         [type this into your terminal]
 
-            docker pull meisnate12/komet:latest
+            docker pull meisnate12/kometa:latest
 
-        Then recreate your container via whatever means you used to create it [docker run, docker-compose, etc.], changing the image in the docker command or the `docker-compose.yml` to `meisnate12/komet:latest`.
+        Then recreate your container via whatever means you used to create it [docker run, docker-compose, etc.], changing the image in the docker command or the `docker-compose.yml` to `meisnate12/kometa:latest`.
 
         If you are using Docker on a NAS like Synology or UNRaid, they will provide some means of doing those two things.
 
 ### Performance & Scheduling
 
-??? question "Any tips on increasing Komet performance?"
+??? question "Any tips on increasing Kometa performance?"
 
-    Use Komet Caching where possible, this allows Komet to temporarily store commonly-used information so that it can be retrieved more efficiently. There are [multiple things](https://metamanager.wiki/en/latest/search.html?q=cache&check_keywords=yes&area=default) that can be cached within Komet.
+    Use Kometa Caching where possible, this allows Kometa to temporarily store commonly-used information so that it can be retrieved more efficiently. There are [multiple things](https://metamanager.wiki/en/latest/search.html?q=cache&check_keywords=yes&area=default) that can be cached within Kometa.
     
-    Run Komet after PLEX Scheduled Tasks, as Plex's API tends to be slower at responding whilst it is performing the tasks. By default, Komet runs at 5AM to avoid the 3-5am window that Plex suggests for Scheduled Tasks.
+    Run Kometa after PLEX Scheduled Tasks, as Plex's API tends to be slower at responding whilst it is performing the tasks. By default, Kometa runs at 5AM to avoid the 3-5am window that Plex suggests for Scheduled Tasks.
     
     For users who are more technically advanced and happy to risk manipulating the Plex database, considering altering the [PRAGMA_CACHE settings](https://www.reddit.com/r/PleX/comments/ic3cjr/anyone_try_giving_sqlite3_more_cache_to_help/) within Plex.
     
     **Note:** you MUST use the version of sqlite3 tool that comes with your running version of PLEX or you will mess up your PLEX DB beyond repair. See [this article](https://support.plex.tv/articles/repair-a-corrupted-database/) on how to find the proper version for your setup.
 
 
-??? question "Why does my Komet run take so long to complete?"
+??? question "Why does my Kometa run take so long to complete?"
 
-    Every time an item (media, collection, overlay) needs to be updated, Komet needs to send the request to Plex, and then receive confirmation back from Plex that the action has been completed. This can take anywhere from seconds to minutes depending on when Plex provides a response. Given that the typical run can update hundreds or even thousands of items, this can quickly add up to a lot of time. If "Mass Update" operations are used, then every single item in the library needs to go through this process, which can be lengthy. 
+    Every time an item (media, collection, overlay) needs to be updated, Kometa needs to send the request to Plex, and then receive confirmation back from Plex that the action has been completed. This can take anywhere from seconds to minutes depending on when Plex provides a response. Given that the typical run can update hundreds or even thousands of items, this can quickly add up to a lot of time. If "Mass Update" operations are used, then every single item in the library needs to go through this process, which can be lengthy. 
     
-    Overlays can be particularly cumbersome as Komet needs to perform the following actions for each of the items that need to have an overlay applied:
+    Overlays can be particularly cumbersome as Kometa needs to perform the following actions for each of the items that need to have an overlay applied:
 
     - Check which overlays are applicable (this will take more time depending on how many overlays you are applying)
         - Compare the current poster to confirm what overlays are already applied, if changes are needed then continue with the following steps
@@ -327,7 +327,7 @@ Your Komet installation may not be located at the paths referenced below. These 
         - Tell Plex to apply new image to the item
         - Wait for Plex to respond confirming that the change has been made
 
-    The above two points can be greatly exacerbated if Komet has to update every episode within a Show library rather than just the Shows themselves, as there can often be hundreds of thousands of episodes to be updated with mass operations or overlays.
+    The above two points can be greatly exacerbated if Kometa has to update every episode within a Show library rather than just the Shows themselves, as there can often be hundreds of thousands of episodes to be updated with mass operations or overlays.
 
     Additionally, some collections require a lot of computing resources to determine the critera of the collections that are to be made. This is commonly seen in the Defaults files for Actor/Director/Producer/Writer which need to get the crew information for each of the movies/shows within your library, and then calculate which ones appear the most to find out which are the most popular. The larger your library, the longer this process will take.
 
@@ -349,11 +349,11 @@ Your Komet installation may not be located at the paths referenced below. These 
 
 ### Errors & Issues
 
-??? question "Why doesn't Komet let me enter my authentication information for Trakt/MAL?"
+??? question "Why doesn't Kometa let me enter my authentication information for Trakt/MAL?"
 
-    Komet needs to run in an interactive mode which allows the user to enter information (such as the Trakt/MAL PIN) as part of the authentication process. This can prove troublesome in some environments, particularly NAS.
+    Kometa needs to run in an interactive mode which allows the user to enter information (such as the Trakt/MAL PIN) as part of the authentication process. This can prove troublesome in some environments, particularly NAS.
     
-    Chazlarson has developed an online tool which will allow you to perform the authentication of both Trakt and MAL outside of Komet, and will then provide you the completed code block to paste into your config.yml.
+    Chazlarson has developed an online tool which will allow you to perform the authentication of both Trakt and MAL outside of Kometa, and will then provide you the completed code block to paste into your config.yml.
     
     The scripts can be found here. Click the green play button, wait a little bit, then follow the prompts. 
 
@@ -366,7 +366,7 @@ Your Komet installation may not be located at the paths referenced below. These 
 
     A 500 Internal Server Error happens when the server has an unexpected error when responding to an API request.
     
-    There could be any number of reasons why this happens and it depends on what server Komet is talking to although it's most likely coming from your Plex Server.
+    There could be any number of reasons why this happens and it depends on what server Kometa is talking to although it's most likely coming from your Plex Server.
     
     Most of the time these errors need to be resolved by changing something specific to your set up but some do come up that can be fixed (i.e. Plex throws one if you upload a photo larger than 10 MB)
     
@@ -378,29 +378,29 @@ Your Komet installation may not be located at the paths referenced below. These 
     
     :two: Check the plex logs (container or other) for the "Busy DB Sleeping for 200ms)
     
-    There is nothing that Komet or our support staff can really do to resolve a 500 error.
+    There is nothing that Kometa or our support staff can really do to resolve a 500 error.
 
 ## Knowledgebase
 
 This section aims to provide some insight as to articles/information that we feel is important to document as they may pop up infrequently but often enough to require entry here.
 
-### Komet 1.20 Release Changes
+### Kometa 1.20 Release Changes
 
-With the release of Komet 1.20, several changes have been made. Please read the document below thoroughly!
+With the release of Kometa 1.20, several changes have been made. Please read the document below thoroughly!
 
 ??? blank "`metadata_path` and `overlay_path` are now legacy attributes (click to expand).<a class="headerlink" href="#metadata-overlay-path" title="Permanent link">¶</a>"
 
     <div id="metadata-overlay-path" />
 
-    The attributes `metadata_path` and `overlay_path` are now legacy, and will likely produce an error `metadata attribute is required` when running Komet.
+    The attributes `metadata_path` and `overlay_path` are now legacy, and will likely produce an error `metadata attribute is required` when running Kometa.
 
     We have new attributes: `collection_files`, `overlay_files` and `metadata_files` which you can read more about on the [Libraries Attributes page](../config/libraries.md#attributes)
 
     Whilst this error can be ignored, we strongly advise you to move over to the new attributes, which can be done following this guidance:
 
-    :fontawesome-solid-1: If your YAML file creates collections or is a Komet Defaults Collection File then it belongs under `collection_files`. 
+    :fontawesome-solid-1: If your YAML file creates collections or is a Kometa Defaults Collection File then it belongs under `collection_files`. 
     
-    :fontawesome-solid-2: If your YAML file creates overlays or is a Komet Defaults Overlay File then it belongs under `overlay_files`
+    :fontawesome-solid-2: If your YAML file creates overlays or is a Kometa Defaults Overlay File then it belongs under `overlay_files`
     
     :fontawesome-solid-3: If your YAML file edits item metadata ([see this example](../files/metadata.md/#__tabbed_1_1)) then it belongs under `metadata_files`
     
@@ -493,10 +493,10 @@ With the release of Komet 1.20, several changes have been made. Please read the 
     Due to FlixPatrol moving a lot of their data behind a paywall and them reworking their pages to remove IMDb IDs and 
     TMDb IDs the flixpatrol builders and default files have been removed. There currently are no plans to re-add them.
 
-??? blank "Komet Default `other_award` replaced with individual Award files (click to expand).<a class="headerlink" href="#awards" title="Permanent link">¶</a>"
+??? blank "Kometa Default `other_award` replaced with individual Award files (click to expand).<a class="headerlink" href="#awards" title="Permanent link">¶</a>"
 
     <div id="awards" />
 
-    The Komet Default file `other_award` is now deprecated and will no longer function.
+    The Kometa Default file `other_award` is now deprecated and will no longer function.
 
-    Individual Komet Default files have been introduced for several Awards, see the [Awards List](../defaults/collection_list.md#award-collections) for more information on the new options.
+    Individual Kometa Default files have been introduced for several Awards, see the [Awards List](../defaults/collection_list.md#award-collections) for more information on the new options.

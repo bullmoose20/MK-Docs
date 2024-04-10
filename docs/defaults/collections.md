@@ -1,8 +1,8 @@
 # Collection Defaults
 
-There are many Default Collection Files built into Komet itself which offer an easy-to-use and customizable set of Collections that the user can achieve without having to worry about creating the files that makes the collections possible.
+There are many Default Collection Files built into Kometa itself which offer an easy-to-use and customizable set of Collections that the user can achieve without having to worry about creating the files that makes the collections possible.
 
-This is the simplest way to create Collections using Komet.
+This is the simplest way to create Collections using Kometa.
 
 {%
    include-markdown "./collection_list.md"
@@ -54,7 +54,7 @@ All Default Collection Files have a `collection_section` attribute. These attrib
 
 For example: `collection_section: 01` translates to `sort_title: "!<<collection_section>><<pre>><<order_<<key>>>><<sort>>"` and so for `genre` if you have a `Fantasy` collection, plex is going to show `!06_Fantasy`
 
-This is the default Komet collection ordering:
+This is the default Kometa collection ordering:
 
 | Collection           | Collection Section |
 |:---------------------|:-------------------|

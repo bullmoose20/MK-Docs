@@ -6,7 +6,7 @@ Rating in Plex for each item within your library.
 This file only updates the overlays based on the data in Plex, it will not pull the ratings directly from any 
 third-party website, see recommendations below for more info.
 
-**Please read [Komet Ratings Explained](../../komet/guides/ratings.md) for more understanding on how Komet interacts with 
+**Please read [Kometa Ratings Explained](../../kometa/guides/ratings.md) for more understanding on how Kometa interacts with 
 ratings.**
 
 ![](images/ratings_overlay.png)
@@ -74,11 +74,11 @@ work. Any value not specified will use its default value if it has one if not it
 
 ??? abstract "Variable Lists (click to expand)"
 
-    * **File-Specific Template Variables** are variables available specifically for this Komet Defaults file.
+    * **File-Specific Template Variables** are variables available specifically for this Kometa Defaults file.
 
-    * **Overlay Template Variables** are additional variables shared across the Komet Overlay Defaults.
+    * **Overlay Template Variables** are additional variables shared across the Kometa Overlay Defaults.
 
-    * **Overlay Text Template Variables** are additional variables shared across the Komet Text Overlay Defaults.
+    * **Overlay Text Template Variables** are additional variables shared across the Kometa Text Overlay Defaults.
 
     ??? example "Default Template Variable Values (click to expand)"
 
@@ -159,7 +159,7 @@ work. Any value not specified will use its default value if it has one if not it
     
     ???+ warning
     
-        This example uses fonts not packaged with Komet. See [bullmoose20's 
+        This example uses fonts not packaged with Kometa. See [bullmoose20's 
         Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs/tree/master/bullmoose20)
 
     ```yaml

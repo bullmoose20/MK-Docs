@@ -11,9 +11,9 @@ You can specify your asset folders under the `settings` attribute `asset_directo
 
 ???+ important 
 
-    Assets can be stored anywhere on the host system that Komet has visibility of (i.e. if using docker, the directory must be mounted/visible to the docker container).
+    Assets can be stored anywhere on the host system that Kometa has visibility of (i.e. if using docker, the directory must be mounted/visible to the docker container).
 
-    For the sake of this document, we will assume that your assets folders are all based within the directory mapped to `config` within your Komet environment.
+    For the sake of this document, we will assume that your assets folders are all based within the directory mapped to `config` within your Kometa environment.
 
 ```yaml
 settings:
@@ -38,9 +38,9 @@ settings:
 
 Assets can be applied to collections [managed or unmanaged], playlists, and media items [movies, shows, seasons, and episodes].
 
-Managed Collection and Playlist assets are applied whenever that collection/playlist is run.  You do not have to specifically enable assets for these items; Komet will always search for and apply them.
+Managed Collection and Playlist assets are applied whenever that collection/playlist is run.  You do not have to specifically enable assets for these items; Kometa will always search for and apply them.
   
-Item [movie/show/etc] assets and Unmanaged Collections assets have to be specifically enabled before Komet will search for and apply them.  Do this by enabling the `assets_for_all` Library Operation:
+Item [movie/show/etc] assets and Unmanaged Collections assets have to be specifically enabled before Kometa will search for and apply them.  Do this by enabling the `assets_for_all` Library Operation:
 
 ```yaml
 Movies:
@@ -60,13 +60,13 @@ If a media item has an asset associated with it, that asset image is taken as th
 
 ## Asset Naming
 
-The table below shows the asset folder path structures that will be searched for. There are two options for how Komet looks at the files inside your Asset Directories. Choose an option with the [`asset_folders` Setting Attribute](../../config/settings.md).  Note that `asset_folders` is a toggle; you can't put some images in folders and some not in a context where it is enabled.
+The table below shows the asset folder path structures that will be searched for. There are two options for how Kometa looks at the files inside your Asset Directories. Choose an option with the [`asset_folders` Setting Attribute](../../config/settings.md).  Note that `asset_folders` is a toggle; you can't put some images in folders and some not in a context where it is enabled.
 
-Assets can be stored anywhere on the host system that Komet has visibility of (i.e. if using docker, the directory must be mounted/visible to the docker container).
+Assets can be stored anywhere on the host system that Kometa has visibility of (i.e. if using docker, the directory must be mounted/visible to the docker container).
 
 ???+ important 
 
-    The below table assumes that your assets are stored within the directory mapped to `config` in your Komet environment.
+    The below table assumes that your assets are stored within the directory mapped to `config` in your Kometa environment.
 
 | Image Type                       | Asset Folders Image Paths<br>`asset_folders: true`       | Flat Assets Image Paths<br>`asset_folders: false`             |
 |:---------------------------------|:---------------------------------------------------------|:--------------------------------------------------------------|
@@ -107,7 +107,7 @@ Assets can be stored anywhere on the host system that Komet has visibility of (i
   /path/to/media/movies/Star Wars (1977) {imdb-tt0076759} {tmdb-11}/Star Wars (1977) [1080p].mp4
                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -- THIS IS ASSET_NAME
   ```
-  The asset names that Komet will look for are:
+  The asset names that Kometa will look for are:
 
   ASSET_FOLDERS=True:
   ```
@@ -134,7 +134,7 @@ Assets can be stored anywhere on the host system that Komet has visibility of (i
   /path/to/media/tv/The Expanse (2015) {tvdb-280619}/Season 01/The Expanse (2015) - S01E01 - Dulcinea.mkv
                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -- THIS IS ASSET_NAME
   ```
-  The asset names that Komet will look for are:
+  The asset names that Kometa will look for are:
 
   ASSET_FOLDERS=True:
   ```
@@ -155,7 +155,7 @@ Assets can be stored anywhere on the host system that Komet has visibility of (i
   /path/to/media/tv/The Expanse (2015) {tvdb-280619}/Season 01/The Expanse (2015) - S01E01 - Dulcinea.mkv
   ```
 
-  The asset names that Komet will look for are:
+  The asset names that Kometa will look for are:
 
   ASSET_FOLDERS=True:
   ```
@@ -176,7 +176,7 @@ Assets can be stored anywhere on the host system that Komet has visibility of (i
   /path/to/media/tv/The Expanse (2015) {tvdb-280619}/Season 01/The Expanse (2015) - S01E01 - Dulcinea.mkv
   ```
 
-  The asset names that Komet will look for are:
+  The asset names that Kometa will look for are:
 
   ASSET_FOLDERS=True:
   ```

@@ -190,6 +190,16 @@ class Overlay:
                 if not os.path.exists(os.path.abspath(os.path.join(images_path, temp_path))):
                     raise Failed(f"Overlay Error: Overlay Image not found at: {os.path.abspath(os.path.join(images_path, temp_path))}")
                 self.path = os.path.abspath(os.path.join(images_path, temp_path))
+            elif ("default" in self.data and self.data["default"]) or ("git" in self.data and self.data["git"] and self.data["git"].startswith("Kometa/")):
+                temp_path = self.data["default"] if "default" in self.data and self.data["default"] else self.data["git"][7:]
+                if temp_path.startswith("overlays/images/"):
+                    temp_path = temp_path[16:]
+                if not temp_path.endswith(".png"):
+                    temp_path = f"{temp_path}.png"
+                images_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "defaults", "overlays", "images")
+                if not os.path.exists(os.path.abspath(os.path.join(images_path, temp_path))):
+                    raise Failed(f"Overlay Error: Overlay Image not found at: {os.path.abspath(os.path.join(images_path, temp_path))}")
+                self.path = os.path.abspath(os.path.join(images_path, temp_path))
             elif "file" in self.data and self.data["file"]:
                 self.path = self.data["file"]
             elif "git" in self.data and self.data["git"]:
@@ -244,11 +254,11 @@ class Overlay:
                 if not os.path.exists(font) and os.path.exists(os.path.join(code_base, font)):
                     font = os.path.join(code_base, font)
                 if not os.path.exists(font):
-                    pmm_fonts = os.listdir(font_base)
-                    fonts = util.get_system_fonts() + pmm_fonts
+                    kometa_fonts = os.listdir(font_base)
+                    fonts = util.get_system_fonts() + kometa_fonts
                     if font not in fonts:
                         raise Failed(f"Overlay Error: font: {os.path.abspath(font)} not found. Options: {', '.join(fonts)}")
-                    if font in pmm_fonts:
+                    if font in kometa_fonts:
                         font = os.path.join(font_base, font)
                 self.font_name = font
             self.font = ImageFont.truetype(self.font_name, self.font_size)
