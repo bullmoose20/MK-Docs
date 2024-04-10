@@ -216,7 +216,7 @@ However, these branches (especially Nightly) are recommended for more technical 
 
     To address this issue, we have implemented 'lxml' variants for each Kometa branch (master, develop, and nightly). These variants resume compatibility with older hardware by freezing lxml on a previous version which has wider hardware support.
 
-    To transition to the lxml branch, simply append '-lxml' to the branch name you are currently utilizing. For instance, `meisnate12/plex-meta-manager:master-lxml`, `meisnate12/plex-meta-manager:develop-lxml` and `meisnate12/plex-meta-manager:nightly-lxml`.
+    To transition to the lxml branch, simply prepend 'lxml-' to the branch name you are currently utilizing. For instance, `meisnate12/plex-meta-manager:lxml-master`, `meisnate12/plex-meta-manager:lxml-develop` and `meisnate12/plex-meta-manager:lxml-nightly`.
 
 ## Discord Support Server
 

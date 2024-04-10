@@ -16,7 +16,7 @@ In March 2024, lxml, a prerequisite for operating Kometa, ceased support for old
 
 To address this issue, we have implemented 'lxml' variants for each Kometa branch (master, develop, and nightly). These variants resume compatibility with older hardware by freezing lxml on a previous version which has wider hardware support.
 
-To transition to the lxml branch, simply append '-lxml' to the branch name you are currently utilizing. For instance, `meisnate12/kometa:master-lxml`, `meisnate12/kometa:develop-lxml` and `meisnate12/kometa:nightly-lxml`.
+To transition to the lxml branch, simply prepend 'lxml-' to the branch name you are currently utilizing. For instance, `meisnate12/kometa:lxml-master`, `meisnate12/kometa:lxml-develop` and `meisnate12/kometa:lxml-nightly`.
 
 ## LinuxServer
 
