@@ -3357,8 +3357,10 @@ class CollectionBuilder:
             sync_tags = self.details["label.sync"] if "label.sync" in self.details else None
             if sync_tags:
                 sync_tags.append("Kometa")
+                remove_tags.append("PMM") # if we're adding Kometa we want to remove PMM
             else:
                 add_tags.append("Kometa")
+                remove_tags.append("PMM") # if we're adding Kometa we want to remove PMM
             tag_results = self.library.edit_tags('label', self.obj, add_tags=add_tags, remove_tags=remove_tags, sync_tags=sync_tags, do_print=False)
             if tag_results:
                 batch_display += f"\n{tag_results}"
