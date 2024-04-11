@@ -7,7 +7,7 @@
 ##############################################################################
 
 external_templates:
-  pmm: templates
+  default: templates
   template_variables:
     conditionals:
       suppress_overlays:
@@ -123,7 +123,7 @@ external_templates:
         conditions:
           - type: resolution_dovetail
             value: top
-      pmm:
+      default:
         conditions:
           - type: [edition, edition_dovetail]
             file.exists: false

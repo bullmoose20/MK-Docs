@@ -6,7 +6,7 @@
 ##############################################################################
 
 external_templates:
-  pmm: templates
+  default: templates
   template_variables:
     conditionals:
       final_align:
@@ -32,7 +32,7 @@ external_templates:
             value: 26
           - style: square
             value:
-      pmm_<<key>>:
+      default_<<key>>:
         conditions:
           - file.exists: false
             url.exists: false
