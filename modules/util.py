@@ -428,7 +428,7 @@ def load_files(files_to_load, method, err_type="Config", schedule=None, lib_vars
                 if attr in file and (method != "metadata_files" or attr != "pmm" or attr != "default"):
                     logger.info(f"Reading {attr}: {file[attr]}")
                     if file[attr]:
-                        if attr == "pmm" or attr == "default" and file[attr] == "other_award":
+                        if (attr == "pmm" and file[attr] == "other_award") or (attr == "default" and file[attr] == "other_award"):
                             logger.error(f"{err_type} Error: The Kometa Default other_award has been deprecated. Please visit the wiki for the full list of available award files")
                         elif attr == "git" and file[attr].startswith("PMM/"):
                             current.append(("Kometa Default", file[attr][4:]))
