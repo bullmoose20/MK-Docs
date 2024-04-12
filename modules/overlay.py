@@ -190,8 +190,8 @@ class Overlay:
                 if not os.path.exists(os.path.abspath(os.path.join(images_path, temp_path))):
                     raise Failed(f"Overlay Error: Overlay Image not found at: {os.path.abspath(os.path.join(images_path, temp_path))}")
                 self.path = os.path.abspath(os.path.join(images_path, temp_path))
-            elif ("default" in self.data and self.data["default"]) or ("git" in self.data and self.data["git"] and self.data["git"].startswith("Kometa/")):
-                temp_path = self.data["default"] if "default" in self.data and self.data["default"] else self.data["git"][7:]
+            elif ("kometa" in self.data and self.data["kometa"]) or ("git" in self.data and self.data["git"] and self.data["git"].startswith("Kometa/")):
+                temp_path = self.data["kometa"] if "kometa" in self.data and self.data["kometa"] else self.data["git"][4:]
                 if temp_path.startswith("overlays/images/"):
                     temp_path = temp_path[16:]
                 if not temp_path.endswith(".png"):
@@ -208,6 +208,10 @@ class Overlay:
                 self.path = get_and_save_image(f"{self.config.custom_repo}{self.data['repo']}.png")
             elif "url" in self.data and self.data["url"]:
                 self.path = get_and_save_image(self.data["url"])
+
+
+
+
 
         if "|" in self.name:
             raise Failed(f"Overlay Error: Overlay Name: {self.name} cannot contain '|'")

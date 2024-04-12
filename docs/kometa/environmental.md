@@ -6,13 +6,13 @@ The basic command to run Kometa is as follows:
 === "Windows / Mac / Linux"
 
     ``` py
-    python plex_meta_manager.py
+    python kometa.py
     ```
 
 === "Docker"
 
     ``` py
-    docker run --rm -it -v "/<ROOT_KOMET_DIRECTORY_HERE>/config:/config:rw" meisnate12/kometa
+    docker run --rm -it -v "/<ROOT_KOMETA_DIRECTORY_HERE>/config:/config:rw" meisnate12/kometa
     ```
 
 To customize the running of Kometa according to your needs, you can use either run commands or environmental 
@@ -39,14 +39,14 @@ different ways to specify these things.
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --collections-only --run
+            python kometa.py --collections-only --run
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --collections-only --run
             ```
 
-??? blank "Config Location&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-c`/`--config`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_CONFIG`<a class="headerlink" href="#config" title="Permanent link">¶</a>"
+??? blank "Config Location&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-c`/`--config`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_CONFIG`<a class="headerlink" href="#config" title="Permanent link">¶</a>"
 
     <div id="config" />Specify the location of the configuration YAML file. Will default to `config/config.yml` when not 
     specified.
@@ -57,19 +57,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-c` or `--config` (ex. `--config /data/config.yml`)
 
-    **Environment Variable:** `KOMET_CONFIG` (ex. `KOMET_CONFIG=/data/config.yml`)
+    **Environment Variable:** `KOMETA_CONFIG` (ex. `KOMETA_CONFIG=/data/config.yml`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --config /data/config.yml
+            python kometa.py --config /data/config.yml
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --config /data/config.yml
             ```
 
-??? blank "Time to Run&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-t`/`--times`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_TIMES`<a class="headerlink" href="#times" title="Permanent link">¶</a>"
+??? blank "Time to Run&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-t`/`--times`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_TIMES`<a class="headerlink" href="#times" title="Permanent link">¶</a>"
 
     <div id="times" />Specify the time of day that Kometa will run. Will default to `05:00` when not 
     specified.
@@ -80,19 +80,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-t` or `--times` (ex. `--times 06:00,18:00`)
 
-    **Environment Variable:** `KOMET_TIMES` (ex. `KOMET_TIMES=06:00,18:00`)
+    **Environment Variable:** `KOMETA_TIMES` (ex. `KOMETA_TIMES=06:00,18:00`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --times 22:00,03:00
+            python kometa.py --times 22:00,03:00
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --times 22:00,03:00
             ```
 
-??? blank "Run Immediately&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-r`/`--run`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_RUN`<a class="headerlink" href="#run" title="Permanent link">¶</a>"
+??? blank "Run Immediately&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-r`/`--run`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_RUN`<a class="headerlink" href="#run" title="Permanent link">¶</a>"
 
     <div id="run" />Perform a run immediately, bypassing the time to run flag.
 
@@ -100,19 +100,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-r` or `--run` (ex. `--run`)
 
-    **Environment Variable:** `KOMET_RUN` (ex. `KOMET_RUN=true`)
+    **Environment Variable:** `KOMETA_RUN` (ex. `KOMETA_RUN=true`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --run
+            python kometa.py --run
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --run
             ```
 
-??? blank "Run Tests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-ts`/`--tests`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_TESTS`<a class="headerlink" href="#tests" title="Permanent link">¶</a>"
+??? blank "Run Tests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-ts`/`--tests`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_TESTS`<a class="headerlink" href="#tests" title="Permanent link">¶</a>"
 
     <div id="tests" />Perform a debug test run immediately, bypassing the time to run flag. **This will only run 
     collections with `test: true` in the definition.**
@@ -121,12 +121,12 @@ different ways to specify these things.
 
     **Shell Flags:** `-ts` or `--tests` (ex. `--tests`)
 
-    **Environment Variable:** `KOMET_TESTS` (ex. `KOMET_TESTS=true`)
+    **Environment Variable:** `KOMETA_TESTS` (ex. `KOMETA_TESTS=true`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --tests
+            python kometa.py --tests
             ```
         === "Docker Environment"
             ```
@@ -144,7 +144,7 @@ different ways to specify these things.
                 smart_label: release.desc
             ```
 
-??? blank "Debug&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-db`/`--debug`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_DEBUG`<a class="headerlink" href="#debug" title="Permanent link">¶</a>"
+??? blank "Debug&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-db`/`--debug`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_DEBUG`<a class="headerlink" href="#debug" title="Permanent link">¶</a>"
 
 
     <div id="debug" />Perform a debug test run immediately, bypassing the time to run flag. **This will only run 
@@ -154,19 +154,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-db` or `--debug` (ex. `--debug`)
 
-    **Environment Variable:** `KOMET_DEBUG` (ex. `KOMET_DEBUG=true`)
+    **Environment Variable:** `KOMETA_DEBUG` (ex. `KOMETA_DEBUG=true`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --debug
+            python kometa.py --debug
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --debug
             ```
 
-??? blank "Trace&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-tr`/`--trace`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_TRACE`<a class="headerlink" href="#trace" title="Permanent link">¶</a>"
+??? blank "Trace&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-tr`/`--trace`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_TRACE`<a class="headerlink" href="#trace" title="Permanent link">¶</a>"
 
     <div id="trace" />Run with extra Trace Debug Logs.
 
@@ -174,19 +174,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-tr` or `--trace` (ex. `--trace`)
 
-    **Environment Variable:** `KOMET_TRACE` (ex. `KOMET_TRACE=true`)
+    **Environment Variable:** `KOMETA_TRACE` (ex. `KOMETA_TRACE=true`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --trace
+            python kometa.py --trace
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --trace
             ```
 
-??? blank "Log Requests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-lr`/`--log-requests`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_LOG_REQUESTS`<a class="headerlink" href="#log-requests" title="Permanent link">¶</a>"
+??? blank "Log Requests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-lr`/`--log-requests`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_LOG_REQUESTS`<a class="headerlink" href="#log-requests" title="Permanent link">¶</a>"
 
     <div id="log-requests" />Run with every network request printed to the Logs. **This can potentially have personal 
     information in it.**
@@ -195,19 +195,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-lr` or `--log-requests` (ex. `--log-requests`)
 
-    **Environment Variable:** `KOMET_LOG_REQUESTS` (ex. `KOMET_LOG_REQUESTS=true`)
+    **Environment Variable:** `KOMETA_LOG_REQUESTS` (ex. `KOMETA_LOG_REQUESTS=true`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --log-requests
+            python kometa.py --log-requests
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --log-requests
             ```
 
-??? blank "Timeout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-ti`/`--timeout`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_TIMEOUT`<a class="headerlink" href="#timeout" title="Permanent link">¶</a>"
+??? blank "Timeout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-ti`/`--timeout`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_TIMEOUT`<a class="headerlink" href="#timeout" title="Permanent link">¶</a>"
 
     <div id="timeout" />Change the timeout for all non-Plex services (such as TMDb, Radarr, and Trakt). This will default to `180` when not specified and is overwritten by any timeouts mentioned for specific services in the Configuration File.
 
@@ -217,19 +217,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-ti` or `--timeout` (ex. `--timeout 06:00,18:00`)
 
-    **Environment Variable:** `KOMET_TIMEOUT` (ex. `KOMET_TIMEOUT=06:00,18:00`)
+    **Environment Variable:** `KOMETA_TIMEOUT` (ex. `KOMETA_TIMEOUT=06:00,18:00`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --timeout 360
+            python kometa.py --timeout 360
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --timeout 360
             ```
 
-??? blank "Collections Only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-co`/`--collections-only`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_COLLECTIONS_ONLY`<a class="headerlink" href="#collections-only" title="Permanent link">¶</a>"
+??? blank "Collections Only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-co`/`--collections-only`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_COLLECTIONS_ONLY`<a class="headerlink" href="#collections-only" title="Permanent link">¶</a>"
 
     <div id="collections-only" />Only run collection YAML files, skip library operations, metadata, overlays, and playlists.
 
@@ -237,19 +237,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-co` or `--collections-only` (ex. `--collections-only`)
 
-    **Environment Variable:** `KOMET_COLLECTIONS_ONLY` (ex. `KOMET_COLLECTIONS_ONLY=true`)
+    **Environment Variable:** `KOMETA_COLLECTIONS_ONLY` (ex. `KOMETA_COLLECTIONS_ONLY=true`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --collections-only
+            python kometa.py --collections-only
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --collections-only
             ```
 
-??? blank "Metadata Only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-mo`/`--metadata-only`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_METADATA_ONLY`<a class="headerlink" href="#metadata-only" title="Permanent link">¶</a>"
+??? blank "Metadata Only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-mo`/`--metadata-only`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_METADATA_ONLY`<a class="headerlink" href="#metadata-only" title="Permanent link">¶</a>"
 
     <div id="metadata-only" />Only run metadata files, skip library operations, collections, overlays, and playlists.
 
@@ -257,19 +257,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-mo` or `--metadata-only` (ex. `--metadata-only`)
 
-    **Environment Variable:** `KOMET_METADATA_ONLY` (ex. `KOMET_METADATA_ONLY=true`)
+    **Environment Variable:** `KOMETA_METADATA_ONLY` (ex. `KOMETA_METADATA_ONLY=true`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --metadata-only
+            python kometa.py --metadata-only
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --metadata-only
             ```
 
-??? blank "Playlists Only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-po`/`--playlists-only`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_PLAYLISTS_ONLY`<a class="headerlink" href="#playlists-only" title="Permanent link">¶</a>"
+??? blank "Playlists Only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-po`/`--playlists-only`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_PLAYLISTS_ONLY`<a class="headerlink" href="#playlists-only" title="Permanent link">¶</a>"
 
     <div id="playlists-only" />Only run playlist YAML files, skip library operations, overlays, collections, and metadata.
 
@@ -277,19 +277,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-po` or `--playlists-only` (ex. `--playlists-only`)
 
-    **Environment Variable:** `KOMET_PLAYLISTS_ONLY` (ex. `KOMET_PLAYLISTS_ONLY=true`)
+    **Environment Variable:** `KOMETA_PLAYLISTS_ONLY` (ex. `KOMETA_PLAYLISTS_ONLY=true`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --playlists-only
+            python kometa.py --playlists-only
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --playlists-only
             ```
 
-??? blank "Operations Only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-op`/`--operations-only`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_OPERATIONS_ONLY`<a class="headerlink" href="#operations-only" title="Permanent link">¶</a>"
+??? blank "Operations Only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-op`/`--operations-only`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_OPERATIONS_ONLY`<a class="headerlink" href="#operations-only" title="Permanent link">¶</a>"
 
     <div id="operations-only" />Only run library operations skipping collections, metadata, playlists, and overlays.
 
@@ -297,19 +297,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-op` or `--operations-only` (ex. `--operations-only`)
 
-    **Environment Variable:** `KOMET_OPERATIONS_ONLY` (ex. `KOMET_OPERATIONS_ONLY=true`)
+    **Environment Variable:** `KOMETA_OPERATIONS_ONLY` (ex. `KOMETA_OPERATIONS_ONLY=true`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --operations-only
+            python kometa.py --operations-only
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --operations-only
             ```
 
-??? blank "Overlays Only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-ov`/`--overlays-only`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_OVERLAYS_ONLY`<a class="headerlink" href="#overlays-only" title="Permanent link">¶</a>"
+??? blank "Overlays Only&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-ov`/`--overlays-only`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_OVERLAYS_ONLY`<a class="headerlink" href="#overlays-only" title="Permanent link">¶</a>"
 
     <div id="overlays-only" />Only run library overlay files skipping collections, metadata, playlists, and operations.
 
@@ -317,19 +317,19 @@ different ways to specify these things.
 
     **Shell Flags:**  `-ov` or `--overlays-only` (ex. `--overlays-only`)
 
-    **Environment Variable:** `KOMET_OVERLAYS_ONLY` (ex. `KOMET_OVERLAYS_ONLY=true`)
+    **Environment Variable:** `KOMETA_OVERLAYS_ONLY` (ex. `KOMETA_OVERLAYS_ONLY=true`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --overlays-only
+            python kometa.py --overlays-only
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --overlays-only
             ```
 
-??? blank "Run Collections&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-rc`/`--run-collections`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_RUN_COLLECTIONS`<a class="headerlink" href="#run-collections" title="Permanent link">¶</a>"
+??? blank "Run Collections&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-rc`/`--run-collections`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_RUN_COLLECTIONS`<a class="headerlink" href="#run-collections" title="Permanent link">¶</a>"
 
     <div id="run-collections" />Perform a collections run immediately to run only the pre-defined collections, bypassing 
     the time to run flag.
@@ -340,19 +340,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-rc` or `--run-collections` (ex. `--run-collections "Harry Potter|Star Wars"`)
 
-    **Environment Variable:** `KOMET_RUN_COLLECTIONS` (ex. `KOMET_RUN_COLLECTIONS=Harry Potter|Star Wars`)
+    **Environment Variable:** `KOMETA_RUN_COLLECTIONS` (ex. `KOMETA_RUN_COLLECTIONS=Harry Potter|Star Wars`)
 
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --run-collections "Harry Potter|Star Wars"
+            python kometa.py --run-collections "Harry Potter|Star Wars"
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --run-collections "Harry Potter|Star Wars"
             ```
 
-??? blank "Run Libraries&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-rl`/`--run-libraries`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_RUN_LIBRARIES`<a class="headerlink" href="#run-libraries" title="Permanent link">¶</a>"
+??? blank "Run Libraries&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-rl`/`--run-libraries`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_RUN_LIBRARIES`<a class="headerlink" href="#run-libraries" title="Permanent link">¶</a>"
 
     <div id="run-libraries" />Perform a libraries run immediately to run only the pre-defined libraries, bypassing the 
     time to run flag.
@@ -363,19 +363,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-rl` or `--run-libraries` (ex. `--run-libraries "Movies - 4K|TV Shows - 4K"`)
 
-    **Environment Variable:** `KOMET_RUN_LIBRARIES` (ex. `KOMET_RUN_LIBRARIES=Movies - 4K|TV Shows - 4K`)
+    **Environment Variable:** `KOMETA_RUN_LIBRARIES` (ex. `KOMETA_RUN_LIBRARIES=Movies - 4K|TV Shows - 4K`)
 
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --run-libraries "Movies - 4K|TV Shows - 4K"
+            python kometa.py --run-libraries "Movies - 4K|TV Shows - 4K"
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --run-libraries "Movies - 4K|TV Shows - 4K"
             ```
 
-??? blank "Run Files&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-rf`/`--run-files`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_RUN_FILES`<a class="headerlink" href="#run-files" title="Permanent link">¶</a>"
+??? blank "Run Files&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-rf`/`--run-files`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_RUN_FILES`<a class="headerlink" href="#run-files" title="Permanent link">¶</a>"
 
     <div id="run-files" />Perform a run immediately to run only the pre-defined Collection, Metadata or Playlist files, 
     bypassing the time to run flag. This works for all different paths i.e. `default`, `git`, `url`, `file`, or `repo`.
@@ -390,19 +390,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-rf` or `--run-files` (ex. `--run-files "Movies.yml|MovieCharts"`)
 
-    **Environment Variable:** `KOMET_RUN_FILES` (ex. `KOMET_RUN_FILES=Movies.yml|MovieCharts`)
+    **Environment Variable:** `KOMETA_RUN_FILES` (ex. `KOMETA_RUN_FILES=Movies.yml|MovieCharts`)
 
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --run-files "Movies.yml|MovieCharts"
+            python kometa.py --run-files "Movies.yml|MovieCharts"
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --run-files "Movies.yml|MovieCharts"
             ```
 
-??? blank "Ignore Schedules&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-is`/`--ignore-schedules`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_IGNORE_SCHEDULES`<a class="headerlink" href="#ignore-schedules" title="Permanent link">¶</a>"
+??? blank "Ignore Schedules&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-is`/`--ignore-schedules`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_IGNORE_SCHEDULES`<a class="headerlink" href="#ignore-schedules" title="Permanent link">¶</a>"
 
     <div id="ignore-schedules" />Ignore all schedules for the run. Range Scheduled collections (such as Christmas 
     movies) will still be ignored.
@@ -411,19 +411,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-is` or `--ignore-schedules` (ex. `--ignore-schedules`)
 
-    **Environment Variable:** `KOMET_IGNORE_SCHEDULES` (ex. `KOMET_IGNORE_SCHEDULES=true`)
+    **Environment Variable:** `KOMETA_IGNORE_SCHEDULES` (ex. `KOMETA_IGNORE_SCHEDULES=true`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --ignore-schedules
+            python kometa.py --ignore-schedules
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --ignore-schedules
             ```
 
-??? blank "Ignore Ghost&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-ig`/`--ignore-ghost`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_IGNORE_GHOST`<a class="headerlink" href="#ignore-ghost" title="Permanent link">¶</a>"
+??? blank "Ignore Ghost&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-ig`/`--ignore-ghost`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_IGNORE_GHOST`<a class="headerlink" href="#ignore-ghost" title="Permanent link">¶</a>"
 
     <div id="ignore-ghost" />Ignore all ghost logging for the run. A ghost log is what's printed to the console to show 
     progress during steps.
@@ -432,19 +432,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-ig` or `--ignore-ghost` (ex. `--ignore-ghost`)
 
-    **Environment Variable:** `KOMET_IGNORE_GHOST` (ex. `KOMET_IGNORE_GHOST=true`)
+    **Environment Variable:** `KOMETA_IGNORE_GHOST` (ex. `KOMETA_IGNORE_GHOST=true`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --ignore-ghost
+            python kometa.py --ignore-ghost
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --ignore-ghost
             ```
 
-??? blank "Delete Collections&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-dc`/`--delete-collections`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_DELETE_COLLECTIONS`<a class="headerlink" href="#delete-collections" title="Permanent link">¶</a>"
+??? blank "Delete Collections&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-dc`/`--delete-collections`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_DELETE_COLLECTIONS`<a class="headerlink" href="#delete-collections" title="Permanent link">¶</a>"
 
     <div id="delete-collections" />Delete all collections in a Library prior to running collections/operations.
 
@@ -457,19 +457,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-dc` or `--delete-collections` (ex. `--delete-collections`)
 
-    **Environment Variable:** `KOMET_DELETE_COLLECTIONS` (ex. `KOMET_DELETE_COLLECTIONS=true`)
+    **Environment Variable:** `KOMETA_DELETE_COLLECTIONS` (ex. `KOMETA_DELETE_COLLECTIONS=true`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --delete-collections
+            python kometa.py --delete-collections
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --delete-collections
             ```
 
-??? blank "Delete Labels&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-dl`/`--delete-labels`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_DELETE_LABELS`<a class="headerlink" href="#delete-labels" title="Permanent link">¶</a>"
+??? blank "Delete Labels&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-dl`/`--delete-labels`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_DELETE_LABELS`<a class="headerlink" href="#delete-labels" title="Permanent link">¶</a>"
 
     <div id="delete-labels" />Delete all labels on every item in a Library prior to running collections/operations.
 
@@ -488,19 +488,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-dl` or `--delete-labels` (ex. `--delete-labels`)
 
-    **Environment Variable:** `KOMET_DELETE_LABELS` (ex. `KOMET_DELETE_LABELS=true`)
+    **Environment Variable:** `KOMETA_DELETE_LABELS` (ex. `KOMETA_DELETE_LABELS=true`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --delete-labels
+            python kometa.py --delete-labels
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --delete-labels
             ```
 
-??? blank "Resume Run&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-re`/`--resume`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_RESUME`<a class="headerlink" href="#resume" title="Permanent link">¶</a>"
+??? blank "Resume Run&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-re`/`--resume`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_RESUME`<a class="headerlink" href="#resume" title="Permanent link">¶</a>"
 
     <div id="resume" />Perform a resume run immediately resuming from the first instance of the specified collection, 
     bypassing the time to run flag.
@@ -509,19 +509,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-re` or `--resume` (ex. `--resume "Star Wars"`)
 
-    **Environment Variable:** `KOMET_RESUME` (ex. `KOMET_RESUME=Star Wars`)
+    **Environment Variable:** `KOMETA_RESUME` (ex. `KOMETA_RESUME=Star Wars`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --resume "Star Wars"
+            python kometa.py --resume "Star Wars"
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --resume "Star Wars"
             ```
 
-??? blank "No Countdown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-nc`/`--no-countdown`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_NO_COUNTDOWN`<a class="headerlink" href="#no-countdown" title="Permanent link">¶</a>"
+??? blank "No Countdown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-nc`/`--no-countdown`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_NO_COUNTDOWN`<a class="headerlink" href="#no-countdown" title="Permanent link">¶</a>"
 
     <div id="no-countdown" />Run without displaying a countdown to the next scheduled run.
 
@@ -529,19 +529,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-nc` or `--no-countdown` (ex. `--no-countdown`)
 
-    **Environment Variable:** `KOMET_NO_COUNTDOWN` (ex. `KOMET_NO_COUNTDOWN=true`)
+    **Environment Variable:** `KOMETA_NO_COUNTDOWN` (ex. `KOMETA_NO_COUNTDOWN=true`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --no-countdown
+            python kometa.py --no-countdown
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --no-countdown
             ```
 
-??? blank "No Missing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-nm`/`--no-missing`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_NO_MISSING`<a class="headerlink" href="#no-missing" title="Permanent link">¶</a>"
+??? blank "No Missing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-nm`/`--no-missing`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_NO_MISSING`<a class="headerlink" href="#no-missing" title="Permanent link">¶</a>"
 
     <div id="no-missing" />Run without utilizing the missing movie/show functions.
 
@@ -549,19 +549,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-nm` or `--no-missing` (ex. `--no-missing`)
 
-    **Environment Variable:** `KOMET_NO_MISSING` (ex. `KOMET_NO_MISSING=true`)
+    **Environment Variable:** `KOMETA_NO_MISSING` (ex. `KOMETA_NO_MISSING=true`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --no-missing
+            python kometa.py --no-missing
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --no-missing
             ```
 
-??? blank "No Report&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-nr`/`--no-report`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_NO_REPORT`<a class="headerlink" href="#no-report" title="Permanent link">¶</a>"
+??? blank "No Report&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-nr`/`--no-report`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_NO_REPORT`<a class="headerlink" href="#no-report" title="Permanent link">¶</a>"
 
     <div id="no-report" />Run without saving the report.
 
@@ -569,19 +569,19 @@ different ways to specify these things.
 
     **Shell Flags:**  `-nr` or `--no-report` (ex. `--no-report`)
 
-    **Environment Variable:** `KOMET_NO_REPORT` (ex. `KOMET_NO_REPORT=true`)
+    **Environment Variable:** `KOMETA_NO_REPORT` (ex. `KOMETA_NO_REPORT=true`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --no-report
+            python kometa.py --no-report
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --no-report
             ```
 
-??? blank "Read Only Config&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-ro`/`--read-only-config`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_READ_ONLY_CONFIG`<a class="headerlink" href="#read-only-config" title="Permanent link">¶</a>"
+??? blank "Read Only Config&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-ro`/`--read-only-config`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_READ_ONLY_CONFIG`<a class="headerlink" href="#read-only-config" title="Permanent link">¶</a>"
 
     <div id="read-only-config" />Run without writing to the configuration file.
 
@@ -589,19 +589,19 @@ different ways to specify these things.
 
     **Shell Flags:**  `-ro` or `--read-only-config` (ex. `--read-only-config`)
 
-    **Environment Variable:** `KOMET_READ_ONLY_CONFIG` (ex. `KOMET_READ_ONLY_CONFIG=true`)
+    **Environment Variable:** `KOMETA_READ_ONLY_CONFIG` (ex. `KOMETA_READ_ONLY_CONFIG=true`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --read-only-config
+            python kometa.py --read-only-config
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --read-only-config
             ```
 
-??? blank "Divider Character&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-d`/`--divider`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_DIVIDER`<a class="headerlink" href="#divider" title="Permanent link">¶</a>"
+??? blank "Divider Character&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-d`/`--divider`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_DIVIDER`<a class="headerlink" href="#divider" title="Permanent link">¶</a>"
 
     <div id="divider" />Change the terminal output divider character. Will default to `=` if not specified.
 
@@ -611,19 +611,19 @@ different ways to specify these things.
 
     **Shell Flags:** `-d` or `--divider` (ex. `--divider *`)
 
-    **Environment Variable:** `KOMET_DIVIDER` (ex. `KOMET_DIVIDER=*`)
+    **Environment Variable:** `KOMETA_DIVIDER` (ex. `KOMETA_DIVIDER=*`)
     
     !!! example
         === "Local Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --divider *
-            python plex_meta_manager.py --divider *
+            python kometa.py --divider *
             ```
         === "Docker Environment"
             ```
             ```
 
-??? blank "Screen Width&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-w`/`--width`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_WIDTH`<a class="headerlink" href="#width" title="Permanent link">¶</a>"
+??? blank "Screen Width&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-w`/`--width`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_WIDTH`<a class="headerlink" href="#width" title="Permanent link">¶</a>"
 
     <div id="width" />Change the terminal output width. Will default to `100` if not specified.
 
@@ -633,22 +633,22 @@ different ways to specify these things.
 
     **Shell Flags:** `-w` or `--width` (ex. `--width 150`)
 
-    **Environment Variable:** `KOMET_WIDTH` (ex. `KOMET_WIDTH=150`)
+    **Environment Variable:** `KOMETA_WIDTH` (ex. `KOMETA_WIDTH=150`)
     
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --width 150
+            python kometa.py --width 150
             ```
         === "Docker Environment"
             ```
             docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa --width 150
             ```
 
-??? blank "Config Secrets&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`--kometa-***`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMET_***`<a class="headerlink" href="#kometa-vars" title="Permanent link">¶</a>"
+??? blank "Config Secrets&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`--kometa-***`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`KOMETA_***`<a class="headerlink" href="#kometa-vars" title="Permanent link">¶</a>"
 
     <div id="kometa-vars" />All Run Commands that are in the format `--kometa-***` and Environment Variables that are in the 
-    format `KOMET_***`, where `***` is the name you want to call the variable, will be loaded in as Config Secrets.
+    format `KOMETA_***`, where `***` is the name you want to call the variable, will be loaded in as Config Secrets.
     
     These Config Secrets can be loaded into the config by placing `<<***>>` in any field in the config, where `***` is 
     whatever name you called the variable.  
@@ -657,12 +657,12 @@ different ways to specify these things.
 
     **Shell Flags:** `--kometa-***` (ex. `--kometa-mysecret 123456789`)
 
-    **Environment Variable:** `KOMET_***` (ex. `KOMET_MYSECRET=123456789`)
+    **Environment Variable:** `KOMETA_***` (ex. `KOMETA_MYSECRET=123456789`)
 
     !!! example
         === "Local Environment"
             ```
-            python plex_meta_manager.py --kometa-mysecret 123456789
+            python kometa.py --kometa-mysecret 123456789
             ```
         === "Docker Environment"
             ```

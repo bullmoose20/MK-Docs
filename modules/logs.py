@@ -1,10 +1,10 @@
-import io, logging, os, re, sys, traceback, shutil, glob
+import io, logging, os, re, sys, traceback
 from logging.handlers import RotatingFileHandler
 
 LOG_DIR = "logs"
 COLLECTION_DIR = "collections"
 PLAYLIST_DIR = "playlists"
-MAIN_LOG = "kometa.log"
+MAIN_LOG = "meta.log"
 LIBRARY_LOG = "library.log"
 COLLECTION_LOG = "collection.log"
 PLAYLIST_LOG = "playlist.log"
@@ -64,18 +64,6 @@ class MyLogger:
         self.saved_errors = []
 
     def _get_handler(self, log_file, count=3):
-        # Define the old log file pattern
-        old_log_file_pattern = os.path.join(self.log_dir, "meta*")
-
-        # Define the archive directory
-        archive_dir = os.path.join(self.log_dir, "archive")
-        os.makedirs(archive_dir, exist_ok=True)
-
-        # Move all old log files that match the pattern
-        for old_log_file in glob.glob(old_log_file_pattern):
-            shutil.move(old_log_file, os.path.join(archive_dir, os.path.basename(old_log_file)))
-
-        # Continue with the existing code
         _handler = RotatingFileHandler(log_file, delay=True, mode="w", backupCount=count, encoding="utf-8")
         self._formatter(handler=_handler)
         if os.path.isfile(log_file):

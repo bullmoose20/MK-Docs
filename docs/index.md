@@ -13,19 +13,19 @@ title: Home
 <center>
 ![Logo](assets/logo-full.png)
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/meisnate12/Plex-Meta-Manager?style=plastic)](https://github.com/meisnate12/Plex-Meta-Manager/releases)
-[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/meisnate12/plex-meta-manager?label=docker&sort=semver&style=plastic)](https://hub.docker.com/r/meisnate12/plex-meta-manager)
-[![Docker Pulls](https://img.shields.io/docker/pulls/meisnate12/plex-meta-manager?style=plastic)](https://hub.docker.com/r/meisnate12/plex-meta-manager)
-[![Develop GitHub commits since latest stable release (by SemVer)](https://img.shields.io/github/commits-since/meisnate12/plex-meta-manager/latest/develop?label=Commits%20in%20Develop&style=plastic)](https://github.com/meisnate12/Plex-Meta-Manager/tree/develop)
-[![Nightly GitHub commits since latest stable release (by SemVer)](https://img.shields.io/github/commits-since/meisnate12/plex-meta-manager/latest/nightly?label=Commits%20in%20Nightly&style=plastic)](https://github.com/meisnate12/Plex-Meta-Manager/tree/nightly)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/meisnate12/Kometa?style=plastic)](https://github.com/meisnate12/Kometa/releases)
+[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/meisnate12/kometa?label=docker&sort=semver&style=plastic)](https://hub.docker.com/r/meisnate12/kometa)
+[![Docker Pulls](https://img.shields.io/docker/pulls/meisnate12/kometa?style=plastic)](https://hub.docker.com/r/meisnate12/kometa)
+[![Develop GitHub commits since latest stable release (by SemVer)](https://img.shields.io/github/commits-since/meisnate12/kometa/latest/develop?label=Commits%20in%20Develop&style=plastic)](https://github.com/meisnate12/Kometa/tree/develop)
+[![Nightly GitHub commits since latest stable release (by SemVer)](https://img.shields.io/github/commits-since/meisnate12/kometa/latest/nightly?label=Commits%20in%20Nightly&style=plastic)](https://github.com/meisnate12/Kometa/tree/nightly)
 
-[![Discord](https://img.shields.io/discord/822460010649878528?color=%2300bc8c&label=Discord&style=plastic)](https://metamanager.wiki/en/latest/discord/)
-[![Reddit](https://img.shields.io/badge/%2Fr%2Fkometa-e05d44?style=plastic&logo=Reddit&logoColor=white&labelColor=5d5d5d&color=00bc8c)](https://www.reddit.com/r/PlexMetaManager/)
-[![Wiki](https://img.shields.io/readthedocs/plex-meta-manager?color=%2300bc8c&style=plastic)](https://metamanager.wiki)
-[![Translations](https://img.shields.io/weblate/progress/plex-meta-manager?color=00bc8c&server=https%3A%2F%2Ftranslations.metamanager.wiki&style=plastic)](https://translations.metamanager.wiki/projects/plex-meta-manager/#languages)
+[![Discord](https://img.shields.io/discord/822460010649878528?color=%2300bc8c&label=Discord&style=plastic)](https://kometa.wiki/en/latest/discord/)
+[![Reddit](https://img.shields.io/badge/%2Fr%2Fkometa-e05d44?style=plastic&logo=Reddit&logoColor=white&labelColor=5d5d5d&color=00bc8c)](https://www.reddit.com/r/Kometa/)
+[![Wiki](https://img.shields.io/readthedocs/kometa?color=%2300bc8c&style=plastic)](https://kometa.wiki)
+[![Translations](https://img.shields.io/weblate/progress/kometa?color=00bc8c&server=https%3A%2F%2Ftranslations.kometa.wiki&style=plastic)](https://translations.kometa.wiki/projects/kometa/#languages)
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/meisnate12?color=00bc8c&style=plastic)](https://github.com/sponsors/meisnate12)
 [![Sponsor or Donate](https://img.shields.io/badge/-Sponsor%2FDonate-00bc8c?style=plastic)](https://github.com/sponsors/meisnate12)
-[![Feature Requests](https://img.shields.io/badge/Feature%20Requests-00bc8c?style=plastic)](https://features.metamanager.wiki/)
+[![Feature Requests](https://img.shields.io/badge/Feature%20Requests-00bc8c?style=plastic)](https://features.kometa.wiki/)
 </center>
 
 Kometa (formerly known as Plex Meta Manager) is a powerful tool designed to give you complete control over your media libraries. With Kometa, you can take your customization to the next level, with granular control over metadata, collections, overlays, and much more.
@@ -114,7 +114,7 @@ To get started with Kometa, follow these simple steps:
 
 3. After creating the Configuration File, you can start updating Metadata and building automatic Collections by creating a [Collection File](files/collections.md) for each Library you want to work with. If you'd rather use some of our pre-made Collection Files, take a look at the [Kometa Defaults](defaults/guide.md)
 
-4. Finally, check out the [Wiki](https://metamanager.wiki/), you'll find new and exciting ways to truly unlock the potential of your libraries.
+4. Finally, check out the [Wiki](https://kometa.wiki/), you'll find new and exciting ways to truly unlock the potential of your libraries.
 
 ## Step-by-Step Guides
 
@@ -160,9 +160,9 @@ However, these branches (especially Nightly) are recommended for more technical 
 
 ??? "Develop Branch (click to expand)"
 
-    [![Develop GitHub commits since latest stable release (by SemVer)](https://img.shields.io/github/commits-since/meisnate12/plex-meta-manager/latest/develop?label=Commits%20in%20Develop&style=plastic)](https://github.com/meisnate12/Plex-Meta-Manager/tree/develop)
+    [![Develop GitHub commits since latest stable release (by SemVer)](https://img.shields.io/github/commits-since/meisnate12/kometa/latest/develop?label=Commits%20in%20Develop&style=plastic)](https://github.com/meisnate12/Kometa/tree/develop)
 
-    The [develop](https://github.com/meisnate12/Plex-Meta-Manager/tree/develop) branch has the most updated **documented** fixes and enhancements to Kometa.  This version is tested and documented to some degree, but it is still an active Develop branch, so there may be rough edges.
+    The [develop](https://github.com/meisnate12/Kometa/tree/develop) branch has the most updated **documented** fixes and enhancements to Kometa.  This version is tested and documented to some degree, but it is still an active Develop branch, so there may be rough edges.
 
     Switching to `develop`:
 
@@ -181,15 +181,15 @@ However, these branches (especially Nightly) are recommended for more technical 
             git checkout master
             ```
     
-    If switching to the develop branch, it is recommended to also use the [develop branch of the wiki](https://metamanager.wiki/en/develop/), which documents any changes made from the Master branch.
+    If switching to the develop branch, it is recommended to also use the [develop branch of the wiki](https://kometa.wiki/en/develop/), which documents any changes made from the Master branch.
 
 ??? warning "Nightly Branch (click to expand)"
 
-    [![Nightly GitHub commits since latest stable release (by SemVer)](https://img.shields.io/github/commits-since/meisnate12/plex-meta-manager/latest/nightly?label=Commits%20in%20Nightly&style=plastic)](https://github.com/meisnate12/Plex-Meta-Manager/tree/nightly)
+    [![Nightly GitHub commits since latest stable release (by SemVer)](https://img.shields.io/github/commits-since/meisnate12/kometa/latest/nightly?label=Commits%20in%20Nightly&style=plastic)](https://github.com/meisnate12/Kometa/tree/nightly)
     
     **This branch will have squashed commits which can cause `git pull`/`git fetch` to error you can use `git reset origin/nightly --hard` to fix the branch.**
     
-    The [nightly](https://github.com/meisnate12/Plex-Meta-Manager/tree/nightly) branch has the absolute latest version of Kometa, but it could easily break, there is no guarantee that it even works, and any new features will not be documented until they have progressed enough to reach the develop branch.
+    The [nightly](https://github.com/meisnate12/Kometa/tree/nightly) branch has the absolute latest version of Kometa, but it could easily break, there is no guarantee that it even works, and any new features will not be documented until they have progressed enough to reach the develop branch.
 
     Switching to `nightly`:
 
@@ -208,7 +208,7 @@ However, these branches (especially Nightly) are recommended for more technical 
             git checkout master
             ```
 
-    As this branch is subject to extreme change, there is no promise of the feature being documented in the [nightly](https://metamanager.wiki/en/nightly/) branch of the wiki and all discussions relating to changes made in the nightly branch will be held within the [Kometa Discord Server](https://metamanager.wiki/en/latest/discord/).
+    As this branch is subject to extreme change, there is no promise of the feature being documented in the [nightly](https://kometa.wiki/en/nightly/) branch of the wiki and all discussions relating to changes made in the nightly branch will be held within the [Kometa Discord Server](https://kometa.wiki/en/latest/discord/).
 
 ???+ tip "`lmxl` Variants for Unsupported Hardware"
 
@@ -216,25 +216,25 @@ However, these branches (especially Nightly) are recommended for more technical 
 
     To address this issue, we have implemented 'lxml' variants for each Kometa branch (master, develop, and nightly). These variants resume compatibility with older hardware by freezing lxml on a previous version which has wider hardware support.
 
-    To transition to the lxml branch, simply prepend 'lxml-' to the branch name you are currently utilizing. For instance, `meisnate12/plex-meta-manager:lxml-master`, `meisnate12/plex-meta-manager:lxml-develop` and `meisnate12/plex-meta-manager:lxml-nightly`.
+    To transition to the lxml branch, simply prepend 'lxml-' to the branch name you are currently utilizing. For instance, `meisnate12/kometa:lxml-master`, `meisnate12/kometa:lxml-develop` and `meisnate12/kometa:lxml-nightly`.
 
 ## Discord Support Server
 
-If you're looking for support for any questions or issues you might have, or if you just want to be a part of our growing community, Join the [Kometa Discord Server](https://metamanager.wiki/en/latest/discord/).
+If you're looking for support for any questions or issues you might have, or if you just want to be a part of our growing community, Join the [Kometa Discord Server](https://kometa.wiki/en/latest/discord/).
 
 ## Feature Requests
 
-At Kometa, we value our community's input and actively seek feedback to drive the evolution of our product. We want to hear your ideas on how to enhance Kometa, and we encourage you to visit our [Feature Request](https://features.metamanager.wiki/features) page to share your thoughts or vote on what features you would like to see added next. Your voice matters and helps shape the future of Kometa, so please don't hesitate to join in the conversation and be a part of our community-driven development process.
+At Kometa, we value our community's input and actively seek feedback to drive the evolution of our product. We want to hear your ideas on how to enhance Kometa, and we encourage you to visit our [Feature Request](https://features.kometa.wiki/features) page to share your thoughts or vote on what features you would like to see added next. Your voice matters and helps shape the future of Kometa, so please don't hesitate to join in the conversation and be a part of our community-driven development process.
 
 ## Errors and Configuration Questions
 
-If you're having trouble, we recommend first joining the [Kometa Discord Server](https://metamanager.wiki/en/latest/discord/) and seeking support there. If that isn't possible for you, here's what you can do:
+If you're having trouble, we recommend first joining the [Kometa Discord Server](https://kometa.wiki/en/latest/discord/) and seeking support there. If that isn't possible for you, here's what you can do:
 
-* If you get an error, update to the latest version and check if the issue persists. If it does, report the bug by filling out the [Bug Report](https://github.com/meisnate12/Plex-Meta-Manager/issues/new?assignees=meisnate12&labels=status%3Anot-yet-viewed%2C+bug&template=bug_report.md&title=Bug%3A+) template.
-* If you spot a mistake or have an idea to improve the [Kometa Wiki](https://metamanager.wiki/), submit a request using the [Wiki Request](https://github.com/meisnate12/Plex-Meta-Manager/issues/new?assignees=meisnate12&labels=status%3Anot-yet-viewed%2C+documentation&template=3.docs_request.yml&title=%5BDocs%5D%3A+) template.
-* If you have a question about metadata configuration, start a discussion on the [Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions). Remember, the community helps shape the future of Kometa, so your input is valuable!
+* If you get an error, update to the latest version and check if the issue persists. If it does, report the bug by filling out the [Bug Report](https://github.com/meisnate12/Kometa/issues/new?assignees=meisnate12&labels=status%3Anot-yet-viewed%2C+bug&template=bug_report.md&title=Bug%3A+) template.
+* If you spot a mistake or have an idea to improve the [Kometa Wiki](https://kometa.wiki/), submit a request using the [Wiki Request](https://github.com/meisnate12/Kometa/issues/new?assignees=meisnate12&labels=status%3Anot-yet-viewed%2C+documentation&template=3.docs_request.yml&title=%5BDocs%5D%3A+) template.
+* If you have a question about metadata configuration, start a discussion on the [Discussions](https://github.com/meisnate12/Kometa/discussions). Remember, the community helps shape the future of Kometa, so your input is valuable!
 
-For support on any of the above, visit the [Discord server](https://metamanager.wiki/en/latest/discord/).
+For support on any of the above, visit the [Discord server](https://kometa.wiki/en/latest/discord/).
 
 ## Contributing
 * Pull Requests are greatly encouraged, please submit all Pull Requests to the nightly branch.

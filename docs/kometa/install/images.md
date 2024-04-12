@@ -20,7 +20,7 @@ To transition to the lxml branch, simply prepend 'lxml-' to the branch name you 
 
 ## LinuxServer
 
-The first image offered in unRAID for Kometa is the Linuxserver.io image [`linuxserver/plex-meta-manager`]
+The first image offered in unRAID for Kometa is the Linuxserver.io image [`linuxserver/kometa`]
 
 This image is different to the official image [meisnate12/kometa] in a few ways that cause a variety of problems particularly for new users.
 
@@ -43,16 +43,16 @@ The LSIO image:
 3. Doesn't support [runtime flags](../environmental.md), only ENV vars. This means that a command like:
 
    ```
-   docker run -it --rm -v /opt/kometa/config:/config linuxserver/plex-meta-manager --config config/config.yml -r --run-libraries "Movies - 4K DV"
+   docker run -it --rm -v /opt/kometa/config:/config linuxserver/kometa --config config/config.yml -r --run-libraries "Movies - 4K DV"
    ```
 
    doesn't work with the LSIO image; it would have to be:
 
    ```
-   docker run -it --rm -v /opt/kometa/config:/config -e KOMET_CONFIG=/config/config.yml -e KOMET_RUN=true -e KOMET_LIBRARIES="Movies - 4K DV" linuxserver/plex-meta-manager
+   docker run -it --rm -v /opt/kometa/config:/config -e KOMETA_CONFIG=/config/config.yml -e KOMETA_RUN=true -e KOMETA_LIBRARIES="Movies - 4K DV" linuxserver/kometa
    ```
 
-4. Doesn't do manual runs correctly; they loop over and over. That command in the previous bullet point [which uses `KOMET_RUN` to run it right now] will run over and over until you manually kill the container.  The same thing using the official image will run once and quit, as expected.
+4. Doesn't do manual runs correctly; they loop over and over. That command in the previous bullet point [which uses `KOMETA_RUN` to run it right now] will run over and over until you manually kill the container.  The same thing using the official image will run once and quit, as expected.
 
 5. Resets ownership of entire config dir every run. In tests, the ownership of the config dir and its contents was set to 911:911 with each run.
 

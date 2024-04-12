@@ -14,7 +14,7 @@ As new log files are created, the old ones get a numeric suffix added: `meta.log
 
 ### Providing Log Files on Discord
 
-You can drag-and-drop your meta.log file directly into [Discord](https://metamanager.wiki/en/latest/discord/), you do not need to upload it to a third-party site unless it exceeds the 50mb size limit.
+You can drag-and-drop your meta.log file directly into [Discord](https://kometa.wiki/en/latest/discord/), you do not need to upload it to a third-party site unless it exceeds the 50mb size limit.
 
 Please DO NOT manually extract, copy and paste text from your log files directly into Discord as the formatting can be difficult to read and can often redact parts of the log file that are important for full context.
 

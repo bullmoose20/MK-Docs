@@ -6,8 +6,8 @@ logger = util.logger
 
 raw_url = "https://raw.githubusercontent.com"
 base_url = "https://api.github.com"
-komet_base = f"{base_url}/repos/meisnate12/Plex-Meta-Manager"
-configs_raw_url = f"{raw_url}/kometa-Team/Kometa-Configs"
+kometa_base = f"{base_url}/repos/meisnate12/Kometa"
+configs_raw_url = f"{raw_url}/kometa-team/Kometa-Configs"
 
 class GitHub:
     def __init__(self, config, params):
@@ -16,7 +16,7 @@ class GitHub:
         logger.secret(self.token)
         self.headers = {"Authorization": f"token {self.token}"} if self.token else None
         self.images_raw_url = f"{raw_url}/meisnate12/PMM-Image-Sets/master/sets/"
-        self.translation_url = f"{raw_url}/meisnate12/PMM-Translations/master/defaults/"
+        self.translation_url = f"{raw_url}/kometa-team/Kometa-Translations/master/defaults/"
         self._configs_url = None
         self._config_tags = []
         self._translation_keys = []
@@ -48,11 +48,11 @@ class GitHub:
         return {i["path"]: i for i in self._requests(tree_url, f"No tree found at {tree_url}")["tree"]}
 
     def latest_release_notes(self):
-        return self._requests(f"{komet_base}/releases/latest")["body"]
+        return self._requests(f"{kometa_base}/releases/latest")["body"]
 
     def get_commits(self, dev_version, nightly=False):
-        master_sha = self._requests(f"{komet_base}/commits/master")["sha"]
-        response = self._requests(f"{komet_base}/commits", params={"sha": "nightly" if nightly else "develop"})
+        master_sha = self._requests(f"{kometa_base}/commits/master")["sha"]
+        response = self._requests(f"{kometa_base}/commits", params={"sha": "nightly" if nightly else "develop"})
         commits = []
         for commit in response:
             if commit["sha"] == master_sha:
@@ -68,7 +68,7 @@ class GitHub:
     def config_tags(self):
         if not self._config_tags:
             try:
-                self._config_tags = [r["ref"][11:] for r in self._requests(f"{komet_base}-Configs/git/refs/tags")]
+                self._config_tags = [r["ref"][11:] for r in self._requests(f"{kometa_base}-Configs/git/refs/tags")]
             except TypeError:
                 pass
         return self._config_tags
@@ -84,7 +84,7 @@ class GitHub:
     @property
     def translation_keys(self):
         if not self._translation_keys:
-            tree, repo = self.get_top_tree("kometa-TEAM/KOMETA-Translations")
+            tree, repo = self.get_top_tree("kometa-team/Kometa-Translations")
             self._translation_keys = [tk[:-4] for tk in self.get_tree(tree["defaults"]["url"])]
         return self._translation_keys
 

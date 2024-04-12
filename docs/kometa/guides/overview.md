@@ -62,16 +62,16 @@ A lot of these guides are stored on Google Drive as using the traditional wiki p
     - Module to interface with Radarr/Sonarr
 - [TMDbAPIs](https://github.com/meisnate12/TMDbAPIs)
     - Module to interface with TMDb
-- [pmmutils](https://github.com/meisnate12/pmmutils)
+- [kometautils](https://github.com/kometa-team/kometautils)
     - Module for various common files among Kometa Repos
 
 <br>
 
-- [Plex-Meta-Manager-Images](https://github.com/kometa-Team/Kometa-Images)
+- [Kometa-Images](https://github.com/kometa-Team/Kometa-Images)
     - Repo to store Kometa's various Images
-- [Plex-Meta-Manager-People](https://github.com/kometa-Team/Kometa-People)
+- [Kometa-People](https://github.com/kometa-Team/Kometa-People)
     - Stores the original image for all our actor posters
-- [Plex-Meta-Manager-People-Auto-Readme](https://github.com/kometa-Team/Kometa-People-Auto-Readme)
+- [Kometa-People-Auto-Readme](https://github.com/kometa-Team/Kometa-People-Auto-Readme)
     - Stores the File that generates the Readme file for the other Actor repos
 - [Black & White (bw)](https://github.com/kometa-Team/Kometa-People-bw)
     - Stores the Black & White actor posters
@@ -88,7 +88,7 @@ A lot of these guides are stored on Google Drive as using the traditional wiki p
 
 <br>
 
-- [Plex-Meta-Manager-Unraid-Templates](https://github.com/kometa-Team/Kometa-Unraid-Templates)
+- [Kometa-Unraid-Templates](https://github.com/kometa-Team/Kometa-Unraid-Templates)
     - Stores the Kometa Unraid Templates
 - [Kometa-Translations ](https://github.com/kometa-Team/Kometa-Translations)
     - Stores the data for Kometa Translations

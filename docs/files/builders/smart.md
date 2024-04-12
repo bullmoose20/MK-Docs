@@ -38,13 +38,13 @@ This is extremely useful because smart collections don't follow normal show/hide
 
 To have the Smart Label Collections to eliminate Plex Collectionless you have to go all in on using them. A good rule of thumb to make sure this works correctly is that every item in your library should have a max of one non-smart collection.
 
-Reach out on the [Kometa Discord](https://metamanager.wiki/en/latest/discord/) or in the [GitHub Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions) for help if you're having any issues getting this to work properly.
+Reach out on the [Kometa Discord](https://kometa.wiki/en/latest/discord/) or in the [GitHub Discussions](https://github.com/meisnate12/Kometa/discussions) for help if you're having any issues getting this to work properly.
 
 ## Smart Filter
 
 Uses Plex's [Advanced Filters](https://support.plex.tv/articles/201273953-collections/) to create a smart collection based on the filter parameters provided.
 
-Any Advanced Filter made using the Plex UI should be able to be recreated using `smart_filter`. If you're having trouble getting `smart_filter` to work correctly, build the collection you want inside of Plex's Advanced Filters and take a screenshot of the parameters in the Plex UI and post it in either the [Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions) or on [Discord](https://metamanager.wiki/en/latest/discord/), and I'll do my best to help you. 
+Any Advanced Filter made using the Plex UI should be able to be recreated using `smart_filter`. If you're having trouble getting `smart_filter` to work correctly, build the collection you want inside of Plex's Advanced Filters and take a screenshot of the parameters in the Plex UI and post it in either the [Discussions](https://github.com/meisnate12/Kometa/discussions) or on [Discord](https://kometa.wiki/en/latest/discord/), and I'll do my best to help you. 
 
 like Plex's [Advanced Filters](https://support.plex.tv/articles/201273953-collections/) you have to start each filter with either `any` or `all` as a base. You can only have one base attribute and all filter attributes must be under the base.
 

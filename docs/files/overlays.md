@@ -289,7 +289,7 @@ You can control the backdrop of the text using the various `back_*` attributes.
 
 The `horizontal_offset` and `vertical_offset` overlay attributes are required when using Text Overlays.
 
-Kometa includes multiple fonts in the [`fonts` folder](https://github.com/meisnate12/Plex-Meta-Manager/tree/master/fonts) which can be called using `fonts/fontname.ttf`
+Kometa includes multiple fonts in the [`fonts` folder](https://github.com/meisnate12/Kometa/tree/master/fonts) which can be called using `fonts/fontname.ttf`
 
 ```yaml
 overlays:

@@ -68,7 +68,7 @@ Detailed steps:
     
         Anything you can do via command-line arguments can be done with [Environment Variables](../environmental.md), which is more typical in Docker environments.
     
-        For example, you could add an environment variable named `KOMET_TESTS` with a value of `true` to run the collections you have defined as tests.
+        For example, you could add an environment variable named `KOMETA_TESTS` with a value of `true` to run the collections you have defined as tests.
     
         Click "Environments" on the left to set environment variables.
     
@@ -125,11 +125,11 @@ Detailed steps:
 
     4. Change the container name if you wish.
 
-        Command line arguments can be entered in the "Entrypoint" field after `/tini -s python3 plex_meta_manager.py --`  
+        Command line arguments can be entered in the "Entrypoint" field after `/tini -s python3 kometa.py --`  
 
         IMPORTANT: **DO NOT REMOVE** ANY ELEMENT OF THAT TEXT.  DO NOT ENTER ANYTHING INTO THE "Command" FIELD.
 
-        For example, you could enter the following into the "Entrypoint" field to make Kometa run immediately when the container starts up: `/tini -s python3 plex_meta_manager.py -- --run`
+        For example, you could enter the following into the "Entrypoint" field to make Kometa run immediately when the container starts up: `/tini -s python3 kometa.py -- --run`
 
         Typically, in a Docker environment, this sort of thing is done via Environment Variables [the next step here].  Editing the "Entrypoint" is not recommended, as it's easy to render the container non-functional if you are not sure what you're doing.
 
@@ -143,7 +143,7 @@ Detailed steps:
 
         Anything you can do via command-line arguments can be done with Environment Variables, which is more typical in Docker environments.
 
-        For example, you could add an environment variable named `KOMET_RUN` with a value of `True` to make Kometa run immediately when the container starts up.
+        For example, you could add an environment variable named `KOMETA_RUN` with a value of `True` to make Kometa run immediately when the container starts up.
 
         Information on available Environment Variables can be found [here](../environmental.md)
 

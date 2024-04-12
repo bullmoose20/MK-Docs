@@ -1505,7 +1505,7 @@ requirements of creating the collection.
             cache_builders: 1
             smart_label: release.desc
             sync_mode: sync
-            mdblist_list: https://mdblist.com/lists/plexmetamanager/<<key>>-movies
+            mdblist_list: https://mdblist.com/lists/k0meta/<<key>>-movies
             url_poster: https://raw.githubusercontent.com/meisnate12/kometa-Images/master/streaming/<<key_name_encoded>>.jpg
         
         dynamic_collections:

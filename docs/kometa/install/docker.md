@@ -230,20 +230,20 @@ You'll need to add this to the docker command every time you run it, like this:
 === ":fontawesome-brands-apple: macOS"
 
       ```
-      docker run --rm -it -v "/Users/YOURUSERNAME/plex-meta-manager/config:/config:rw" meisnate12/kometa
+      docker run --rm -it -v "/Users/YOURUSERNAME/kometa/config:/config:rw" meisnate12/kometa
       ```
 
 === ":fontawesome-brands-windows: Windows"
 
       ```
-      docker run --rm -it -v "C:\Users\YOURUSERNAME\plex-meta-manager\config:/config:rw" meisnate12/kometa
+      docker run --rm -it -v "C:\Users\YOURUSERNAME\kometa\config:/config:rw" meisnate12/kometa
       ```
 
 
 If you run that command now it will display a similar error to before, but without all the image loading:
 
 ``` { .bash .no-copy }
-$ docker run --rm -it -v "/Users/mroche/plex-meta-manager/config:/config:rw" meisnate12/kometa --run
+$ docker run --rm -it -v "/Users/mroche/kometa/config:/config:rw" meisnate12/kometa --run
 Config Error: config not found at //config
 ```
 
@@ -314,7 +314,7 @@ First, make a copy of the template:
 
       Go to [this URL](https://raw.githubusercontent.com/meisnate12/kometa/master/config/config.yml.template) using a web browser; choose the "Save" command, then save the file at:
       ```
-      C:\Users\YOURUSERNAME\plex-meta-manager\config\config.yml
+      C:\Users\YOURUSERNAME\kometa\config\config.yml
       ```
 
 
@@ -441,7 +441,7 @@ Then run Kometa again:
 Add the `develop` tag to the image name in your run command [or wherever you specify the image in your environment]
 
 ```
-docker run --rm -it -v "Komet_PATH_GOES_HERE:/config:rw" meisnate12/kometa:develop --run
+docker run --rm -it -v "KOMETA_PATH_GOES_HERE:/config:rw" meisnate12/kometa:develop --run
                                                                                                   ^^^^^^^
 ```
 
@@ -452,7 +452,7 @@ This may not work if you are not using the official image; for example, it does 
 Add the `nightly` tag to the image name in your run command [or wherever you specify the image in your environment]
 
 ```
-docker run --rm -it -v "Komet_PATH_GOES_HERE:/config:rw" meisnate12/kometa:nightly --run
+docker run --rm -it -v "KOMETA_PATH_GOES_HERE:/config:rw" meisnate12/kometa:nightly --run
                                                                                                   ^^^^^^^
 ```
 
@@ -463,7 +463,7 @@ This may not work if you are not using the official image; for example, it does 
 Add the `latest` tag to the image name in your run command [or wherever you specify the image in your environment]
 
 ```
-docker run --rm -it -v "Komet_PATH_GOES_HERE:/config:rw" meisnate12/kometa:latest --run
+docker run --rm -it -v "KOMETA_PATH_GOES_HERE:/config:rw" meisnate12/kometa:latest --run
                                                                                                   ^^^^^^
 ```
 

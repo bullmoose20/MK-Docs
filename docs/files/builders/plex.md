@@ -107,7 +107,7 @@ collections:
 
 Uses Plex's [Advanced Filters](https://support.plex.tv/articles/201273953-collections/) to find all items based on the search parameters provided.
 
-Any Advanced Filter made using the Plex UI should be able to be recreated using `plex_search`. If you're having trouble getting `plex_search` to work correctly, build the collection you want inside of Plex's Advanced Filters and take a screenshot of the parameters in the Plex UI and post it in either the [Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions) or on [Discord](https://metamanager.wiki/en/latest/discord/), and I'll do my best to help you. 
+Any Advanced Filter made using the Plex UI should be able to be recreated using `plex_search`. If you're having trouble getting `plex_search` to work correctly, build the collection you want inside of Plex's Advanced Filters and take a screenshot of the parameters in the Plex UI and post it in either the [Discussions](https://github.com/meisnate12/Kometa/discussions) or on [Discord](https://kometa.wiki/en/latest/discord/), and I'll do my best to help you. 
 
 like Plex's [Advanced Filters](https://support.plex.tv/articles/201273953-collections/) you have to start each search with either `any` or `all` as a base. You can only have one base attribute and all search attributes must be under the base.
 

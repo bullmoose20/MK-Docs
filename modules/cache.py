@@ -24,7 +24,6 @@ class Cache:
                     "overlay_ratings", "anidb_data", "anidb_data2", "anidb_data3", "mal_data"
                 ]:
                     cursor.execute(f"DROP TABLE IF EXISTS {old_table}")
-                cursor.execute("DROP TABLE IF EXISTS tmdb_show_data2")
                 cursor.execute(
                     """CREATE TABLE IF NOT EXISTS guids_map (
                     key INTEGER PRIMARY KEY,

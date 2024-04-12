@@ -114,13 +114,15 @@ class DataFile:
                 file_path = file_path[:-5]
         if not translation and not file_path.endswith((".yml", ".yaml")):
             file_path = f"{file_path}.yml"
-        if file_type in ["URL", "Git", "Repo"] or (images and file_type == "Kometa Default"):
+        if file_type in ["URL", "Git", "Repo"] or (images and file_type == "PMM Default") or (images and file_type == "Kometa Default"):
             if file_type == "Repo" and not self.config.custom_repo:
                 raise Failed("Config Error: No custom_repo defined")
             if file_type == "URL":
                 content_path = file_path
             elif file_type == "Repo":
                 content_path = f"{self.config.custom_repo}{file_path}"
+            elif file_type == "PMM Default":
+                content_path = f"{self.config.GitHub.images_raw_url}{folder}{file_path}"
             elif file_type == "Kometa Default":
                 content_path = f"{self.config.GitHub.images_raw_url}{folder}{file_path}"
             else:
@@ -133,7 +135,7 @@ class DataFile:
                 raise Failed(f"URL Error: No file found at {content_path}")
             yaml = YAML(input_data=response.content, check_empty=True)
         else:
-            if file_type == "Kometa Default":
+            if file_type == "PMM Default" or file_type == "Kometa Default":
                 if not overlay and file_path.startswith(("movie/", "chart/", "award/")):
                     file_path = file_path[6:]
                 elif not overlay and file_path.startswith(("show/", "both/")):
@@ -153,7 +155,7 @@ class DataFile:
             content_path = os.path.abspath(os.path.join(file_path, "default.yml") if translation else file_path)
             dir_path = file_path
             if not os.path.exists(content_path):
-                if file_type == "Kometa Default":
+                if file_type == "PMM Default" or file_type == "Kometa Default":
                     raise Failed(f"File Error: Default does not exist {file_path}")
                 else:
                     raise Failed(f"File Error: File does not exist {content_path}")
@@ -623,7 +625,7 @@ class MetadataFile(DataFile):
         self.style_priority = []
         if self.file_style == "image":
             self.metadata = {}
-            if self.type == "Kometa Default":
+            if self.type == "PMM Default" or self.type == "Kometa Default":
                 if self.path.endswith(".yml"):
                     self.path = self.path[:-4]
                 elif self.path.endswith(".yaml"):

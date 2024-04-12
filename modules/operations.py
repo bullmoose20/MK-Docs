@@ -1043,8 +1043,10 @@ class Operations:
                 if (less is not None or managed is not None or configured is not None) \
                         and (less is None or col.childCount < less) \
                         and (managed is None
-                             or (managed is True and ("PMM" in labels or "Kometa" in labels))
-                             or (managed is False and ("PMM" not in labels and "Kometa" not in labels))) \
+                             or (managed is True and "PMM" in labels)
+                             or (managed is True and "Kometa" in labels)
+                             or (managed is False and "PMM" not in labels)
+                             or (managed is False and "Kometa" not in labels)) \
                         and (configured is None
                              or (configured is True and col.title in self.library.collections)
                              or (configured is False and col.title not in self.library.collections)):
@@ -1054,7 +1056,7 @@ class Operations:
                     except Failed as e:
                         logger.error(e)
                 else:
-                    if "PMM" not in labels or "Kometa" not in labels:
+                    if "PMM" or "Kometa" not in labels:
                         unmanaged_collections.append(col)
                     if col.title not in self.library.collection_names:
                         unconfigured_collections.append(col)

@@ -4,9 +4,9 @@ search:
 ---
 # FAQ & Knowledgebase
 
-This page aims to provide knowledge based on combined user experience, and to answer the frequent questions that we are asked in our [Discord Server](https://metamanager.wiki/en/latest/discord/).
+This page aims to provide knowledge based on combined user experience, and to answer the frequent questions that we are asked in our [Discord Server](https://kometa.wiki/en/latest/discord/).
 
-If you have a question that is not answered here, try entering some keywords into the search bar above, or join our [Discord Server](https://metamanager.wiki/en/latest/discord/).
+If you have a question that is not answered here, try entering some keywords into the search bar above, or join our [Discord Server](https://kometa.wiki/en/latest/discord/).
 
 ## Frequently Asked Questions
 
@@ -304,7 +304,7 @@ Your Kometa installation may not be located at the paths referenced below. These
 
 ??? question "Any tips on increasing Kometa performance?"
 
-    Use Kometa Caching where possible, this allows Kometa to temporarily store commonly-used information so that it can be retrieved more efficiently. There are [multiple things](https://metamanager.wiki/en/latest/search.html?q=cache&check_keywords=yes&area=default) that can be cached within Kometa.
+    Use Kometa Caching where possible, this allows Kometa to temporarily store commonly-used information so that it can be retrieved more efficiently. There are [multiple things](https://kometa.wiki/en/latest/search.html?q=cache&check_keywords=yes&area=default) that can be cached within Kometa.
     
     Run Kometa after PLEX Scheduled Tasks, as Plex's API tends to be slower at responding whilst it is performing the tasks. By default, Kometa runs at 5AM to avoid the 3-5am window that Plex suggests for Scheduled Tasks.
     

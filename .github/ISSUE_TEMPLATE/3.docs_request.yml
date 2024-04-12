@@ -8,8 +8,8 @@ body:
     attributes:
       value: >
         **THIS IS NOT THE PLACE TO ASK FOR SUPPORT OR FEATURE REQUESTS!**
-        Please use [Kometa Discord](https://metamanager.wiki/en/latest/discord/) and post your question under the ` kometa-support` channel for support issues.
-        Please use [Kometa Features](https://features.metamanager.wiki/) to request and upvote features.
+        Please use [Kometa Discord](https://kometa.wiki/en/latest/discord/) and post your question under the ` kometa-support` channel for support issues.
+        Please use [Kometa Features](https://features.kometa.wiki/) to request and upvote features.
   - type: textarea
     attributes:
       label: What is the improvement or update to the Wiki you wish to see?
@@ -18,6 +18,6 @@ body:
   - type: input
     attributes:
       label: Does the docs page already exist? Please link to it.
-      description: 'Example: https://metamanager.wiki/en/latest/config/operations.html'
+      description: 'Example: https://kometa.wiki/en/latest/config/operations.html'
     validations:
       required: false

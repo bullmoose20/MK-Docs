@@ -18,7 +18,7 @@ class ImageBase:
             return None
         return self.data[self.methods[attr]]
 
-    def check_file(self, attr, kometa_items, local=False, required=False):
+    def check_file(self, attr, pmm_items, local=False, required=False):
         if attr not in self.methods or not self.data[self.methods[attr]]:
             if required:
                 raise Failed(f"Posters Error: {attr} not found or is blank")
@@ -27,17 +27,12 @@ class ImageBase:
         if isinstance(file_data, list):
             file_data = file_data[0]
         if not isinstance(file_data, dict):
-            file_data = {"default": str(file_data)}
+            file_data = {"pmm": str(file_data)}
         if "pmm" in file_data and file_data["pmm"]:
-            file_path = kometa_items[file_data["pmm"]] if file_data["pmm"] in kometa_items else file_data["pmm"]
+            file_path = pmm_items[file_data["pmm"]] if file_data["pmm"] in pmm_items else file_data["pmm"]
             if os.path.exists(file_path):
                 return file_path, os.path.getsize(file_path)
-            raise Failed(f"Poster Error: {attr} pmm invalid. Options: {', '.join(kometa_items.keys())}")
-        elif "default" in file_data and file_data["default"]:
-            file_path = kometa_items[file_data["default"]] if file_data["default"] in kometa_items else file_data["default"]
-            if os.path.exists(file_path):
-                return file_path, os.path.getsize(file_path)
-            raise Failed(f"Poster Error: {attr} default invalid. Options: {', '.join(kometa_items.keys())}")
+            raise Failed(f"Poster Error: {attr} pmm invalid. Options: {', '.join(pmm_items.keys())}")
         elif "file" in file_data and file_data["file"]:
             if os.path.exists(file_data["file"]):
                 return file_data["file"], os.path.getsize(file_data["file"])
@@ -110,8 +105,8 @@ class Component(ImageBase):
         self.horizontal_offset, self.horizontal_align, self.vertical_offset, self.vertical_align = util.parse_cords(self.data, "component", err_type="Posters", default=(0, "center", 0, "center"))
 
         old_images_dir = os.path.join(self.images_dir, "images")
-        self.kometa_images = {k[:-4]: os.path.join(old_images_dir, k) for k in os.listdir(old_images_dir)}
-        self.image, self.image_compare = self.check_file("image", self.kometa_images)
+        self.pmm_images = {k[:-4]: os.path.join(old_images_dir, k) for k in os.listdir(old_images_dir)}
+        self.image, self.image_compare = self.check_file("image", self.pmm_images)
         self.image_width = util.parse("Posters", "image_width", self.data, datatype="int", methods=self.methods, default=0, minimum=0, maximum=2000) if "image_width" in self.methods else 0
         self.image_color = self.check_color("image_color")
 
@@ -332,9 +327,9 @@ class KometaImage(ImageBase):
         self.image_attr = image_attr
         self.backgrounds_dir = os.path.join(self.images_dir, "backgrounds")
         self.playlist = playlist
-        self.kometa_backgrounds = {k[:-4]: os.path.join(self.backgrounds_dir, k) for k in os.listdir(self.backgrounds_dir)}
+        self.pmm_backgrounds = {k[:-4]: os.path.join(self.backgrounds_dir, k) for k in os.listdir(self.backgrounds_dir)}
 
-        self.background_image, self.background_compare = self.check_file("background_image", self.kometa_backgrounds)
+        self.background_image, self.background_compare = self.check_file("background_image", self.pmm_backgrounds)
         self.background_color = self.check_color("background_color")
         self.border_width = util.parse("Posters", "border_width", self.data, datatype="int", methods=self.methods, default=0, minimum=0) if "border_width" in self.methods else 0
         self.border_color = self.check_color("border_color")
@@ -359,14 +354,14 @@ class KometaImage(ImageBase):
         canvas_height = 1000 if self.playlist else 1500
         canvas_box = (canvas_width, canvas_height)
 
-        kometa_image = Image.new(mode="RGB", size=canvas_box, color=self.background_color)
+        pmm_image = Image.new(mode="RGB", size=canvas_box, color=self.background_color)
         if self.background_image:
             bkg_image = Image.open(self.background_image)
             bkg_image = bkg_image.resize(canvas_box, Image.Resampling.LANCZOS) # noqa
-            kometa_image.paste(bkg_image, (0, 0), bkg_image)
+            pmm_image.paste(bkg_image, (0, 0), bkg_image)
 
         if self.border_width:
-            draw = ImageDraw.Draw(kometa_image)
+            draw = ImageDraw.Draw(pmm_image)
             draw.rectangle(((0, 0), canvas_box), outline=self.border_color, width=self.border_width)
 
         max_border_width = canvas_width - self.border_width - 100
@@ -377,11 +372,11 @@ class KometaImage(ImageBase):
                 component.adjust_text_width(component.back_width if component.back_width and component.back_width != "max" else max_border_width)
             generated_layer, image_point, image = component.get_generated_layer(canvas_box)
             if generated_layer:
-                kometa_image.paste(generated_layer, (0, 0), generated_layer)
+                pmm_image.paste(generated_layer, (0, 0), generated_layer)
             if image:
-                kometa_image.paste(image, image_point, image)
+                pmm_image.paste(image, image_point, image)
 
-        kometa_image.save(image_path)
+        pmm_image.save(image_path)
 
         return ImageData(self.image_attr, image_path, is_url=False, compare=self.get_compare_string())
 

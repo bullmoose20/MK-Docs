@@ -41,7 +41,7 @@ Kometa is compatible with Python 3.8 through 3.11. Later versions may function b
 
 These are high-level steps which assume the user has knowledge of python and pip, and the general ability to troubleshoot issues. For a detailed step-by-step walkthrough, refer to the [Local Walkthrough](local.md) guide.
 
-1. Clone or [download and unzip](https://github.com/meisnate12/Plex-Meta-Manager/archive/refs/heads/master.zip) the repo.
+1. Clone or [download and unzip](https://github.com/meisnate12/Kometa/archive/refs/heads/master.zip) the repo.
 
 ```shell
 git clone https://github.com/meisnate12/kometa
@@ -94,9 +94,9 @@ This is an example docker-compose which will have to be edited to suit your envi
 
 ```yaml
 services:
-  plex-meta-manager:
+  kometa:
     image: meisnate12/kometa
-    container_name: plex-meta-manager
+    container_name: kometa
     environment:
       - TZ=TIMEZONE #optional
     volumes:
@@ -106,7 +106,7 @@ services:
 
 ### Dockerfile
 
-A `Dockerfile` is included within the GitHub repository for those who require it, although this is only suggested for those with knowledge of dockerfiles. The official Kometa build is available on the [Dockerhub Website](https://hub.docker.com/r/meisnate12/plex-meta-manager).
+A `Dockerfile` is included within the GitHub repository for those who require it, although this is only suggested for those with knowledge of dockerfiles. The official Kometa build is available on the [Dockerhub Website](https://hub.docker.com/r/meisnate12/kometa).
 
 ## Customizing the docker-compose file with runtime flags and ENV vars
 
@@ -120,24 +120,24 @@ As with the one above, this is an example docker-compose which will have to be e
 
 ```yaml
 services:
-  plex-meta-manager:
+  kometa:
     image: meisnate12/kometa
-    container_name: plex-meta-manager
+    container_name: kometa
     environment:
-      - KOMET_RUN=true
-      - KOMET_CONFIG=/config/special-config.yml
-      - KOMET_OVERLAYS_ONLY=true
-      - KOMET_RUN_LIBRARIES=Movies
+      - KOMETA_RUN=true
+      - KOMETA_CONFIG=/config/special-config.yml
+      - KOMETA_OVERLAYS_ONLY=true
+      - KOMETA_RUN_LIBRARIES=Movies
     volumes:
       - /path/to/config:/config
 ```
 
-`- KOMET_RUN=true` tells Kometa to run right away,
+`- KOMETA_RUN=true` tells Kometa to run right away,
 
-`- KOMET_CONFIG=/config/special-config.yml` points Kometa at a particular config file,
+`- KOMETA_CONFIG=/config/special-config.yml` points Kometa at a particular config file,
 
-`- KOMET_OVERLAYS_ONLY=true` tells Kometa to run overlays only, and 
+`- KOMETA_OVERLAYS_ONLY=true` tells Kometa to run overlays only, and 
 
-`- KOMET_RUN_LIBRARIES=Movies` tells Kometa to process only a library called "Movies"
+`- KOMETA_RUN_LIBRARIES=Movies` tells Kometa to process only a library called "Movies"
 
 Again, a list of the available environment variables can be found [here](../environmental.md).

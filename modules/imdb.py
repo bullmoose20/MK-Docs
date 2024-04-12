@@ -88,7 +88,7 @@ event_options = {
     "razzie": {"eventId": "ev0000558"},
 }
 base_url = "https://www.imdb.com"
-git_base = "https://raw.githubusercontent.com/kometa-TEAM/KOMETA-IMDb-Awards/master"
+git_base = "https://raw.githubusercontent.com/kometa-team/Kometa-IMDb-Awards/master"
 hash_url = "https://raw.githubusercontent.com/meisnate12/IMDb-Hash/master/HASH"
 graphql_url = "https://api.graphql.imdb.com/"
 list_url = f"{base_url}/list/ls"

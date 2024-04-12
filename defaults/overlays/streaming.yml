@@ -3,7 +3,7 @@
 #                 Created by Yozora, Bullmoose20, & Sohjiro                  #
 #                     Credit to Magic815 for base images                     #
 #          EDITING THIS FILE MAY CAUSE PULLING NEW UPDATES TO FAIL           #
-#       https://metamanager.wiki/en/latest/defaults/overlays/streaming       #
+#       https://kometa.wiki/en/latest/defaults/overlays/streaming       #
 ##############################################################################
 
 external_templates:
@@ -94,7 +94,7 @@ templates:
           - region: CA
             key: ["1899", "37"]
             value: False
-    mdblist_list: https://mdblist.com/lists/plexmetamanager/<<originals_key>>-<<originals>>
+    mdblist_list: https://mdblist.com/lists/k0meta/<<originals_key>>-<<originals>>
     tmdb_discover:
       limit: <<discover_limit>>
       with_watch_providers: <<discover_with>>

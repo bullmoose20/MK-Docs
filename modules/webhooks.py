@@ -313,8 +313,8 @@ class Webhooks:
                     "color": 0x00bc8c
                 }
             ],
-            "username": "Metabot",
-            "avatar_url": "https://github.com/meisnate12/Plex-Meta-Manager/raw/master/.github/pmm.png"
+            "username": "Kometa Releases",
+            "avatar_url": "https://github.com/meisnate12/Kometa/raw/master/.github/kometa.png"
         }
         if description:
             new_json["embeds"][0]["description"] = description

@@ -6,7 +6,7 @@ search:
 
 Kometa is designed to be a background running service that "wakes up" and "sleeps" when it is scheduled to do so. By default unless configured using the [Time to Run Command](../environmental.md#time-to-run), Kometa expects to run every day at 5AM local time.
 
-Whilst it is possible to have `python plex-meta-manager.py` running in an open window constantly, this is not the recommended approach as it relies on an always-open command window that can be obtrusive to the user.
+Whilst it is possible to have `python kometa.py` running in an open window constantly, this is not the recommended approach as it relies on an always-open command window that can be obtrusive to the user.
 
 Instead, it is recommended to set an automated scheduling service so that Kometa can run in the background when scheduled to without any visible impact to the user (other than the Plex libraries and playlists updating).
 
@@ -69,7 +69,7 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
         
            ```batch
            cd C:\Users\USERNAMEHERE\Kometa
-           .\kometa-venv\Scripts\python .\plex_meta_manager.py
+           .\kometa-venv\Scripts\python .\kometa.py
            ```
            * This will navigate to the Kometa directory, then run Kometa. At the scheduled time [as defined within Kometa], Kometa will process the Configuration File and will then wait until the next scheduled time.
         
@@ -120,7 +120,7 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
         
            ```batch
            cd C:\Users\USERNAMEHERE\Kometa
-           .\kometa-venv\Scripts\python .\plex_meta_manager.py --run
+           .\kometa-venv\Scripts\python .\kometa.py --run
            ```
            * This will navigate to the Kometa directory, then launch Kometa using the `-r`/`--run` flag which triggers an immediate run. Once complete, Kometa will exit.
         
@@ -192,7 +192,7 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
         <array>
             <string>sh</string>
             <string>-c</string>
-            <string>kometa-venv/bin/python plex-meta-manager.py --config /path/to/kometa-config/config.yml</string>
+            <string>kometa-venv/bin/python kometa.py --config /path/to/kometa-config/config.yml</string>
         </array>
         <key>UserName</key>
         <string>YOUR_USERNAME</string>
@@ -215,7 +215,7 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
         <array>
             <string>sh</string>
             <string>-c</string>
-            <string>kometa-venv/bin/python plex-meta-manager.py --config /path/to/kometa-config/config.yml --run</string>
+            <string>kometa-venv/bin/python kometa.py --config /path/to/kometa-config/config.yml --run</string>
         </array>
         <key>StartCalendarInterval</key>
         <array>
@@ -292,7 +292,7 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
        Environment=LC_ALL=C.UTF-8
        Environment=LANG=C.UTF-8
        WorkingDirectory=/path/to/kometa
-       ExecStart=/path/to/kometa/kometa-venv/bin/python /path/to/kometa/plex_meta_manager.py
+       ExecStart=/path/to/kometa/kometa-venv/bin/python /path/to/kometa/kometa.py
        Restart=always
        RestartSec=10
     
@@ -312,13 +312,13 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
     
           ```shell
           sudo systemctl daemon-reload
-          sudo systemctl start plex-meta-manager.service
+          sudo systemctl start kometa.service
           ```
     
     3. You can check whether the service is running with:
     
           ```shell
-          sudo systemctl status plex-meta-manager.service
+          sudo systemctl status kometa.service
           ```
 
 === "cron"
@@ -335,9 +335,9 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
        A command you could use for this:
     
        ```
-       cd /path/to/plex-meta-manager && kometa-venv/bin/python plex_meta_manager.py --config config/config.yml --run
+       cd /path/to/kometa && kometa-venv/bin/python kometa.py --config config/config.yml --run
        ```
-       Change `/path/to/plex-meta-manager` to reflect where you've installed Kometa.
+       Change `/path/to/kometa` to reflect where you've installed Kometa.
 
        This is an example, which does nothing but run the script immediately.  If you want to add additional flags you can do so.
 

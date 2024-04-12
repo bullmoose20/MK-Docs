@@ -2,7 +2,7 @@
 #                              Ratings Overlays                              #
 #                 Created by Yozora, Bullmoose20, & Sohjiro                  #
 #          EDITING THIS FILE MAY CAUSE PULLING NEW UPDATES TO FAIL           #
-#        https://metamanager.wiki/en/latest/defaults/overlays/ratings        #
+#        https://kometa.wiki/en/latest/defaults/overlays/ratings        #
 ##############################################################################
 
 templates:
@@ -76,10 +76,10 @@ templates:
         conditions:
           - image_level: Top
             rating<<rating_num>>_image: rt_tomato
-            value: https://mdblist.com/lists/plexmetamanager/certifiedfresh<<library_type>>s
+            value: https://mdblist.com/lists/k0meta/certifiedfresh<<library_type>>s
           - image_level: Top
             rating<<rating_num>>_image: metacritic
-            value: https://mdblist.com/lists/plexmetamanager/metacriticmustsee<<library_type>>s
+            value: https://mdblist.com/lists/k0meta/metacriticmustsee<<library_type>>s
       imdb_top:
         conditions:
           - image_level: Top

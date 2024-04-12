@@ -162,7 +162,7 @@ Clone the repo into your home directory and go into that directory [type this in
 ```
 cd ~
 git clone https://github.com/meisnate12/kometa
-cd Plex-Meta-Manager
+cd Kometa
 ```
 
 **NOTE: The rest of this walkthrough assumes you are staying in this directory in this terminal/Powershell window.**
@@ -173,7 +173,7 @@ When you open a command window to run Kometa, the first step will always be:
 
 ```
 cd ~
-cd Plex-Meta-Manager
+cd Kometa
 ```
 
 There are parts of the code that are assuming and expecting that you will be in this directory when you run Kometa [the fonts used in overlays are one example].  Be sure that you are always in this directory when you run Kometa.
@@ -190,7 +190,7 @@ There are parts of the code that are assuming and expecting that you will be in 
   ```
   This uses `git` to make a copy of (`clone`) the Kometa code from where it is stored on `github`.
   ```
-  cd Plex-Meta-Manager
+  cd Kometa
   ```
   This moves into the directory that was created by the `clone` command.
 </details>
@@ -228,7 +228,7 @@ This walkthrough is going to use a "virtual environment", since that provides a 
     ```
     If you see an error like:
     ```
-    Error: Command '['/home/mroche/Plex-Meta-Manager/kometa-venv/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1.
+    Error: Command '['/home/mroche/Kometa/kometa-venv/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1.
     ```
     You probably need to make sure the Python 3.9-specific virtualenv support library is installed:
     [type this into your terminal]
@@ -299,7 +299,7 @@ That will create the virtual environment, and then you need to activate it:
     ```
     If you see something like this:
     ```powershell
-    .\kometa-venv\Scripts\activate : File C:\Users\mroche\Plex-Meta-Manager\kometa-venv\Scripts\Activate.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink LinkID=135170.
+    .\kometa-venv\Scripts\activate : File C:\Users\mroche\Kometa\kometa-venv\Scripts\Activate.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink LinkID=135170.
     At line:1 char:1
     + .\kometa-venv\Scripts\activate
     + ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -318,8 +318,8 @@ That command will not produce any output if it works; it will display an error i
 You may see a change in your prompt, something like this:
 
 ```
-➜  Plex-Meta-Manager git:(master) ✗ source kometa-venv/bin/activate
-(kometa-venv) ➜  Plex-Meta-Manager git:(master) ✗
+➜  Kometa git:(master) ✗ source kometa-venv/bin/activate
+(kometa-venv) ➜  Kometa git:(master) ✗
 ```
 
 Note that the prompt now shows the name of the virtual environment.  You may not see this; it's dependent on *your* terminal configuration, not anything to do with Python or Kometa.
@@ -357,7 +357,7 @@ An advantage of doing this in a virtual environment is that in the event somethi
 
 ### Installing requirements
 
-Plex-Meta-Manager, like every other Python script, depends on support libraries that manage things like connections to Plex, or getting things from the internet, or writing files and so on.
+Kometa, like every other Python script, depends on support libraries that manage things like connections to Plex, or getting things from the internet, or writing files and so on.
 
 These support libraries are called “requirements”, and they are defined in that file called `requirements.txt`.  To install them, type the following command [type this into your terminal]:
 
@@ -379,7 +379,7 @@ Installing collected packages: urllib3, idna, charset-normalizer, certifi, six, 
     Running setup.py install for arrapi ... done
 Successfully installed PlexAPI-4.7.0 arrapi-1.1.3 certifi-2021.10.8 charset-normalizer-2.0.7 idna-3.3 lxml-4.6.3 pathvalidate-2.4.1 pillow-8.3.2 requests-2.26.0 retrying-1.3.3 ruamel.yaml-0.17.10 ruamel.yaml.clib-0.2.6 schedule-1.1.0 six-1.16.0 tmdbv3api-1.7.6 urllib3-1.26.7
 WARNING: You are using pip version 21.1.3; however, version 21.3 is available.
-You should consider upgrading via the '/Users/mroche/Plex-Meta-Manager/kometa-venv/bin/python -m pip install --upgrade pip' command.
+You should consider upgrading via the '/Users/mroche/Kometa/kometa-venv/bin/python -m pip install --upgrade pip' command.
 ```
 
 Don't worry about the WARNING about `pip version thus-and-such` if it comes up.
@@ -423,7 +423,7 @@ This is going to fail with an error, which you will then fix.
 You should see something like this:
 
 ```
-Config Error: config not found at /Users/mroche/Plex-Meta-Manager/config
+Config Error: config not found at /Users/mroche/Kometa/config
 ```
 
 That error means you don’t have a config file, but we at least know that the requirements are in place and the script can run.
@@ -569,7 +569,7 @@ deactivate
 
     [type this into your terminal]
     ```
-    cd ~/Plex-Meta-Manager
+    cd ~/Kometa
     git pull
     source kometa-venv/bin/activate
     python -m pip install -r requirements.txt
@@ -579,7 +579,7 @@ deactivate
 
     [type this into your terminal]
     ```
-    cd ~/Plex-Meta-Manager
+    cd ~/Kometa
     git pull
     source kometa-venv/bin/activate
     python -m pip install -r requirements.txt
@@ -589,7 +589,7 @@ deactivate
 
     [type this into your terminal]
     ```
-    cd ~\Plex-Meta-Manager
+    cd ~\Kometa
     git pull
     .\kometa-venv\Scripts\activate
     python -m pip install -r requirements.txt
@@ -602,7 +602,7 @@ deactivate
 
     [type this into your terminal]
     ```
-    cd ~/Plex-Meta-Manager
+    cd ~/Kometa
     git checkout develop
     git pull
     source kometa-venv/bin/activate
@@ -613,7 +613,7 @@ deactivate
 
     [type this into your terminal]
     ```
-    cd ~/Plex-Meta-Manager
+    cd ~/Kometa
     git checkout develop
     git pull
     source kometa-venv/bin/activate
@@ -624,7 +624,7 @@ deactivate
 
     [type this into your terminal]
     ```
-    cd ~/Plex-Meta-Manager
+    cd ~/Kometa
     git checkout develop
     git pull
     .\kometa-venv\Scripts\activate

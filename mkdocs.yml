@@ -1,7 +1,7 @@
 site_name: Kometa Wiki
 site_author: meisnate12
 site_description: Kometa is an open-source python project allowing you to unlock the potential of your media server.
-site_url: https://<slug>.metamanager.wiki/en/latest/
+site_url: https://<slug>.kometa.wiki/en/latest/
 repo_name: Kometa Docker Image
 repo_url: https://github.com/meisnate12/Plex-Meta-Manager
 
@@ -56,7 +56,7 @@ plugins:
   - include-markdown
   - redirects:
       redirect_maps:
-        'discord.md': 'https://metamanager.wiki/en/nightly/link/'
+        'discord.md': 'https://kometa.wiki/en/nightly/link/'
         'redact.md': 'https://regex101.com/r/DMo1DQ/latest'
         'link.md': 'https://discord.gg/FNqqw5jRSz'
         'malauth.md': 'https://replit.com/@chazlarson/MALAuth'
@@ -80,7 +80,7 @@ extra:
       name: Donate
     - icon: fontawesome/brands/discord
       class: md-social__link
-      link: 'https://metamanager.wiki/en/latest/discord/'
+      link: 'https://kometa.wiki/en/latest/discord/'
       name: Discord
     - icon: fontawesome/brands/github
       class: md-social__link
@@ -88,8 +88,8 @@ extra:
       name: GitHub
   analytics:
     provider: plausible
-    domain: metamanager.wiki/en/latest
-    src: "https://analytics.metamanager.wiki/js/script.js"
+    domain: kometa.wiki/en/latest
+    src: "https://analytics.kometa.wiki/js/script.js"
 copyright: Copyright &copy; 2024 meisnate12
 markdown_extensions:
   - pymdownx.tasklist:
@@ -156,10 +156,10 @@ nav:
           - Plex Image Cleanup: kometa/scripts/image-cleanup.md
           - Kometa Overlay Reset: kometa/scripts/overlay-reset.md
       - USEFUL LINKS: &links
-        - Feature Requests: https://features.metamanager.wiki/
+        - Feature Requests: https://features.kometa.wiki/
         - Bugs & Issues: https://github.com/meisnate12/Plex-Meta-Manager/issues
         - User Configs Repository: https://github.com/kometa-Team/Kometa-Configs
-        - Discord Server: https://metamanager.wiki/en/latest/discord/
+        - Discord Server: https://kometa.wiki/en/latest/discord/
         - Donate/Sponsor Kometa: https://github.com/sponsors/meisnate12
         - Acknowledgements: kometa/acknowledgements.md
   - CONFIGURATION FILE:

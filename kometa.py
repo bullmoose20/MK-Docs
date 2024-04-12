@@ -103,13 +103,13 @@ static_envs = []
 run_args = {}
 for arg_key, arg_data in arguments.items():
     temp_args = arg_data["args"] if isinstance(arg_data["args"], list) else [arg_data["args"]]
-    final_vars = [f"KOMET_{arg_key.replace('-', '_').upper()}"] + [f"KOMET_{a.replace('-', '_').upper()}" for a in temp_args if len(a) > 2]
+    final_vars = [f"KOMETA_{arg_key.replace('-', '_').upper()}"] + [f"KOMETA_{a.replace('-', '_').upper()}" for a in temp_args if len(a) > 2]
     run_args[arg_key] = get_env(final_vars, getattr(args, arg_key.replace("-", "_")), arg_bool=arg_data["type"] == "bool", arg_int=arg_data["type"] == "int")
 
 env_version = get_env("BRANCH_NAME", "master")
-is_docker = get_env("KOMET_DOCKER", False, arg_bool=True)
-is_linuxserver = get_env("KOMET_LINUXSERVER", False, arg_bool=True)
-is_lxml = get_env("KOMET_LXML", False, arg_bool=True)
+is_docker = get_env("KOMETA_DOCKER", False, arg_bool=True)
+is_linuxserver = get_env("KOMETA_LINUXSERVER", False, arg_bool=True)
+is_lxml = get_env("KOMETA_LXML", False, arg_bool=True)
 
 secret_args = {}
 plex_url = None
@@ -125,19 +125,19 @@ while i < len(unknown):
         elif test_var.startswith("--pmm-"):
             secret_args[test_var[6:]] = str(unknown[i + 1])
         else:
-            secret_args[test_var[8:]] = str(unknown[i + 1])
+            secret_args[test_var[9:]] = str(unknown[i + 1])
         i += 1
     i += 1
 
-plex_url = get_env("KOMET_PLEX_URL", plex_url)
-plex_token = get_env("KOMET_PLEX_TOKEN", plex_token)
+plex_url = get_env("KOMETA_PLEX_URL", plex_url)
+plex_token = get_env("KOMETA_PLEX_TOKEN", plex_token)
 
 env_secrets = []
 for env_name, env_data in os.environ.items():
     if str(env_name).upper().startswith("PMM_") and str(env_name).upper() not in static_envs:
         secret_args[str(env_name).lower()[4:].replace("_", "-")] = env_data
-    elif str(env_name).upper().startswith("KOMET_") and str(env_name).upper() not in static_envs:
-        secret_args[str(env_name).lower()[6:].replace("_", "-")] = env_data
+    elif str(env_name).upper().startswith("KOMETA_") and str(env_name).upper() not in static_envs:
+        secret_args[str(env_name).lower()[7:].replace("_", "-")] = env_data
 run_arg = " ".join([f'"{s}"' if " " in s else s for s in sys.argv[:]])
 for _, sv in secret_args.items():
     if sv in run_arg:
@@ -290,12 +290,12 @@ def start(attrs):
     for akey, adata in arguments.items():
         if isinstance(adata["help"], str):
             ext = '"' if adata["type"] == "str" and run_args[akey] not in [None, "None"] else ""
-            logger.debug(f"--{akey} (KOMET_{akey.replace('-', '_').upper()}): {ext}{run_args[akey]}{ext}")
+            logger.debug(f"--{akey} (KOMETA_{akey.replace('-', '_').upper()}): {ext}{run_args[akey]}{ext}")
     logger.debug("")
     if secret_args:
         logger.debug("Kometa Secrets Read:")
         for sec in secret_args:
-            logger.debug(f"--kometa-{sec} (KOMET_{sec.upper().replace('-', '_')}): (redacted)")
+            logger.debug(f"--kometa-{sec} (KOMETA_{sec.upper().replace('-', '_')}): (redacted)")
         logger.debug("")
     logger.separator(f"Starting {start_type}Run")
     config = None
