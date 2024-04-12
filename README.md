@@ -7,7 +7,7 @@
 [![Nightly GitHub commits since latest stable release (by SemVer)](https://img.shields.io/github/commits-since/meisnate12/plex-meta-manager/latest/nightly?label=Commits%20in%20Nightly&style=plastic)](https://github.com/meisnate12/Plex-Meta-Manager/tree/nightly)
 
 [![Discord](https://img.shields.io/discord/822460010649878528?color=%2300bc8c&label=Discord&style=plastic)](https://metamanager.wiki/en/latest/discord/)
-[![Reddit](https://img.shields.io/badge/%2Fr%2Fkomet-e05d44?style=plastic&logo=Reddit&logoColor=white&labelColor=0e8a6a&color=00bc8c)](https://www.reddit.com/r/kometa/)
+[![Reddit](https://img.shields.io/badge/%2Fr%2Fkometa-e05d44?style=plastic&logo=Reddit&logoColor=white&labelColor=0e8a6a&color=00bc8c)](https://www.reddit.com/r/kometa/)
 [![Wiki](https://img.shields.io/readthedocs/plex-meta-manager?color=%2300bc8c&style=plastic)](https://metamanager.wiki)
 [![Translations](https://img.shields.io/weblate/progress/plex-meta-manager?color=00bc8c&server=https%3A%2F%2Ftranslations.metamanager.wiki&style=plastic)](https://translations.metamanager.wiki/projects/plex-meta-manager/#languages)
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/meisnate12?color=%238a2be2&style=plastic)](https://github.com/sponsors/meisnate12)
