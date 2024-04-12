@@ -94,7 +94,7 @@ These are the attributes which can be utilized within the Playlist File:
 
 * `playlists` is required in order to run the Playlist File.
 * You can find example Playlist Files in the 
-[Kometa Configs Repository](https://github.com/meisnate12/Plex-Meta-Manager-Configs)
+[Kometa Configs Repository](https://github.com/kometa-Team/Kometa-Configs)
 * Plex does not support the "Continue Watching" feature for playlists, you can
 [vote for the feature here](https://forums.plex.tv/t/playlists-remember-position-for-subsequent-resume/84866/39)
 

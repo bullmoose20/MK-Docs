@@ -7,7 +7,7 @@ logger = util.logger
 raw_url = "https://raw.githubusercontent.com"
 base_url = "https://api.github.com"
 komet_base = f"{base_url}/repos/meisnate12/Plex-Meta-Manager"
-configs_raw_url = f"{raw_url}/meisnate12/Plex-Meta-Manager-Configs"
+configs_raw_url = f"{raw_url}/kometa-Team/Kometa-Configs"
 
 class GitHub:
     def __init__(self, config, params):
@@ -84,7 +84,7 @@ class GitHub:
     @property
     def translation_keys(self):
         if not self._translation_keys:
-            tree, repo = self.get_top_tree("meisnate12/PMM-Translations")
+            tree, repo = self.get_top_tree("kometa-TEAM/KOMETA-Translations")
             self._translation_keys = [tk[:-4] for tk in self.get_tree(tree["defaults"]["url"])]
         return self._translation_keys
 

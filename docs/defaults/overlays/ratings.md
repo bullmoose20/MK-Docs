@@ -160,7 +160,7 @@ work. Any value not specified will use its default value if it has one if not it
     ???+ warning
     
         This example uses fonts not packaged with Kometa. See [bullmoose20's 
-        Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs/tree/master/bullmoose20)
+        Configs](https://github.com/kometa-Team/Kometa-Configs/tree/master/bullmoose20)
 
     ```yaml
       Movies:

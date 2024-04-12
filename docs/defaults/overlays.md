@@ -28,7 +28,7 @@ libraries:
 <details>
   <summary>Click to expand sample config.yml Movies overlays section:</summary>
 
-**Note: This uses fonts not packaged with Kometa. See [bullmoose20's Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs/tree/master/bullmoose20)**
+**Note: This uses fonts not packaged with Kometa. See [bullmoose20's Configs](https://github.com/kometa-Team/Kometa-Configs/tree/master/bullmoose20)**
 
 ```yaml
 libraries:
@@ -73,7 +73,7 @@ libraries:
 <details>
   <summary>Click to expand sample config.yml TV Shows overlays section for the Show Poster:</summary>
 
-**Note: This uses fonts not packaged with Kometa. See [bullmoose20's Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs/tree/master/bullmoose20)**
+**Note: This uses fonts not packaged with Kometa. See [bullmoose20's Configs](https://github.com/kometa-Team/Kometa-Configs/tree/master/bullmoose20)**
 
 ```yaml
 libraries:
@@ -140,7 +140,7 @@ libraries:
 <details>
   <summary>Click to expand sample config.yml TV Shows overlays section for the Episode Poster:</summary>
   
-**Note: This uses fonts not packaged with Kometa. See [bullmoose20's Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs/tree/master/bullmoose20)**
+**Note: This uses fonts not packaged with Kometa. See [bullmoose20's Configs](https://github.com/kometa-Team/Kometa-Configs/tree/master/bullmoose20)**
 
 ```yaml
 libraries:

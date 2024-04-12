@@ -495,5 +495,5 @@ collections:
 ```
 
 Check out the example files in the 
-[Kometa Configs Repository](https://github.com/meisnate12/Plex-Meta-Manager-Configs/tree/master/meisnate12) 
+[Kometa Configs Repository](https://github.com/kometa-Team/Kometa-Configs/tree/master/meisnate12) 
 for more uses and examples.

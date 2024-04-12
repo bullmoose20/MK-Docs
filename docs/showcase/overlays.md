@@ -49,7 +49,7 @@ Each showcased photo has been confirmed to be fully functional with Kometa v1.19
 
     Ratings are set to show the Rotten Tomatoes Audience & Critic scores, as well as the IMDb score.
 
-    Custom fonts have been used for the ratings which can be sourced in [bullmoose20's repository](https://github.com/meisnate12/Plex-Meta-Manager-Configs/tree/master/bullmoose20) within `fonts.zip`
+    Custom fonts have been used for the ratings which can be sourced in [bullmoose20's repository](https://github.com/kometa-Team/Kometa-Configs/tree/master/bullmoose20) within `fonts.zip`
 
     A [Library Operation](../config/operations.md#mass--rating-update) is used to place the IMDb rating into the user rating slot, as can be seen in the code example.
 

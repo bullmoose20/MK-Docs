@@ -84,7 +84,7 @@ Overlay Files can utilize the following top-level attributes
 | [`external_templates`](templates.md#external-templates) | contains [file blocks](../config/files.md) that point to external templates that can be leveraged by multiple overlays |
 | [`overlays`](#overlay-attributes)                       | contains definitions of Overlays you wish to add to one or more libraries                                              |
 
-* Example Files can be found in the [Kometa Configs Repository](https://github.com/meisnate12/Plex-Meta-Manager-Configs)
+* Example Files can be found in the [Kometa Configs Repository](https://github.com/kometa-Team/Kometa-Configs)
 
 ## Overlay Understandings
 
@@ -135,7 +135,7 @@ Overlay Files can utilize the following top-level attributes
 | [`overlays`](#overlay-attributes)                       | contains definitions of overlays you wish to add                                                                       |
 
 * `overlays` is required in order to run the Overlay File.
-* Example Overlay Files can be found in the [Kometa Configs Repository](https://github.com/meisnate12/Plex-Meta-Manager-Configs)
+* Example Overlay Files can be found in the [Kometa Configs Repository](https://github.com/kometa-Team/Kometa-Configs)
 
 There are multiple types of attributes that can be utilized within an overlay:
 
@@ -187,7 +187,7 @@ The below attributes are also available for Overlay files, to give more granular
 | `name`                     | Name of the overlay.                                                                                                                                                                                                                                                                  | :fontawesome-solid-circle-check:{ .green } |
 | `file`                     | Local location of the Overlay Image.                                                                                                                                                                                                                                                  |  :fontawesome-solid-circle-xmark:{ .red }  |
 | `url`                      | URL of Overlay Image Online.                                                                                                                                                                                                                                                          |  :fontawesome-solid-circle-xmark:{ .red }  |
-| `git`                      | Location in the [Configs Repo](https://github.com/meisnate12/Plex-Meta-Manager-Configs) of the Overlay Image.                                                                                                                                                                         |  :fontawesome-solid-circle-xmark:{ .red }  |
+| `git`                      | Location in the [Configs Repo](https://github.com/kometa-Team/Kometa-Configs) of the Overlay Image.                                                                                                                                                                         |  :fontawesome-solid-circle-xmark:{ .red }  |
 | `repo`                     | Location in the [Custom Repo](../config/settings.md) of the Overlay Image.                                                                                                                                                                                                            |  :fontawesome-solid-circle-xmark:{ .red }  |
 | [`group`](#overlay-groups) | Name of the Grouping for this overlay. Only one overlay with the highest weight per group will be applied.<br>**`weight` is required when using `group`**<br>**Values:** group name                                                                                                   |  :fontawesome-solid-circle-xmark:{ .red }  |
 | [`queue`](#overlay-queues) | Name of the Queue for this overlay. Define `queue` positions using the `queues` attribute at the top level of an Overlay File. Overlay with the highest weight is applied to the first position and so on.<br>**`weight` is required when using `queue`**<br>**Values:** queue name   |  :fontawesome-solid-circle-xmark:{ .red }  |

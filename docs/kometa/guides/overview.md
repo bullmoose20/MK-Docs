@@ -40,20 +40,20 @@ A lot of these guides are stored on Google Drive as using the traditional wiki p
 
 ## Associated Git Repos
 
-- [Kometa User Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs)
+- [Kometa User Configs](https://github.com/kometa-Team/Kometa-Configs)
     - Kometa's User submitted Config Repo
 
 <br>
 
-- [Plex Image Cleanup](https://github.com/meisnate12/Plex-Image-Cleanup)
+- [Plex Image Cleanup](https://github.com/kometa-Team/Image-Cleanup)
     - Removes Image bloat from your Plex
-- [Kometa Overlay Reset](https://github.com/meisnate12/PMM-Overlay-Reset)
+- [Kometa Overlay Reset](https://github.com/kometa-TEAM/KOMETA-Overlay-Reset)
     - Resets your Library back to default images removing all overlays
-- [Kometa Anime IDs](https://github.com/meisnate12/Plex-Meta-Manager-Anime-IDs)
+- [Kometa Anime IDs](https://github.com/kometa-Team/Kometa-Anime-IDs)
     - How Kometa translates Anime IDs to TVDB IDs
-- [Kometa IMDb Awards](https://github.com/meisnate12/PMM-IMDb-Awards)
+- [Kometa IMDb Awards](https://github.com/kometa-TEAM/KOMETA-IMDb-Awards)
     - How Kometa stores the IMDB Award Lists
-- [Kometa Mediastingers](https://github.com/meisnate12/PMM-Mediastingers)
+- [Kometa Mediastingers](https://github.com/kometa-TEAM/KOMETA-Mediastingers)
     - How Kometa stores the Mediastingers List
 
 <br>
@@ -67,28 +67,28 @@ A lot of these guides are stored on Google Drive as using the traditional wiki p
 
 <br>
 
-- [Plex-Meta-Manager-Images](https://github.com/meisnate12/Plex-Meta-Manager-Images)
+- [Plex-Meta-Manager-Images](https://github.com/kometa-Team/Kometa-Images)
     - Repo to store Kometa's various Images
-- [Plex-Meta-Manager-People](https://github.com/meisnate12/Plex-Meta-Manager-People)
+- [Plex-Meta-Manager-People](https://github.com/kometa-Team/Kometa-People)
     - Stores the original image for all our actor posters
-- [Plex-Meta-Manager-People-Auto-Readme](https://github.com/meisnate12/Plex-Meta-Manager-People-Auto-Readme)
+- [Plex-Meta-Manager-People-Auto-Readme](https://github.com/kometa-Team/Kometa-People-Auto-Readme)
     - Stores the File that generates the Readme file for the other Actor repos
-- [Black & White (bw)](https://github.com/meisnate12/Plex-Meta-Manager-People-bw)
+- [Black & White (bw)](https://github.com/kometa-Team/Kometa-People-bw)
     - Stores the Black & White actor posters
-- [Rainier (rainier)](https://github.com/meisnate12/Plex-Meta-Manager-People-rainier)
+- [Rainier (rainier)](https://github.com/kometa-Team/Kometa-People-rainier)
     - Stores the Rainier actor posters
-- [Signature (signature)](https://github.com/meisnate12/Plex-Meta-Manager-People-signature)
+- [Signature (signature)](https://github.com/kometa-Team/Kometa-People-signature)
     - Stores the Signature actor posters
-- [DIIVOY (diiivoy)](https://github.com/meisnate12/Plex-Meta-Manager-People-diiivoy)
+- [DIIVOY (diiivoy)](https://github.com/kometa-Team/Kometa-People-diiivoy)
     - Stores the DIIVOY actor posters
-- [DIIVOY Color (diiivoycolor)](https://github.com/meisnate12/Plex-Meta-Manager-People-diiivoycolor)
+- [DIIVOY Color (diiivoycolor)](https://github.com/kometa-Team/Kometa-People-diiivoycolor)
     - Stores the DIIVOY Color actor posters
-- [Transparent (transparent)](https://github.com/meisnate12/Plex-Meta-Manager-People-transparent)
+- [Transparent (transparent)](https://github.com/kometa-Team/Kometa-People-transparent)
     - Stores the Transparent actor posters
 
 <br>
 
-- [Plex-Meta-Manager-Unraid-Templates](https://github.com/meisnate12/Plex-Meta-Manager-Unraid-Templates)
+- [Plex-Meta-Manager-Unraid-Templates](https://github.com/kometa-Team/Kometa-Unraid-Templates)
     - Stores the Kometa Unraid Templates
-- [Kometa-Translations ](https://github.com/meisnate12/Plex-Meta-Manager-Translations)
+- [Kometa-Translations ](https://github.com/kometa-Team/Kometa-Translations)
     - Stores the data for Kometa Translations

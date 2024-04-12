@@ -220,7 +220,7 @@ Special Filters each have their own set of rules for how they're used.
 
 <sup>**3**</sup> You can use `current_year` to have Kometa use the current years value. This can be combined with a `-#` at the end to subtract that number of years. i.e. `current_year-2`
 
-<sup>**4**</sup> The actual numbers are pulled from the [PMM-Mediastingers](https://github.com/meisnate12/PMM-Mediastingers) Repo.
+<sup>**4**</sup> The actual numbers are pulled from the [PMM-Mediastingers](https://github.com/kometa-TEAM/KOMETA-Mediastingers) Repo.
 
 <sup>**5**</sup> Also is a Tag Filter and can use all of those modifiers.
 

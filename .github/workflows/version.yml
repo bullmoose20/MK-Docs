@@ -91,7 +91,7 @@ jobs:
       - name: Checkout Configs Repo
         uses: actions/checkout@v4
         with:
-          repository: meisnate12/Plex-Meta-Manager-Configs
+          repository: kometa-Team/Kometa-Configs
           token: ${{ secrets.PAT }}
           path: pmmconfigs
 

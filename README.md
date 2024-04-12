@@ -66,7 +66,7 @@ Here are some examples of the things you can achieve using Kometa!
 
 Want your library to look like the above images?  With the [Kometa Defaults](https://metamanager.wiki/en/latest/defaults/guide/) you can! These powerful and modular files were designed by the Kometa team to make it simple to create a personalized, one-of-a-kind media collection without the hassle of manually defining each one.
 
-Want to see what the community has to offer? Check out the [Kometa Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs) repository on GitHub to see user-submitted configuration files, or even add your own to the mix!
+Want to see what the community has to offer? Check out the [Kometa Configs](https://github.com/kometa-Team/Kometa-Configs) repository on GitHub to see user-submitted configuration files, or even add your own to the mix!
 
 With Kometa, you can also manage metadata for all your media types, from movies and shows to music and more. And since your metadata is managed outside your libraries, you'll never have to worry about losing your customizations in the event of a media server database loss, you can simply reapply them! It is also easy to move your customizations between servers if you need to.
 

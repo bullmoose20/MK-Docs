@@ -24,7 +24,7 @@ templates:
       item_sonarr_tag_<<key>>: <<item_sonarr_tag>>
       sonarr_monitor_<<key>>: <<sonarr_monitor>>
       collection_order_<<key>>: <<collection_order>>
-      url_poster_<<key>>: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager-Images/master/franchise/<<key_name_encoded>>.jpg
+      url_poster_<<key>>: https://raw.githubusercontent.com/kometa-Team/Kometa-Images/master/franchise/<<key_name_encoded>>.jpg
     optional:
       - name_<<key>>
       - summary_<<key>>
