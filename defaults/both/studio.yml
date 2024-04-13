@@ -2,7 +2,7 @@
 #                             Studio Collections                             #
 #                 Created by Yozora, Bullmoose20, & Sohjiro                  #
 #          EDITING THIS FILE MAY CAUSE PULLING NEW UPDATES TO FAIL           #
-#          https://kometa.wiki/en/latest/defaults/both/studio           #
+#             https://kometa.wiki/en/latest/defaults/both/studio             #
 ##############################################################################
 
 external_templates:
@@ -290,6 +290,7 @@ dynamic_collections:
       - Chimp Television
       - Chris Morgan Productions
       - Cinergi Pictures Entertainment
+      - Codeblack Entertainment
       - Columbia Pictures
       - Constantin Film
       - Cowboy Films
@@ -297,6 +298,7 @@ dynamic_collections:
       - Dark Horse Entertainment
       - Davis Entertainment
       - DC Comics
+      - Dimension Films
       - Dino De Laurentiis Company
       - Don Simpson Jerry Bruckheimer Films
       - Doozer
