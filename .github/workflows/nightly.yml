@@ -69,7 +69,7 @@ jobs:
           message: "<@&967002147520675840> - An update to Kometa has now been published and is available to users of the **nightly** branch."
           commits: "true"
           username: Kometa Releases
-          avatar_url: https://raw.githubusercontent.com/meisnate12/Kometa/nightly/.github/kometa.png
+          avatar_url: https://raw.githubusercontent.com/kometa-Team/Kometa/nightly/.github/kometa.png
 
       - name: Discord Success Notification
         uses: meisnate12/discord-notifications@master
@@ -78,11 +78,11 @@ jobs:
           webhook_id: ${{ secrets.BUILD_WEBHOOK_ID }}
           webhook_token: ${{ secrets.BUILD_WEBHOOK_TOKEN }}
           title: "nightly build: **Success**"
-          url: https://github.com/meisnate12/Kometa/actions/runs/${{ github.run_id }}
+          url: https://github.com/kometa-Team/Kometa/actions/runs/${{ github.run_id }}
           username: Kometa Releases
-          avatar_url: https://raw.githubusercontent.com/meisnate12/Kometa/nightly/.github/kometa.png
+          avatar_url: https://raw.githubusercontent.com/kometa-Team/Kometa/nightly/.github/kometa.png
           author: Docker
-          author_icon_url: https://raw.githubusercontent.com/meisnate12/Kometa/nightly/.github/docker.png
+          author_icon_url: https://raw.githubusercontent.com/kometa-Team/Kometa/nightly/.github/docker.png
 
       - name: Discord Failure Notification
         uses: meisnate12/discord-notifications@master
@@ -93,8 +93,8 @@ jobs:
           message: <@&1079153184007790652>
           title: "nightly build: **Failure**"
           color: 0xe30c43
-          url: https://github.com/meisnate12/Kometa/actions/runs/${{ github.run_id }}
+          url: https://github.com/kometa-Team/Kometa/actions/runs/${{ github.run_id }}
           username: Kometa Releases
-          avatar_url: https://raw.githubusercontent.com/meisnate12/Kometa/nightly/.github/kometa.png
+          avatar_url: https://raw.githubusercontent.com/kometa-Team/Kometa/nightly/.github/kometa.png
           author: Docker
-          author_icon_url: https://raw.githubusercontent.com/meisnate12/Kometa/nightly/.github/docker.png
+          author_icon_url: https://raw.githubusercontent.com/kometa-Team/Kometa/nightly/.github/docker.png

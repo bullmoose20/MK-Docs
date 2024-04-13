@@ -41,7 +41,7 @@ These are the File types that can be utilized against Plex servers:
     * Then, look within the root of the Kometa directory (also known as `config/`) for a directory called `TV Shows`, and 
     then load any collection files within that directory.
 
-    * Then, look in the [defaults folder](https://github.com/meisnate12/kometa/tree/master/defaults) within 
+    * Then, look in the [defaults folder](https://github.com/kometa-team/kometa/tree/master/defaults) within 
     the local Kometa folder [or docker container] for a file called `imdb.yml`.
 
     * Then, look within the Custom Defined Repo for a file called `overlays.yml`.

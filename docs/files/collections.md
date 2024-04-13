@@ -95,7 +95,7 @@ Examples of these can be seen here
         ```yaml
         collections:
           Christmas Extravaganza:
-            trakt_list: https://trakt.tv/users/plexmetamanager/lists/christmas-extravaganza-non-tv-movie #(1)!
+            trakt_list: https://trakt.tv/users/k0meta/lists/christmas-extravaganza-non-tv-movie #(1)!
             sync_mode: append #(2!)
             collection_order: custom #(3)!
         ```
@@ -138,7 +138,7 @@ Examples of these can be seen here
         ```yaml
         collections:
           Christmas Extravaganza:
-            trakt_list: https://trakt.tv/users/plexmetamanager/lists/christmas-extravaganza-non-tv-movie #(1)!
+            trakt_list: https://trakt.tv/users/k0meta/lists/christmas-extravaganza-non-tv-movie #(1)!
             schedule: range(12/01-12/31) #(2)!
             delete_not_scheduled: true #(3)!
         ```

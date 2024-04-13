@@ -201,7 +201,7 @@ NOTE: You must either create an empty Trakt list or specify an existing Trakt li
 collections:
   My Favourite Movies:
     sync_to_trakt_list: myfilms
-    # trakt_list: https://trakt.tv/users/plexmetamanager/lists/myfilms  OPTIONAL TWO-WAY SYNC
+    # trakt_list: https://trakt.tv/users/k0meta/lists/myfilms  OPTIONAL TWO-WAY SYNC
     plex_search:
       any:
         rating.gte: 8

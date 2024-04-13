@@ -89,7 +89,7 @@ event_options = {
 }
 base_url = "https://www.imdb.com"
 git_base = "https://raw.githubusercontent.com/kometa-team/Kometa-IMDb-Awards/master"
-hash_url = "https://raw.githubusercontent.com/meisnate12/IMDb-Hash/master/HASH"
+hash_url = "https://raw.githubusercontent.com/kometa-team/IMDb-Hash/master/HASH"
 graphql_url = "https://api.graphql.imdb.com/"
 list_url = f"{base_url}/list/ls"
 

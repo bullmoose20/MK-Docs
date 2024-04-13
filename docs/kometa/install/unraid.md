@@ -72,7 +72,7 @@ To install a container from docker hub, you will need community applications - a
 
 #### Important note on Docker images
 
-This tutorial uses the official image, and you should, too.  Don't change `meisnate12/kometa` to the `linuxserver.io` image or any other. Other images may have [idiosyncracies](images.md) that will prevent this walkthrough from working.  The official image *will* behave exactly as documented below.  Others very possibly won't.
+This tutorial uses the official image, and you should, too.  Don't change `kometa-team/kometa` to the `linuxserver.io` image or any other. Other images may have [idiosyncracies](images.md) that will prevent this walkthrough from working.  The official image *will* behave exactly as documented below.  Others very possibly won't.
 
 The great thing about Docker is that all the setup you'd have to do to run Kometa is already done inside the docker image.
 
@@ -127,7 +127,7 @@ First, make a copy of the template:
 
     Get a copy of the template to edit [type this into your terminal]:
     ```
-    curl -fLvo config/config.yml https://raw.githubusercontent.com/meisnate12/kometa/master/config/config.yml.template
+    curl -fLvo config/config.yml https://raw.githubusercontent.com/kometa-team/kometa/master/config/config.yml.template
     ```
 
 Now open the copy in an editor on the machine of your choice (Use Linux tab below for the Unraid Kometa `_>Console`):
@@ -235,10 +235,10 @@ Then run the script again:
 %}
 ### I want to use the develop branch
 
-Add the `develop` tag to the image name in your `Repository:` setting for the Kometa unRAID app: [meisnate12/kometa:develop]
+Add the `develop` tag to the image name in your `Repository:` setting for the Kometa unRAID app: [kometa-team/kometa:develop]
 
 ```
-meisnate12/kometa:develop
+kometa-team/kometa:develop
                              ^^^^^^^
 ```
 
@@ -246,10 +246,10 @@ This may not work if you are not using the official image; for example, it does 
 
 ### I want to use the nightly branch
 
-Add the `nightly` tag to the image name in your `Repository:` setting for the Kometa unRAID app: [meisnate12/kometa:nightly]
+Add the `nightly` tag to the image name in your `Repository:` setting for the Kometa unRAID app: [kometa-team/kometa:nightly]
 
 ```
-meisnate12/kometa:nightly
+kometa-team/kometa:nightly
                              ^^^^^^^
 ```
 
@@ -257,10 +257,10 @@ This may not work if you are not using the official image; for example, it does 
 
 ### I want to ensure I am using the master branch
 
-Add the `latest` tag to the image name in your `Repository:` setting for the Kometa unRAID app: [meisnate12/kometa:latest]
+Add the `latest` tag to the image name in your `Repository:` setting for the Kometa unRAID app: [kometa-team/kometa:latest]
 
 ```
-meisnate12/kometa:latest
+kometa-team/kometa:latest
                              ^^^^^^
 ```
 

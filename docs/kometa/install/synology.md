@@ -21,7 +21,7 @@ This is a quick walkthrough of setting up the Kometa Docker container in the Syn
 2.  Search and Download the Image.
 
     1.  Click Registry.
-    2.  Search for `meisnate12/kometa`.
+    2.  Search for `kometa-team/kometa`.
     3.  Select the Repository.
     4.  Click Download.
 
@@ -40,7 +40,7 @@ This is a quick walkthrough of setting up the Kometa Docker container in the Syn
 4.  Select the Image and Create a Container.
 
     1.  Click Image.
-    2.  Select the `meisnate12/kometa` Image.
+    2.  Select the `kometa-team/kometa` Image.
     3.  Click Launch.
 
     ![Step 4](images/synology-06.png)

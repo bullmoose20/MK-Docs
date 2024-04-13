@@ -4,7 +4,7 @@ This is a quick walkthrough of setting up the Kometa Docker container in the QNA
 
 The "Container Station" UI on your QNAP may differ from these screenshots, but the concepts are the same:
 
-1. Create a container based on the `meisnate12/kometa` image.
+1. Create a container based on the `kometa-team/kometa` image.
 2. Set environment variables to control the container's behavior [optional].
 3. Point the container to the directory where your configuration files are to be stored.
 
@@ -27,9 +27,9 @@ Detailed steps:
         Under the "Image" section you will be typing in the name and version of the docker image you wish to pull. Type in the image you wish to use as follows:
     
         ```
-        meisnate12/kometa:latest
-        meisnate12/kometa:develop
-        meisnate12/kometa:nightly
+        kometa-team/kometa:latest
+        kometa-team/kometa:develop
+        kometa-team/kometa:nightly
         ```
 
     4. Then click Pull.
@@ -108,7 +108,7 @@ Detailed steps:
     
         ![](images/qnap1.png)
 
-    2. Search for `meisnate12/kometa`.
+    2. Search for `kometa-team/kometa`.
 
         On the "Docker Hub" tab you should see the image; click on it and click "Install".
         

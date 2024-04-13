@@ -158,7 +158,7 @@ def get_master():
 
 def get_version(level):
     try:
-        url = f"https://raw.githubusercontent.com/meisnate12/Kometa/{level}/VERSION"
+        url = f"https://raw.githubusercontent.com/kometa-Team/Kometa/{level}/VERSION"
         return parse_version(requests.get(url).content.decode().strip(), text=level)
     except requests.exceptions.ConnectionError:
         return "Unknown", "Unknown", 0

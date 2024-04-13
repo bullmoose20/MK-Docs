@@ -58,7 +58,7 @@ These are the developers and creators of the technologies that are required to m
 | Acknowledgement                             | Reason                                                                                                           |                Sponsor the Developer                 |
 |:--------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|:----------------------------------------------------:|
 | [pkkid](https://github.com/pkkid)           | Creator of [python-plexapi](https://github.com/pkkid/python-plexapi)                                             |       :fontawesome-solid-circle-xmark:{ .red }       |
-| [meisnate12](https://github.com/meisnate12) | Creator of [ArrAPI](https://github.com/meisnate12/ArrAPI) and [TMDbAPIs](https://github.com/meisnate12/TMDbAPIs) | [Click Here](https://github.com/sponsors/meisnate12) |
+| [meisnate12](https://github.com/meisnate12) | Creator of [ArrAPI](https://github.com/kometa-team/ArrAPI) and [TMDbAPIs](https://github.com/kometa-team/TMDbAPIs) | [Click Here](https://github.com/sponsors/meisnate12) |
 | [dbader](https://github.com/dbader)         | Creator of [schedule](https://github.com/dbader/schedule)                                                        |       :fontawesome-solid-circle-xmark:{ .red }       |
 | [rholder](https://github.com/rholder)       | Creator of [retrying](https://github.com/rholder/retrying)                                                       |       :fontawesome-solid-circle-xmark:{ .red }       |
 

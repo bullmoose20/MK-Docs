@@ -6,7 +6,7 @@ logger = util.logger
 
 raw_url = "https://raw.githubusercontent.com"
 base_url = "https://api.github.com"
-kometa_base = f"{base_url}/repos/meisnate12/Kometa"
+kometa_base = f"{base_url}/repos/kometa-Team/Kometa"
 configs_raw_url = f"{raw_url}/kometa-team/Kometa-Configs"
 
 class GitHub:
@@ -15,7 +15,7 @@ class GitHub:
         self.token = params["token"]
         logger.secret(self.token)
         self.headers = {"Authorization": f"token {self.token}"} if self.token else None
-        self.images_raw_url = f"{raw_url}/meisnate12/PMM-Image-Sets/master/sets/"
+        self.images_raw_url = f"{raw_url}/kometa-TEAM/KOMETA-Image-Sets/master/sets/"
         self.translation_url = f"{raw_url}/kometa-team/Kometa-Translations/master/defaults/"
         self._configs_url = None
         self._config_tags = []

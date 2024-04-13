@@ -58,9 +58,9 @@ A lot of these guides are stored on Google Drive as using the traditional wiki p
 
 <br>
 
-- [ArrAPI](https://github.com/meisnate12/ArrAPI)
+- [ArrAPI](https://github.com/kometa-team/ArrAPI)
     - Module to interface with Radarr/Sonarr
-- [TMDbAPIs](https://github.com/meisnate12/TMDbAPIs)
+- [TMDbAPIs](https://github.com/kometa-team/TMDbAPIs)
     - Module to interface with TMDb
 - [kometautils](https://github.com/kometa-team/kometautils)
     - Module for various common files among Kometa Repos

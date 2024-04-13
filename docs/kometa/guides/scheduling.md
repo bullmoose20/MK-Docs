@@ -26,7 +26,7 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
       --restart=unless-stopped \
       -e TZ=<TIMEZONE> \
       -v /path/to/config:/config:rw \
-      meisnate12/kometa
+      kometa-team/kometa
     ```
     Change `/path/to/config` to reflect where you've installed Kometa.
 

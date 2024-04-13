@@ -41,10 +41,10 @@ Kometa is compatible with Python 3.8 through 3.11. Later versions may function b
 
 These are high-level steps which assume the user has knowledge of python and pip, and the general ability to troubleshoot issues. For a detailed step-by-step walkthrough, refer to the [Local Walkthrough](local.md) guide.
 
-1. Clone or [download and unzip](https://github.com/meisnate12/Kometa/archive/refs/heads/master.zip) the repo.
+1. Clone or [download and unzip](https://github.com/kometa-Team/Kometa/archive/refs/heads/master.zip) the repo.
 
 ```shell
-git clone https://github.com/meisnate12/kometa
+git clone https://github.com/kometa-team/kometa
 ```
 2. Install dependencies:
 
@@ -69,7 +69,7 @@ python kometa.py
 ### Docker Run:
 
 ```shell
-docker run -it -v <PATH_TO_CONFIG>:/config:rw meisnate12/kometa
+docker run -it -v <PATH_TO_CONFIG>:/config:rw kometa-team/kometa
 ```
 
 - The `-it` flag allows you to interact with the script when needed (such as for Trakt or MyAnimeList authentication).
@@ -85,7 +85,7 @@ Example Docker Run command:
 These docs are assuming you have a basic understanding of Docker concepts.  One place to get familiar with Docker would be the [official tutorial](https://www.docker.com/101-tutorial/).
 
 ```shell
-docker run -it -v "X:\Media\Kometa\config:/config:rw" meisnate12/kometa
+docker run -it -v "X:\Media\Kometa\config:/config:rw" kometa-team/kometa
 ```
 
 ### Docker Compose:
@@ -95,7 +95,7 @@ This is an example docker-compose which will have to be edited to suit your envi
 ```yaml
 services:
   kometa:
-    image: meisnate12/kometa
+    image: kometa-team/kometa
     container_name: kometa
     environment:
       - TZ=TIMEZONE #optional
@@ -106,7 +106,7 @@ services:
 
 ### Dockerfile
 
-A `Dockerfile` is included within the GitHub repository for those who require it, although this is only suggested for those with knowledge of dockerfiles. The official Kometa build is available on the [Dockerhub Website](https://hub.docker.com/r/meisnate12/kometa).
+A `Dockerfile` is included within the GitHub repository for those who require it, although this is only suggested for those with knowledge of dockerfiles. The official Kometa build is available on the [Dockerhub Website](https://hub.docker.com/r/kometa-team/kometa).
 
 ## Customizing the docker-compose file with runtime flags and ENV vars
 
@@ -121,7 +121,7 @@ As with the one above, this is an example docker-compose which will have to be e
 ```yaml
 services:
   kometa:
-    image: meisnate12/kometa
+    image: kometa-team/kometa
     container_name: kometa
     environment:
       - KOMETA_RUN=true

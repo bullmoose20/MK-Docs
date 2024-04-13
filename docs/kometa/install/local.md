@@ -161,7 +161,7 @@ Clone the repo into your home directory and go into that directory [type this in
 
 ```
 cd ~
-git clone https://github.com/meisnate12/kometa
+git clone https://github.com/kometa-team/kometa
 cd Kometa
 ```
 
@@ -186,7 +186,7 @@ There are parts of the code that are assuming and expecting that you will be in 
   ```
   This changes to your home directory, which will be something like `/home/yourname` or `/Users/yourname` or `C:\Users\YourName` depending on the platform.
   ```
-  git clone https://github.com/meisnate12/kometa
+  git clone https://github.com/kometa-team/kometa
   ```
   This uses `git` to make a copy of (`clone`) the Kometa code from where it is stored on `github`.
   ```

@@ -7,7 +7,7 @@ third-party services via API.
 By default, and unless otherwise stated, Kometa looks for the configuration file at `/config/config.yml`.
 
 A template Configuration File can be found in the 
-[GitHub Repo](https://github.com/meisnate12/Kometa/blob/master/config/config.yml.template).
+[GitHub Repo](https://github.com/kometa-Team/Kometa/blob/master/config/config.yml.template).
 
 This table outlines the third-party services that Kometa can make use of. Each service has specific 
 requirements for setup that can be found by clicking the links within the table.

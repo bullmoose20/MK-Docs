@@ -35,7 +35,7 @@ To connect to MyAnimeList.net you must create a MyAnimeList application and supp
 3. Select `web` for `App Type`.
 4. Enter an `App Description` for the application Ex. `Kometa manages metadata and collections`
 5. Enter `http://localhost/` for `App Redirect URL`.
-6. Enter `https://github.com/meisnate12/kometa` for `Homepage URL`.
+6. Enter `https://github.com/kometa-team/kometa` for `Homepage URL`.
 7. Select `non-commercial` for `Commercial / Non-Commercial`.
 8. Enter any name under `Name / Company Name`.
 9. Select `hobbyist` for `Purpose of Use`.

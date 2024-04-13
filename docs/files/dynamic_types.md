@@ -1506,7 +1506,7 @@ requirements of creating the collection.
             smart_label: release.desc
             sync_mode: sync
             mdblist_list: https://mdblist.com/lists/k0meta/<<key>>-movies
-            url_poster: https://raw.githubusercontent.com/meisnate12/kometa-Images/master/streaming/<<key_name_encoded>>.jpg
+            url_poster: https://raw.githubusercontent.com/kometa-team/kometa-Images/master/streaming/<<key_name_encoded>>.jpg
         
         dynamic_collections:
           Streaming:

@@ -944,7 +944,7 @@ The available setting attributes which can be set at each level are outlined bel
     ???+ note
     
         Ensure you are using the raw GitHub link (i.e. 
-        https://github.com/meisnate12/kometa-Configs/tree/master/meisnate12 )
+        https://github.com/kometa-team/kometa-Configs/tree/master/meisnate12 )
 
     <hr style="margin: 0px;">
     
@@ -960,7 +960,7 @@ The available setting attributes which can be set at each level are outlined bel
         
         ```yaml
         settings:
-          custom_repo: https://github.com/meisnate12/kometa-Configs/tree/master/meisnate12
+          custom_repo: https://github.com/kometa-team/kometa-Configs/tree/master/meisnate12
         ```
 
 ??? blank "`verify_ssl` - Turn SSL Verification on or off.<a class="headerlink" href="#verify-ssl" title="Permanent link">¶</a>"

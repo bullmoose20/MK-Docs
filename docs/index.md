@@ -13,11 +13,11 @@ title: Home
 <center>
 ![Logo](assets/logo-full.png)
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/meisnate12/Kometa?style=plastic)](https://github.com/meisnate12/Kometa/releases)
-[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/meisnate12/kometa?label=docker&sort=semver&style=plastic)](https://hub.docker.com/r/meisnate12/kometa)
-[![Docker Pulls](https://img.shields.io/docker/pulls/meisnate12/kometa?style=plastic)](https://hub.docker.com/r/meisnate12/kometa)
-[![Develop GitHub commits since latest stable release (by SemVer)](https://img.shields.io/github/commits-since/meisnate12/kometa/latest/develop?label=Commits%20in%20Develop&style=plastic)](https://github.com/meisnate12/Kometa/tree/develop)
-[![Nightly GitHub commits since latest stable release (by SemVer)](https://img.shields.io/github/commits-since/meisnate12/kometa/latest/nightly?label=Commits%20in%20Nightly&style=plastic)](https://github.com/meisnate12/Kometa/tree/nightly)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/kometa-Team/Kometa?style=plastic)](https://github.com/kometa-Team/Kometa/releases)
+[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/kometa-team/kometa?label=docker&sort=semver&style=plastic)](https://hub.docker.com/r/kometa-team/kometa)
+[![Docker Pulls](https://img.shields.io/docker/pulls/kometa-team/kometa?style=plastic)](https://hub.docker.com/r/kometa-team/kometa)
+[![Develop GitHub commits since latest stable release (by SemVer)](https://img.shields.io/github/commits-since/kometa-team/kometa/latest/develop?label=Commits%20in%20Develop&style=plastic)](https://github.com/kometa-Team/Kometa/tree/develop)
+[![Nightly GitHub commits since latest stable release (by SemVer)](https://img.shields.io/github/commits-since/kometa-team/kometa/latest/nightly?label=Commits%20in%20Nightly&style=plastic)](https://github.com/kometa-Team/Kometa/tree/nightly)
 
 [![Discord](https://img.shields.io/discord/822460010649878528?color=%2300bc8c&label=Discord&style=plastic)](https://kometa.wiki/en/latest/discord/)
 [![Reddit](https://img.shields.io/badge/%2Fr%2Fkometa-e05d44?style=plastic&logo=Reddit&logoColor=white&labelColor=5d5d5d&color=00bc8c)](https://www.reddit.com/r/Kometa/)
@@ -160,16 +160,16 @@ However, these branches (especially Nightly) are recommended for more technical 
 
 ??? "Develop Branch (click to expand)"
 
-    [![Develop GitHub commits since latest stable release (by SemVer)](https://img.shields.io/github/commits-since/meisnate12/kometa/latest/develop?label=Commits%20in%20Develop&style=plastic)](https://github.com/meisnate12/Kometa/tree/develop)
+    [![Develop GitHub commits since latest stable release (by SemVer)](https://img.shields.io/github/commits-since/kometa-team/kometa/latest/develop?label=Commits%20in%20Develop&style=plastic)](https://github.com/kometa-Team/Kometa/tree/develop)
 
-    The [develop](https://github.com/meisnate12/Kometa/tree/develop) branch has the most updated **documented** fixes and enhancements to Kometa.  This version is tested and documented to some degree, but it is still an active Develop branch, so there may be rough edges.
+    The [develop](https://github.com/kometa-Team/Kometa/tree/develop) branch has the most updated **documented** fixes and enhancements to Kometa.  This version is tested and documented to some degree, but it is still an active Develop branch, so there may be rough edges.
 
     Switching to `develop`:
 
     === "Running in Docker"
         Add ":develop" to the image name in your run command or configuration:
             ```
-            meisnate12/kometa:develop
+            kometa-team/kometa:develop
             ```
     === "Running on the Host"
         In the directory where you cloned Kometa:
@@ -185,18 +185,18 @@ However, these branches (especially Nightly) are recommended for more technical 
 
 ??? warning "Nightly Branch (click to expand)"
 
-    [![Nightly GitHub commits since latest stable release (by SemVer)](https://img.shields.io/github/commits-since/meisnate12/kometa/latest/nightly?label=Commits%20in%20Nightly&style=plastic)](https://github.com/meisnate12/Kometa/tree/nightly)
+    [![Nightly GitHub commits since latest stable release (by SemVer)](https://img.shields.io/github/commits-since/kometa-team/kometa/latest/nightly?label=Commits%20in%20Nightly&style=plastic)](https://github.com/kometa-Team/Kometa/tree/nightly)
     
     **This branch will have squashed commits which can cause `git pull`/`git fetch` to error you can use `git reset origin/nightly --hard` to fix the branch.**
     
-    The [nightly](https://github.com/meisnate12/Kometa/tree/nightly) branch has the absolute latest version of Kometa, but it could easily break, there is no guarantee that it even works, and any new features will not be documented until they have progressed enough to reach the develop branch.
+    The [nightly](https://github.com/kometa-Team/Kometa/tree/nightly) branch has the absolute latest version of Kometa, but it could easily break, there is no guarantee that it even works, and any new features will not be documented until they have progressed enough to reach the develop branch.
 
     Switching to `nightly`:
 
     === "Running in Docker"
         Add ":nightly" to the image name in your run command or configuration:
             ```
-            meisnate12/kometa:nightly
+            kometa-team/kometa:nightly
             ```
     === "Running on the Host"
         In the directory where you cloned Kometa:
@@ -216,7 +216,7 @@ However, these branches (especially Nightly) are recommended for more technical 
 
     To address this issue, we have implemented 'lxml' variants for each Kometa branch (master, develop, and nightly). These variants resume compatibility with older hardware by freezing lxml on a previous version which has wider hardware support.
 
-    To transition to the lxml branch, simply prepend 'lxml-' to the branch name you are currently utilizing. For instance, `meisnate12/kometa:lxml-master`, `meisnate12/kometa:lxml-develop` and `meisnate12/kometa:lxml-nightly`.
+    To transition to the lxml branch, simply prepend 'lxml-' to the branch name you are currently utilizing. For instance, `kometa-team/kometa:lxml-master`, `kometa-team/kometa:lxml-develop` and `kometa-team/kometa:lxml-nightly`.
 
 ## Discord Support Server
 
@@ -230,9 +230,9 @@ At Kometa, we value our community's input and actively seek feedback to drive th
 
 If you're having trouble, we recommend first joining the [Kometa Discord Server](https://kometa.wiki/en/latest/discord/) and seeking support there. If that isn't possible for you, here's what you can do:
 
-* If you get an error, update to the latest version and check if the issue persists. If it does, report the bug by filling out the [Bug Report](https://github.com/meisnate12/Kometa/issues/new?assignees=meisnate12&labels=status%3Anot-yet-viewed%2C+bug&template=bug_report.md&title=Bug%3A+) template.
-* If you spot a mistake or have an idea to improve the [Kometa Wiki](https://kometa.wiki/), submit a request using the [Wiki Request](https://github.com/meisnate12/Kometa/issues/new?assignees=meisnate12&labels=status%3Anot-yet-viewed%2C+documentation&template=3.docs_request.yml&title=%5BDocs%5D%3A+) template.
-* If you have a question about metadata configuration, start a discussion on the [Discussions](https://github.com/meisnate12/Kometa/discussions). Remember, the community helps shape the future of Kometa, so your input is valuable!
+* If you get an error, update to the latest version and check if the issue persists. If it does, report the bug by filling out the [Bug Report](https://github.com/kometa-Team/Kometa/issues/new?assignees=meisnate12&labels=status%3Anot-yet-viewed%2C+bug&template=bug_report.md&title=Bug%3A+) template.
+* If you spot a mistake or have an idea to improve the [Kometa Wiki](https://kometa.wiki/), submit a request using the [Wiki Request](https://github.com/kometa-Team/Kometa/issues/new?assignees=meisnate12&labels=status%3Anot-yet-viewed%2C+documentation&template=3.docs_request.yml&title=%5BDocs%5D%3A+) template.
+* If you have a question about metadata configuration, start a discussion on the [Discussions](https://github.com/kometa-Team/Kometa/discussions). Remember, the community helps shape the future of Kometa, so your input is valuable!
 
 For support on any of the above, visit the [Discord server](https://kometa.wiki/en/latest/discord/).
 

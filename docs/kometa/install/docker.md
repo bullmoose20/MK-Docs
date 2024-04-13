@@ -108,14 +108,14 @@ If that doesn't work, stop here until you fix that.  Diagnoing and repairing Doc
 
 #### Important note on Docker images
 
-This tutorial uses the official image, and you should, too.  Don't change `meisnate12/kometa` to the `linuxserver.io` image or any other; other images may have [idiosyncracies](images.md) that will prevent this walkthrough from working.  The official image *will* behave exactly as documented below.  Others very possibly won't.
+This tutorial uses the official image, and you should, too.  Don't change `kometa-team/kometa` to the `linuxserver.io` image or any other; other images may have [idiosyncracies](images.md) that will prevent this walkthrough from working.  The official image *will* behave exactly as documented below.  Others very possibly won't.
 
 The great thing about Docker is that all the setup you'd have to do to run Kometa is already done inside the docker image.
 
 That means we can just jump right into running it.  At the command prompt, type:
 
 ```
-docker run --rm meisnate12/kometa --run
+docker run --rm kometa-team/kometa --run
 
 ```
 
@@ -124,8 +124,8 @@ This is going to fail with an error.  That's expected.
 You should see something like this:
 
 ``` { .shell .no-copy }
-Unable to find image 'meisnate12/kometa:latest' locally
-latest: Pulling from meisnate12/kometa
+Unable to find image 'kometa-team/kometa:latest' locally
+latest: Pulling from kometa-team/kometa
 7d63c13d9b9b: Already exists
 6ad2a11ca37b: Already exists
 8076cdef4689: Pull complete
@@ -136,7 +136,7 @@ ed6716577767: Pull complete
 0547721ab7a3: Pull complete
 ea4d35bce959: Pull complete
 Digest: sha256:472be179a75259e07e68a3da365851b58c2f98383e02ac815804299da6f99824
-Status: Downloaded newer image for meisnate12/kometa:latest
+Status: Downloaded newer image for kometa-team/kometa:latest
 Config Error: config not found at //config
 ```
 
@@ -224,26 +224,26 @@ You'll need to add this to the docker command every time you run it, like this:
 === ":fontawesome-brands-linux: Linux"
 
       ```
-      docker run --rm -it -v "/home/YOURUSERNAME/kometa/config:/config:rw" meisnate12/kometa
+      docker run --rm -it -v "/home/YOURUSERNAME/kometa/config:/config:rw" kometa-team/kometa
       ```
 
 === ":fontawesome-brands-apple: macOS"
 
       ```
-      docker run --rm -it -v "/Users/YOURUSERNAME/kometa/config:/config:rw" meisnate12/kometa
+      docker run --rm -it -v "/Users/YOURUSERNAME/kometa/config:/config:rw" kometa-team/kometa
       ```
 
 === ":fontawesome-brands-windows: Windows"
 
       ```
-      docker run --rm -it -v "C:\Users\YOURUSERNAME\kometa\config:/config:rw" meisnate12/kometa
+      docker run --rm -it -v "C:\Users\YOURUSERNAME\kometa\config:/config:rw" kometa-team/kometa
       ```
 
 
 If you run that command now it will display a similar error to before, but without all the image loading:
 
 ``` { .bash .no-copy }
-$ docker run --rm -it -v "/Users/mroche/kometa/config:/config:rw" meisnate12/kometa --run
+$ docker run --rm -it -v "/Users/mroche/kometa/config:/config:rw" kometa-team/kometa --run
 Config Error: config not found at //config
 ```
 
@@ -300,19 +300,19 @@ First, make a copy of the template:
    
       Get a copy of the template to edit [type this into your terminal]:
       ```
-      curl -fLvo config/config.yml https://raw.githubusercontent.com/meisnate12/kometa/master/config/config.yml.template
+      curl -fLvo config/config.yml https://raw.githubusercontent.com/kometa-team/kometa/master/config/config.yml.template
       ```
 
 === ":fontawesome-brands-apple: macOS"
 
       Get a copy of the template to edit [type this into your terminal]:
       ```
-      curl -fLvo config/config.yml https://raw.githubusercontent.com/meisnate12/kometa/master/config/config.yml.template
+      curl -fLvo config/config.yml https://raw.githubusercontent.com/kometa-team/kometa/master/config/config.yml.template
       ```
 
 === ":fontawesome-brands-windows: Windows"
 
-      Go to [this URL](https://raw.githubusercontent.com/meisnate12/kometa/master/config/config.yml.template) using a web browser; choose the "Save" command, then save the file at:
+      Go to [this URL](https://raw.githubusercontent.com/kometa-team/kometa/master/config/config.yml.template) using a web browser; choose the "Save" command, then save the file at:
       ```
       C:\Users\YOURUSERNAME\kometa\config\config.yml
       ```
@@ -441,7 +441,7 @@ Then run Kometa again:
 Add the `develop` tag to the image name in your run command [or wherever you specify the image in your environment]
 
 ```
-docker run --rm -it -v "KOMETA_PATH_GOES_HERE:/config:rw" meisnate12/kometa:develop --run
+docker run --rm -it -v "KOMETA_PATH_GOES_HERE:/config:rw" kometa-team/kometa:develop --run
                                                                                                   ^^^^^^^
 ```
 
@@ -452,7 +452,7 @@ This may not work if you are not using the official image; for example, it does 
 Add the `nightly` tag to the image name in your run command [or wherever you specify the image in your environment]
 
 ```
-docker run --rm -it -v "KOMETA_PATH_GOES_HERE:/config:rw" meisnate12/kometa:nightly --run
+docker run --rm -it -v "KOMETA_PATH_GOES_HERE:/config:rw" kometa-team/kometa:nightly --run
                                                                                                   ^^^^^^^
 ```
 
@@ -463,7 +463,7 @@ This may not work if you are not using the official image; for example, it does 
 Add the `latest` tag to the image name in your run command [or wherever you specify the image in your environment]
 
 ```
-docker run --rm -it -v "KOMETA_PATH_GOES_HERE:/config:rw" meisnate12/kometa:latest --run
+docker run --rm -it -v "KOMETA_PATH_GOES_HERE:/config:rw" kometa-team/kometa:latest --run
                                                                                                   ^^^^^^
 ```
 

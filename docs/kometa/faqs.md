@@ -80,7 +80,7 @@ Your Kometa installation may not be located at the paths referenced below. These
     
         [type this into your terminal]
 
-            docker pull meisnate12/kometa:TAG_HERE
+            docker pull kometa-team/kometa:TAG_HERE
 
         replacing TAG_HERE with latest, develop, or nightly [whichever you are currently using]
 
@@ -153,9 +153,9 @@ Your Kometa installation may not be located at the paths referenced below. These
     
         [type this into your terminal]
 
-            docker pull meisnate12/kometa:develop
+            docker pull kometa-team/kometa:develop
 
-        Then recreate your container via whatever means you used to create it [docker run, docker-compose, etc.], changing the image in the docker command or the `docker-compose.yml` to `meisnate12/kometa:develop`.
+        Then recreate your container via whatever means you used to create it [docker run, docker-compose, etc.], changing the image in the docker command or the `docker-compose.yml` to `kometa-team/kometa:develop`.
 
         If you are using Docker on a NAS like Synology or UNRaid, they will provide some means of doing those two things.
 
@@ -224,9 +224,9 @@ Your Kometa installation may not be located at the paths referenced below. These
     
         [type this into your terminal]
 
-            docker pull meisnate12/kometa:nightly
+            docker pull kometa-team/kometa:nightly
 
-        Then recreate your container via whatever means you used to create it [docker run, docker-compose, etc.], changing the image in the docker command or the `docker-compose.yml` to `meisnate12/kometa:nightly`.
+        Then recreate your container via whatever means you used to create it [docker run, docker-compose, etc.], changing the image in the docker command or the `docker-compose.yml` to `kometa-team/kometa:nightly`.
 
         If you are using Docker on a NAS like Synology or UNRaid, they will provide some means of doing those two things.
 
@@ -294,9 +294,9 @@ Your Kometa installation may not be located at the paths referenced below. These
     
         [type this into your terminal]
 
-            docker pull meisnate12/kometa:latest
+            docker pull kometa-team/kometa:latest
 
-        Then recreate your container via whatever means you used to create it [docker run, docker-compose, etc.], changing the image in the docker command or the `docker-compose.yml` to `meisnate12/kometa:latest`.
+        Then recreate your container via whatever means you used to create it [docker run, docker-compose, etc.], changing the image in the docker command or the `docker-compose.yml` to `kometa-team/kometa:latest`.
 
         If you are using Docker on a NAS like Synology or UNRaid, they will provide some means of doing those two things.
 

@@ -40,7 +40,7 @@ spec:
             runAsGroup: 1000
           containers:
             - name: plex-media-manager
-              image: meisnate12/kometa:latest
+              image: kometa-team/kometa:latest
               imagePullPolicy: IfNotPresent
               args: [ "--run", "--read-only-config" ]
               resources:
@@ -324,7 +324,7 @@ spec:
                   mountPath: /config
           containers:
             - name: plex-media-manager
-              image: meisnate12/kometa:latest
+              image: kometa-team/kometa:latest
               imagePullPolicy: Always
               args: [ "--run", "--read-only-config" ]
               resources:

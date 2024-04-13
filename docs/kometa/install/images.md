@@ -3,7 +3,7 @@
 You should use the official docker image:
 
 ```
-meisnate12/kometa
+kometa-team/kometa
 ```
 
 All the examples in the wiki are assuming the use of this image, and many do not work with non-official Docker images due to differences in how the authors have chosen to construct their images.
@@ -16,13 +16,13 @@ In March 2024, lxml, a prerequisite for operating Kometa, ceased support for old
 
 To address this issue, we have implemented 'lxml' variants for each Kometa branch (master, develop, and nightly). These variants resume compatibility with older hardware by freezing lxml on a previous version which has wider hardware support.
 
-To transition to the lxml branch, simply prepend 'lxml-' to the branch name you are currently utilizing. For instance, `meisnate12/kometa:lxml-master`, `meisnate12/kometa:lxml-develop` and `meisnate12/kometa:lxml-nightly`.
+To transition to the lxml branch, simply prepend 'lxml-' to the branch name you are currently utilizing. For instance, `kometa-team/kometa:lxml-master`, `kometa-team/kometa:lxml-develop` and `kometa-team/kometa:lxml-nightly`.
 
 ## LinuxServer
 
 The first image offered in unRAID for Kometa is the Linuxserver.io image [`linuxserver/kometa`]
 
-This image is different to the official image [meisnate12/kometa] in a few ways that cause a variety of problems particularly for new users.
+This image is different to the official image [kometa-team/kometa] in a few ways that cause a variety of problems particularly for new users.
 
 One typical error is something like:
 
