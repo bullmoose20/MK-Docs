@@ -210,12 +210,17 @@ table.dualTable td, table.dualTable th {
 }
 
 .md-typeset mark {
-    background-color: #ac0ce3;
+    background-color: initial;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    color: #ffffff;
+    color: #00bc8c;
     word-break: break-word;
 }
+
+.md-search-result .md-typeset h2 mark {
+    text-decoration: underline;
+}
+
 :root {
     --md-admonition-icon--blank: url()
 }
