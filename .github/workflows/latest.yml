@@ -61,7 +61,7 @@ jobs:
           title: "latest build: **Success**"
           url: https://github.com/kometa-Team/Kometa/actions/runs/${{ github.run_id }}
           username: Kometa Releases
-          avatar_url: https://raw.githubusercontent.com/kometa-Team/Kometa/master/.github/kometa.png
+          avatar_url: https://raw.githubusercontent.com/kometa-Team/Kometa/master/.github/release.png
           author: Docker
           author_icon_url: https://raw.githubusercontent.com/kometa-Team/Kometa/master/.github/docker.png
 
@@ -76,6 +76,6 @@ jobs:
           color: 0xe30c43
           url: https://github.com/kometa-Team/Kometa/actions/runs/${{ github.run_id }}
           username: Kometa Releases
-          avatar_url: https://raw.githubusercontent.com/kometa-Team/Kometa/master/.github/kometa.png
+          avatar_url: https://raw.githubusercontent.com/kometa-Team/Kometa/master/.github/release.png
           author: Docker
           author_icon_url: https://raw.githubusercontent.com/kometa-Team/Kometa/master/.github/docker.png
