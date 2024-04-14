@@ -112,7 +112,7 @@ You will need to stop that web server while you're doing this in order to grab t
 
 ```
 | URL: http://localhost/?code=BOING
-| Saving authorization information to /path/to/Plex-Meta-Manager/config/config.yml |
+| Saving authorization information to /path/to/Kometa/config/config.yml |
 | My Anime List Connection Successful                                                                |
 |====================================================================================================|
 

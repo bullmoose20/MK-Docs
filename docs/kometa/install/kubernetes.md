@@ -27,7 +27,7 @@ site if you aren't sure on how to create a schedule.
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: plex-media-manager
+  name: kometa
   namespace: media
 spec:
   schedule: "0 0 * * *"
@@ -39,7 +39,7 @@ spec:
             runAsUser: 1000
             runAsGroup: 1000
           containers:
-            - name: plex-media-manager
+            - name: kometa
               image: kometa-team/kometa:latest
               imagePullPolicy: IfNotPresent
               args: [ "--run", "--read-only-config" ]
@@ -65,7 +65,7 @@ spec:
           volumes:
             - name: config
               persistentVolumeClaim:
-                claimName: plex-media-manager
+                claimName: kometa
             - configMap:
                 name: kometa-config
               name: kometa-config
@@ -90,8 +90,8 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   labels:
-    app: plex-media-manager
-  name: plex-media-manager
+    app: kometa
+  name: kometa
   namespace: media
 spec:
   accessModes:
@@ -292,7 +292,7 @@ NOTE the environment value nameed `JINJA_DEST_FILE` is the resulting name of the
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: plex-media-manager
+  name: kometa
   namespace: media
 spec:
   schedule: "0 0 * * *"
@@ -323,7 +323,7 @@ spec:
                 - name: config
                   mountPath: /config
           containers:
-            - name: plex-media-manager
+            - name: kometa
               image: kometa-team/kometa:latest
               imagePullPolicy: Always
               args: [ "--run", "--read-only-config" ]
@@ -346,7 +346,7 @@ spec:
           volumes:
             - name: config
               persistentVolumeClaim:
-                claimName: plex-media-manager
+                claimName: kometa
             - configMap:
                 name: kometa-config
               name: kometa-config
