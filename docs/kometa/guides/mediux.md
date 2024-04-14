@@ -31,7 +31,7 @@ You should have something like this:
 
     It is imperative that the `metadata:` line only appears **once** within the mediux.yml file. If it appears more than once, the file will not load in Kometa and your assets will not be set.
 
-    If your Set in MediUX ncludes a `metadata:` line, you should remove it and only have `metadata:` appearing on line 1 of your `mediux.yml` file.
+    If your Set in MediUX includes a `metadata:` line, you should remove it and only have `metadata:` appearing on line 1 of your `mediux.yml` file.
 
 Now let's navigate to the MediUX website and find the Set that we want to use. In this case, I'm going to use [Olivier_286's Toy Story Collection Set](https://mediux.pro/sets/15639)
 
@@ -51,7 +51,7 @@ I will click the copy button highlighted:
 
 ![Step 3](images/step3.png)
 
-and now I will paste it directly into my `mediux.yml` file and it now looks like this:
+and now I will paste it directly into my `mediux.yml` file, and it now looks like this:
 
 ![Step 4](images/step4.png)
 
