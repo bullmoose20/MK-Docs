@@ -25,8 +25,9 @@ The below guides and recipes have been created to assist users with various aspe
 - [Log Files](../logs.md)
 - [Understanding YAML File Syntax](../yaml.md)
 - [Formula 1 Metadata Edit Guide](formula.md)
+- [Using MediUX Sets Guide](mediux.md)
 
-{%    
+- {%    
   include-markdown "https://raw.githubusercontent.com/kometa-team/Kometa-Cookbook/main/guides/README.md"
 %}
 

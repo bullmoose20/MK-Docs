@@ -151,6 +151,7 @@ nav:
           - Scheduling Kometa Runs Guide: kometa/guides/scheduling.md
           - Image Asset Directory Guide: kometa/guides/assets.md
           - Formula 1 Metadata Guide: kometa/guides/formula.md
+          - MediUX Assets Guide: kometa/guides/mediux.md
         - Companion Scripts: &scripts
           - Overview: kometa/scripts/overview.md
           - Plex Image Cleanup: kometa/scripts/image-cleanup.md
