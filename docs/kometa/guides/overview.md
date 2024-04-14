@@ -27,7 +27,7 @@ The below guides and recipes have been created to assist users with various aspe
 - [Formula 1 Metadata Edit Guide](formula.md)
 
 {%    
-  include-markdown "https://raw.githubusercontent.com/chazlarson/Kometa-Cookbook/main/guides/README.md"
+  include-markdown "https://raw.githubusercontent.com/kometa-team/Kometa-Cookbook/main/guides/README.md"
 %}
 
 ## Recipes
@@ -35,7 +35,7 @@ The below guides and recipes have been created to assist users with various aspe
 A lot of these guides are stored on Google Drive as using the traditional wiki pages would make the formatting difficult to understand.
 
 {%    
-  include-markdown "https://raw.githubusercontent.com/chazlarson/Kometa-Cookbook/main/cookbook/README.md"
+  include-markdown "https://raw.githubusercontent.com/kometa-team/Kometa-Cookbook/main/cookbook/README.md"
 %}
 
 ## Associated Git Repos
