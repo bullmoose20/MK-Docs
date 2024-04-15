@@ -13,7 +13,7 @@ The source code for these scripts can be found on [Chazlarson's GitHub Repositor
 4.  Click "Submit"
 5.  Copy and paste the result into your Kometa config.
 
-<iframe src="https://pmm-auth-8e685ca9b226.herokuapp.com/" width="100%" height="700" style="border:0px solid black;"></iframe>
+<iframe src="https://kometa-auth-2cb6c5672416.herokuapp.com/" width="100%" height="700" style="border:0px solid black;"></iframe>
 
 ## Running the Authentication Scripts Locally
 
