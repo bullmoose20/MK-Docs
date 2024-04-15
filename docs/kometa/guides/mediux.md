@@ -51,7 +51,7 @@ I will click the copy button highlighted:
 
 ![Step 3](images/step3.png)
 
-and now I will paste it directly into my `mediux.yml` file, and it now looks like this:
+And now I will paste it directly into my `mediux.yml` file, and it now looks like this:
 
 ![Step 4](images/step4.png)
 
@@ -61,9 +61,9 @@ The file can now be saved and is ready for use.
 
 Now that my metadata file is ready, I can run it against my library.
 
-I will open my `config.yml` file and add the `mediux.yml` file as a `metadata_file` against my Movies library:
+I will open my `config.yml` file and add the `mediux.yml` within the `metadata_files` section of my Movies library:
 
-My config.yml libraries section now looks like this:
+My config.yml `libraries` section now looks like this:
 ```yaml
 libraries:
   Movies:
@@ -71,6 +71,6 @@ libraries:
       - file: config/metadata/mediux.yml
 ```
 
-after running Kometa and navigating to Plex, I can see that my posters for the Toy Story movies have been updated with the images from the Set in MediUX:
+After running Kometa and navigating to Plex, I can see that my posters for the Toy Story movies have been updated with the images from the Set in MediUX:
 
 ![Step 5](images/step5.png)
