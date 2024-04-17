@@ -66,7 +66,7 @@ Collection Files can utilize the following top-level attributes
 an error when trying to run the file against your library.
 
 * Example Files can be found in the 
-[Kometa Configs Repository](https://github.com/kometa-Team/Kometa-Configs)
+[Kometa Configs Repository](https://github.com/kometa-team/Configs)
 
 ## Collection Operations & Attributes
 

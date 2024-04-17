@@ -4,7 +4,7 @@ When trying to authorize Trakt or MyAnimeList, Kometa needs to run in interactiv
 
 These scripts allow you to authorize Trakt and MyAnimeList here on the wiki. Once authorized, the script will give you a YAML block that you will copy into the config.yml, replacing the existing `trakt` and/or `myanimelist` sections.
 
-The source code for these scripts can be found on [Chazlarson's GitHub Repository](https://github.com/kometa-team/Kometa-Auth)
+The source code for these scripts can be found on [Chazlarson's GitHub Repository](https://github.com/kometa-team/Auth)
 ## Usage
 
 1.  Enter client ID and secret.
@@ -17,14 +17,14 @@ The source code for these scripts can be found on [Chazlarson's GitHub Repositor
 
 ## Running the Authentication Scripts Locally
 
-For users who want full control over the scripts and would prefer the run them locally, you can run the script in docker or python by downloading the scripts from [Chazlarson's GitHub Repository](https://github.com/kometa-team/Kometa-Auth)
+For users who want full control over the scripts and would prefer the run them locally, you can run the script in docker or python by downloading the scripts from [Chazlarson's GitHub Repository](https://github.com/kometa-team/Auth)
 
 ??? abstract "Click for instructions on how to run the scripts locally"
 
-    Ensure you have downloaded a copy of the script from [Chazlarson's GitHub Repository](https://github.com/kometa-team/Kometa-Auth). If you have downloaded the ZIP, extract it to your desired location.
+    Ensure you have downloaded a copy of the script from [Chazlarson's GitHub Repository](https://github.com/kometa-team/Auth). If you have downloaded the ZIP, extract it to your desired location.
 
     {%    
-      include-markdown "https://raw.githubusercontent.com/kometa-team/Kometa-Auth/main/README.md"
+      include-markdown "https://raw.githubusercontent.com/kometa-team/Auth/main/README.md"
       start="You can run it in Docker or Python."
     %}
     

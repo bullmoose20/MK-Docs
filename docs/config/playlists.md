@@ -4,8 +4,7 @@ As playlists are not tied to one specific library and can combine media from mul
 special [Playlist Files](../files/playlists.md) to work.
 
 Within the [Configuration File](overview.md), the `playlist_files` attribute specifies the 
-[File Blocks](../config/files.md#blocks) of the [Playlist Files](../files/playlists.md) that the user wants Plex Meta 
-Manager to act on.
+[File Blocks](../config/files.md#blocks) of the [Playlist Files](../files/playlists.md) that the user wants Kometa to act on.
 
 **The libraries used in the playlist attribute `libraries` must be defined under the `libraries` attribute of the 
 [Configuration File](overview.md).**

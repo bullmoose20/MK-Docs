@@ -47,7 +47,7 @@ Every file block under the parent attribute begins with a `-`.
 
 There are multiple location types that can be used to call a file. They can either be on the local system, online at an 
 url, part of the [Kometa Defaults](../defaults/guide.md), directly from the 
-[Kometa User Configs](https://github.com/kometa-Team/Kometa-Configs) repository, or from another 
+[Kometa User Configs](https://github.com/kometa-team/Configs) repository, or from another 
 [`Custom Repository`](settings.md).
 
 The location types are outlined as follows:
@@ -115,10 +115,10 @@ The location types are outlined as follows:
               - default: oscars
         ```
 
-??? blank "`git` - Used to run a file hosted on the [Kometa User Configs](https://github.com/kometa-Team/Kometa-Configs) repository.<a class="headerlink" href="#git" title="Permanent link">¶</a>"
+??? blank "`git` - Used to run a file hosted on the [Kometa User Configs](https://github.com/kometa-team/Configs) repository.<a class="headerlink" href="#git" title="Permanent link">¶</a>"
 
     <div id="git" />Used to run a file hosted on the 
-    [Kometa User Configs](https://github.com/kometa-Team/Kometa-Configs) repository.
+    [Kometa User Configs](https://github.com/kometa-team/Configs) repository.
 
     Note that you enter the bits of the items path relative to the top level of the repo [`meisnate12/People`] and you 
     don't need the `.yml` extension.
@@ -129,7 +129,7 @@ The location types are outlined as follows:
         libraries:
           Movies:
             collection_files:
-              - git: meisnate12/People # this links to https://github.com/kometa-Team/Kometa-Configs/blob/master/meisnate12/People.yml
+              - git: meisnate12/People # this links to https://github.com/kometa-team/Configs/blob/master/meisnate12/People.yml
         ```
 
 ??? blank "`repo` - Used to run a file hosted on a custom repository.<a class="headerlink" href="#repo" title="Permanent link">¶</a>"
@@ -143,7 +143,7 @@ The location types are outlined as follows:
     ???+ example "Example"
 
         This is assuming the `custom_repo` setting is 
-        `https://github.com/kometa-team/kometa-Configs/tree/master/meisnate12`.
+        `https://github.com/kometa-team/Configs/tree/master/meisnate12`.
         
         ```yaml
         libraries:

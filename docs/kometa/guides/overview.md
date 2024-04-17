@@ -28,7 +28,7 @@ The below guides and recipes have been created to assist users with various aspe
 - [Using MediUX Sets Guide](mediux.md)
 
 - {%    
-  include-markdown "https://raw.githubusercontent.com/kometa-team/Kometa-Cookbook/main/guides/README.md"
+  include-markdown "https://raw.githubusercontent.com/kometa-team/Cookbook/main/guides/README.md"
 %}
 
 ## Recipes
@@ -36,25 +36,25 @@ The below guides and recipes have been created to assist users with various aspe
 A lot of these guides are stored on Google Drive as using the traditional wiki pages would make the formatting difficult to understand.
 
 {%    
-  include-markdown "https://raw.githubusercontent.com/kometa-team/Kometa-Cookbook/main/cookbook/README.md"
+  include-markdown "https://raw.githubusercontent.com/kometa-team/Cookbook/main/cookbook/README.md"
 %}
 
 ## Associated Git Repos
 
-- [Kometa User Configs](https://github.com/kometa-Team/Kometa-Configs)
+- [Kometa User Configs](https://github.com/kometa-team/Configs)
     - Kometa's User submitted Config Repo
 
 <br>
 
-- [Plex Image Cleanup](https://github.com/kometa-Team/Image-Cleanup)
+- [Kometa Image Cleanup](https://github.com/kometa-Team/Image-Cleanup)
     - Removes Image bloat from your Plex
-- [Kometa Overlay Reset](https://github.com/kometa-TEAM/KOMETA-Overlay-Reset)
+- [Kometa Overlay Reset](https://github.com/kometa-team/Overlay-Reset)
     - Resets your Library back to default images removing all overlays
-- [Kometa Anime IDs](https://github.com/kometa-Team/Kometa-Anime-IDs)
+- [Kometa Anime IDs](https://github.com/kometa-team/Anime-IDs)
     - How Kometa translates Anime IDs to TVDB IDs
-- [Kometa IMDb Awards](https://github.com/kometa-TEAM/KOMETA-IMDb-Awards)
+- [Kometa IMDb Awards](https://github.com/kometa-team/IMDb-Awards)
     - How Kometa stores the IMDB Award Lists
-- [Kometa Mediastingers](https://github.com/kometa-TEAM/KOMETA-Mediastingers)
+- [Kometa Mediastingers](https://github.com/kometa-team/Mediastingers)
     - How Kometa stores the Mediastingers List
 
 <br>
@@ -68,28 +68,28 @@ A lot of these guides are stored on Google Drive as using the traditional wiki p
 
 <br>
 
-- [Kometa-Images](https://github.com/kometa-Team/Kometa-Images)
+- [Kometa-Images](https://github.com/kometa-team/Images)
     - Repo to store Kometa's various Images
-- [Kometa-People](https://github.com/kometa-Team/Kometa-People)
+- [Kometa-People](https://github.com/kometa-team/People)
     - Stores the original image for all our actor posters
-- [Kometa-People-Auto-Readme](https://github.com/kometa-Team/Kometa-People-Auto-Readme)
+- [Kometa-People-Auto-Readme](https://github.com/kometa-team/People-Auto-Readme)
     - Stores the File that generates the Readme file for the other Actor repos
-- [Black & White (bw)](https://github.com/kometa-Team/Kometa-People-bw)
+- [Black & White (bw)](https://github.com/kometa-team/People-bw)
     - Stores the Black & White actor posters
-- [Rainier (rainier)](https://github.com/kometa-Team/Kometa-People-rainier)
+- [Rainier (rainier)](https://github.com/kometa-team/People-rainier)
     - Stores the Rainier actor posters
-- [Signature (signature)](https://github.com/kometa-Team/Kometa-People-signature)
+- [Signature (signature)](https://github.com/kometa-team/People-signature)
     - Stores the Signature actor posters
-- [DIIVOY (diiivoy)](https://github.com/kometa-Team/Kometa-People-diiivoy)
+- [DIIVOY (diiivoy)](https://github.com/kometa-team/People-diiivoy)
     - Stores the DIIVOY actor posters
-- [DIIVOY Color (diiivoycolor)](https://github.com/kometa-Team/Kometa-People-diiivoycolor)
+- [DIIVOY Color (diiivoycolor)](https://github.com/kometa-team/People-diiivoycolor)
     - Stores the DIIVOY Color actor posters
-- [Transparent (transparent)](https://github.com/kometa-Team/Kometa-People-transparent)
+- [Transparent (transparent)](https://github.com/kometa-team/People-transparent)
     - Stores the Transparent actor posters
 
 <br>
 
-- [Kometa-Unraid-Templates](https://github.com/kometa-Team/Kometa-Unraid-Templates)
+- [Kometa-Unraid-Templates](https://github.com/kometa-team/Unraid-Templates)
     - Stores the Kometa Unraid Templates
-- [Kometa-Translations ](https://github.com/kometa-Team/Kometa-Translations)
+- [Kometa-Translations ](https://github.com/kometa-team/Translations)
     - Stores the data for Kometa Translations

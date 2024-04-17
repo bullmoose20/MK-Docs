@@ -7,7 +7,7 @@ logger = util.logger
 raw_url = "https://raw.githubusercontent.com"
 base_url = "https://api.github.com"
 kometa_base = f"{base_url}/repos/kometa-Team/Kometa"
-configs_raw_url = f"{raw_url}/kometa-team/Kometa-Configs"
+configs_raw_url = f"{raw_url}/kometa-team/Configs"
 
 class GitHub:
     def __init__(self, config, params):
@@ -15,8 +15,8 @@ class GitHub:
         self.token = params["token"]
         logger.secret(self.token)
         self.headers = {"Authorization": f"token {self.token}"} if self.token else None
-        self.images_raw_url = f"{raw_url}/kometa-TEAM/KOMETA-Image-Sets/master/sets/"
-        self.translation_url = f"{raw_url}/kometa-team/Kometa-Translations/master/defaults/"
+        self.images_raw_url = f"{raw_url}/kometa-team/Image-Sets/master/sets/"
+        self.translation_url = f"{raw_url}/kometa-team/Translations/master/defaults/"
         self._configs_url = None
         self._config_tags = []
         self._translation_keys = []
@@ -84,7 +84,7 @@ class GitHub:
     @property
     def translation_keys(self):
         if not self._translation_keys:
-            tree, repo = self.get_top_tree("kometa-team/Kometa-Translations")
+            tree, repo = self.get_top_tree("kometa-team/Translations")
             self._translation_keys = [tk[:-4] for tk in self.get_tree(tree["defaults"]["url"])]
         return self._translation_keys
 

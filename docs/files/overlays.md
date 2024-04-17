@@ -84,7 +84,7 @@ Overlay Files can utilize the following top-level attributes
 | [`external_templates`](templates.md#external-templates) | contains [file blocks](../config/files.md) that point to external templates that can be leveraged by multiple overlays |
 | [`overlays`](#overlay-attributes)                       | contains definitions of Overlays you wish to add to one or more libraries                                              |
 
-* Example Files can be found in the [Kometa Configs Repository](https://github.com/kometa-Team/Kometa-Configs)
+* Example Files can be found in the [Kometa Configs Repository](https://github.com/kometa-team/Configs)
 
 ## Overlay Understandings
 
@@ -106,11 +106,11 @@ Although Overlays are modular in that you can pick and choose what you would lik
 
 Kometa and Plex **will not** remove old Overlaid images from the Plex file structure or database when new updates are available. On large libraries, this can often result in Image Bloat.
 
-  * We recommend you read more about this and the solution on the [Plex Image Cleanup](../kometa/scripts/image-cleanup.md) page.
+  * We recommend you read more about this and the solution on the [Kometa Image Cleanup](../kometa/scripts/image-cleanup.md) page.
 
 There is an attribute called `reapply_overlays` which, when set to true, will force overlays to reapply even when it is not necessary to do so [overlays only update when something has changed, this bypasses that behaviour]. This will increase how long Kometa takes to run and will also result in Image Bloat.
 
-  * Ensure `reapply_overlays` is set to `false` if you see it in your Configuration File. If it has previously been set to true we recommend using [Plex Image Cleanup](../kometa/scripts/image-cleanup.md) to get rid of the bloat.
+  * Ensure `reapply_overlays` is set to `false` if you see it in your Configuration File. If it has previously been set to true we recommend using [Kometa Image Cleanup](../kometa/scripts/image-cleanup.md) to get rid of the bloat.
 
 To remove all overlays from your library, add the [`remove_overlays` library attribute](../config/libraries.md#remove-overlays) set to `true`.**
 
@@ -135,7 +135,7 @@ Overlay Files can utilize the following top-level attributes
 | [`overlays`](#overlay-attributes)                       | contains definitions of overlays you wish to add                                                                       |
 
 * `overlays` is required in order to run the Overlay File.
-* Example Overlay Files can be found in the [Kometa Configs Repository](https://github.com/kometa-Team/Kometa-Configs)
+* Example Overlay Files can be found in the [Kometa Configs Repository](https://github.com/kometa-team/Configs)
 
 There are multiple types of attributes that can be utilized within an overlay:
 
@@ -187,7 +187,7 @@ The below attributes are also available for Overlay files, to give more granular
 | `name`                     | Name of the overlay.                                                                                                                                                                                                                                                                  | :fontawesome-solid-circle-check:{ .green } |
 | `file`                     | Local location of the Overlay Image.                                                                                                                                                                                                                                                  |  :fontawesome-solid-circle-xmark:{ .red }  |
 | `url`                      | URL of Overlay Image Online.                                                                                                                                                                                                                                                          |  :fontawesome-solid-circle-xmark:{ .red }  |
-| `git`                      | Location in the [Configs Repo](https://github.com/kometa-Team/Kometa-Configs) of the Overlay Image.                                                                                                                                                                         |  :fontawesome-solid-circle-xmark:{ .red }  |
+| `git`                      | Location in the [Configs Repo](https://github.com/kometa-team/Configs) of the Overlay Image.                                                                                                                                                                         |  :fontawesome-solid-circle-xmark:{ .red }  |
 | `repo`                     | Location in the [Custom Repo](../config/settings.md) of the Overlay Image.                                                                                                                                                                                                            |  :fontawesome-solid-circle-xmark:{ .red }  |
 | [`group`](#overlay-groups) | Name of the Grouping for this overlay. Only one overlay with the highest weight per group will be applied.<br>**`weight` is required when using `group`**<br>**Values:** group name                                                                                                   |  :fontawesome-solid-circle-xmark:{ .red }  |
 | [`queue`](#overlay-queues) | Name of the Queue for this overlay. Define `queue` positions using the `queues` attribute at the top level of an Overlay File. Overlay with the highest weight is applied to the first position and so on.<br>**`weight` is required when using `queue`**<br>**Values:** queue name   |  :fontawesome-solid-circle-xmark:{ .red }  |
